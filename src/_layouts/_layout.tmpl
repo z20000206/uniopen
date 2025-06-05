@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}Aplus Digital Consulting Co., Ltd.{% endblock %}
+    </title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="{{ '/favicon.ico' | relativePath }}" sizes="any">
+    <link rel="manifest" href="{{ '/site.json' | relativePath }}" crossorigin="use-credentials">
+    <link rel="apple-touch-icon" href="{{ '/content/images/touch/icon-192x192.png' | relativePath }}">
+
+    <!-- Page plugin css / Begin -->
+    {% block plugins %}{% endblock %}
+    <!-- Page plugin css / End -->
+
+    <!-- Global third party css / Begin -->
+    <!-- Global third party css / End -->
+
+    <!-- Global css / Begin -->
+    <link rel="stylesheet" href="{{ '/content/css/normalize.min.css' | relativePath }}">
+    <link rel="stylesheet" href="{{ '/content/css/layout.min.css' | relativePath }}">
+    <link rel="stylesheet" href="{{ '/content/css/main.min.css' | relativePath }}">
+    <!-- Global css / End -->
+
+    <!-- Page css / Begin -->
+    {% block styles %}{% endblock %}
+    <!-- Page css / End -->
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <div class="l-container">
+        <header class="l-header"></header>
+        <main class="l-main">
+            <div class="l-wrap">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        <footer class="l-footer"></footer>
+    </div>
+    {% block popups %}{% endblock %}
+
+    <!-- Global plugin js / Begin -->
+    <!-- Global plugin js / End -->
+
+    <!-- Global js / Begin -->
+    <script src="{{ '/content/vendor/modernizr-3.11.7.min.js' | relativePath }}"></script>
+    <script src="{{ '/content/vendor/jquery-3.7.1.min.js' | relativePath }}"></script>
+    <script src="{{ '/content/js/plugins.min.js' | relativePath }}"></script>
+    <script src="{{ '/content/js/main.min.js' | relativePath }}"></script>
+    <!-- Global js / End -->
+
+    <!-- Page js / Begin -->
+    {% block scripts %}{% endblock %}
+    <!-- Page js / End -->
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <!-- <script> window.ga = function () { ga .q .push(arguments) }; ga.q = []; ga.l = + new Date; ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview') </script> <script src="https://www.google-analytics.com/analytics.js" async="async"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.c-browserUpgrade {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    color: #000;
+    text-align: center;
+    border-bottom: 1px solid #a29330;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff8ea;
+    animation: browserUpgradeFly 1s ease-out 0s;
+
+    &__actions {
+        display: block;
+        text-align: center;
+    }
+
+    &__update,
+    &__ignore {
+        display: inline-block;
+        margin: 0 2px;
+        padding: 1px 10px;
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        border-radius: 4px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    }
+
+    &__update {
+        background-color: #5ab400;
+    }
+
+    &__ignore {
+        background-color: #edbc68;
+    }
+}
+
+@keyframes browserUpgradeFly {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}

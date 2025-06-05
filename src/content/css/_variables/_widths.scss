@@ -1,0 +1,17 @@
+$width: (
+    lg: (
+        max: null,
+        min: 1200px,
+        device: "desktop"
+    ),
+    md: (
+        max: 1199.99999px,
+        min: 768.1px,
+        device: "pad"
+    ),
+    sm: (
+        max: 767.9999px,
+        min: null,
+        device: "mobile"
+    )
+);

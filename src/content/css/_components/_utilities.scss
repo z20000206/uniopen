@@ -1,0 +1,8 @@
+@use "../_mixins/_bemit"as bemit;
+@use "../_variables/_others"as others;
+
+.u-hidden {
+    @include bemit.regular() {
+        display: none;
+    }
+}

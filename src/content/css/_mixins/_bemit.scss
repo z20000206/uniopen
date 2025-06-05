@@ -1,0 +1,83 @@
+@use "./_medias" as medias;
+
+@mixin regular() {
+    @content;
+
+    @include medias.breakpoint-up("lg") {
+        &\@lg {
+            @content;
+        }
+    }
+
+    @include medias.breakpoint-up("md") {
+        &\@md\+ {
+            @content;
+        }
+    }
+
+    @include medias.breakpoint-only("md") {
+        &\@md {
+            @content;
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+        &\@md- {
+            @content;
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &\@sm {
+            @content;
+        }
+    }
+}
+
+@mixin utility($settings) {
+    @each $suffix, $size in $settings {
+        &-#{$suffix} {
+            @content ($size);
+        }
+    }
+
+    @include medias.breakpoint-up("lg") {
+        @each $suffix, $size in $settings {
+            &-#{$suffix}\@lg {
+                @content ($size);
+            }
+        }
+    }
+
+    @include medias.breakpoint-up("md") {
+        @each $suffix, $size in $settings {
+            &-#{$suffix}\@md\+ {
+                @content ($size);
+            }
+        }
+    }
+
+    @include medias.breakpoint-only("md") {
+        @each $suffix, $size in $settings {
+            &-#{$suffix}\@md {
+                @content ($size);
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+        @each $suffix, $size in $settings {
+            &-#{$suffix}\@md- {
+                @content ($size);
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        @each $suffix, $size in $settings {
+            &-#{$suffix}\@sm {
+                @content ($size);
+            }
+        }
+    }
+}

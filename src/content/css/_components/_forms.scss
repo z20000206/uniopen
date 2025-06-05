@@ -1,0 +1,19 @@
+@use "./_mixins/_fonts"as fonts;
+
+.o-textbox {
+    @include fonts.family;
+
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
