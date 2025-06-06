@@ -1,73 +1,102 @@
 <!doctype html>
 <html class="no-js" lang="zh-Hant-TW">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        {% block title %}Aplus Digital Consulting Co., Ltd.{% endblock %}
-    </title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            {% block title %}Aplus Digital Consulting Co., Ltd.{% endblock %}
+        </title>
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
 
-    <link rel="icon" href="{{ '/favicon.ico' | relativePath }}" sizes="any">
-    <link rel="manifest" href="{{ '/site.json' | relativePath }}" crossorigin="use-credentials">
-    <link rel="apple-touch-icon" href="{{ '/content/images/touch/icon-192x192.png' | relativePath }}">
+        <link rel="icon" href="{{ '/favicon.ico' | relativePath }}" sizes="any">
+        <link rel="manifest" href="{{ '/site.json' | relativePath }}" crossorigin="use-credentials">
+        <link rel="apple-touch-icon" href="{{ '/content/images/touch/icon-192x192.png' | relativePath }}">
 
-    <!-- Page plugin css / Begin -->
-    {% block plugins %}{% endblock %}
-    <!-- Page plugin css / End -->
+        <!-- Page plugin css / Begin -->
+        {% block plugins %}{% endblock %}
+        <!-- Page plugin css / End -->
 
-    <!-- Global third party css / Begin -->
-    <!-- Global third party css / End -->
+        <!-- Global third party css / Begin -->
+        <!-- Global third party css / End -->
 
-    <!-- Global css / Begin -->
-    <link rel="stylesheet" href="{{ '/content/css/normalize.min.css' | relativePath }}">
-    <link rel="stylesheet" href="{{ '/content/css/layout.min.css' | relativePath }}">
-    <link rel="stylesheet" href="{{ '/content/css/main.min.css' | relativePath }}">
-    <!-- Global css / End -->
+        <!-- Global css / Begin -->
+        <link rel="stylesheet" href="{{ '/content/css/normalize.min.css' | relativePath }}">
+        <link rel="stylesheet" href="{{ '/content/css/layout.min.css' | relativePath }}">
+        <link rel="stylesheet" href="{{ '/content/css/main.min.css' | relativePath }}">
+        <!-- Global css / End -->
 
-    <!-- Page css / Begin -->
-    {% block styles %}{% endblock %}
-    <!-- Page css / End -->
+        <!-- Page css / Begin -->
+        {% block styles %}{% endblock %}
+        <!-- Page css / End -->
 
-    <meta name="theme-color" content="#fafafa">
-</head>
+        <meta name="theme-color" content="#fafafa">
+    </head>
 
-<body>
-    <div class="l-container">
-        <header class="l-header"></header>
-        <main class="l-main">
-            <div class="l-wrap">
-                {% block content %}{% endblock %}
-            </div>
-        </main>
-        <footer class="l-footer"></footer>
-    </div>
-    {% block popups %}{% endblock %}
+    <body>
+        <div class="l-container">
+            <header class="l-header">
+                <div class="l-header__wrap">
+                    <div class="l-header__logo">
+                        <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
+                            <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.svg' | relativePath }}" alt="中國信託">
+                        </a>
+                        <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
+                            <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
+                        </a>
+                    </div>
+                    <div class="l-header__menu">
+                        <a href="#" class="l-header__item" data-section="discount">專屬禮遇</a>
+                        <a href="#" class="l-header__item" data-section="extravagant">輕奢體驗</a>
+                        <a href="#" class="l-header__item" data-section="enjoy">享樂日常</a>
+                        <a href="#" class="l-header__item" data-section="savor">品味時光</a>
+                        <a href="#" class="l-header__item" data-section="life">連結會員</a>
+                        <a href="#" class="l-header__item" data-section="finance">金融生活</a>
+                    </div>
+                    <div class="l-header__hamburger">
+                        <button class="o-hamburger"></button>
+                    </div>
+                </div>
+            </header>
+            <main class="l-main">
+                <div class="l-wrap">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+            <footer class="l-footer">
+                <a href="https://www.ctbcbank.com/twrbo/zh_tw/index/ctbc_aboutCTBC/ctbc_legal/ctbc_finances.html?targetTab=ctbc_finances_tab2" class="t-noUnderline" target="_blank" rel="noreferrer noopener">
+                    <div class="l-footer__wrap">
+                        <div class="l-footer__title">謹慎理財 信用至上</div>
+                        <div class="l-footer__content">信用卡循環年利率：本行ARM指數+加碼利率(5.97%~13.47%)；上限為15%，預借現金手續費為每筆預借金額X3.5%+150元，循環利率基準日為104年9月1日，其他費用請上官網查詢</div>
+                    </div>
+                </a>
+            </footer>
+        </div>
+        {% block popups %}{% endblock %}
 
-    <!-- Global plugin js / Begin -->
-    <!-- Global plugin js / End -->
+        <!-- Global plugin js / Begin -->
+        <!-- Global plugin js / End -->
 
-    <!-- Global js / Begin -->
-    <script src="{{ '/content/vendor/modernizr-3.11.7.min.js' | relativePath }}"></script>
-    <script src="{{ '/content/vendor/jquery-3.7.1.min.js' | relativePath }}"></script>
-    <script src="{{ '/content/js/plugins.min.js' | relativePath }}"></script>
-    <script src="{{ '/content/js/main.min.js' | relativePath }}"></script>
-    <!-- Global js / End -->
+        <!-- Global js / Begin -->
+        <script src="{{ '/content/vendor/modernizr-3.11.7.min.js' | relativePath }}"></script>
+        <script src="{{ '/content/vendor/jquery-3.7.1.min.js' | relativePath }}"></script>
+        <script src="{{ '/content/js/plugins.min.js' | relativePath }}"></script>
+        <script src="{{ '/content/js/main.min.js' | relativePath }}"></script>
+        <!-- Global js / End -->
 
-    <!-- Page js / Begin -->
-    {% block scripts %}{% endblock %}
-    <!-- Page js / End -->
+        <!-- Page js / Begin -->
+        {% block scripts %}{% endblock %}
+        <!-- Page js / End -->
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!-- <script> window.ga = function () { ga .q .push(arguments) }; ga.q = []; ga.l = + new Date; ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview') </script> <script src="https://www.google-analytics.com/analytics.js" async="async"></script> -->
-</body>
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <!-- <script> window.ga = function () { ga .q .push(arguments) }; ga.q = []; ga.l = + new Date; ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview') </script> <script src="https://www.google-analytics.com/analytics.js" async="async"></script> -->
+    </body>
 
 </html>

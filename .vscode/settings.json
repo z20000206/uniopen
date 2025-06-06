@@ -1,0 +1,19 @@
+{
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[nunjucks]": {
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+  },
+  "auto-close-tag.activationOnLanguage": ["nunjucks"],
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "files.associations": {
+    "*.tmpl": "nunjucks",
+    "*.part": "nunjucks",
+    "*.njk": "nunjucks"
+  },
+  "nunjucksFormat.spaceclose": true,
+  "liveServer.settings.port": 5501
+}

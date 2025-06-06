@@ -30,3 +30,31 @@
         viewport.setAttribute('content', 'width=device-width, initial-scale=' + ratio + ', minimum-scale=' + ratio + ', maximum-scale=' + ratio + ', user-scalable=yes');
     }
 })(360);
+
+// popup
+(function ($, undefined) {
+    'use strict';
+
+    $.extend($.magnificPopup.defaults, {
+        fixedContentPos: true,
+        fixedBgPos: true,
+        removalDelay: 0,
+        showCloseBtn: false
+    });
+
+    $(function () {
+        $('[data-mfp-src]').magnificPopup({
+            callbacks: {
+                open: function () {
+                    $('[data-mfp-close]').on('click', function (e) {
+                        e.preventDefault();
+                        $.magnificPopup.close();
+                    });
+                },
+                close: function () {
+                    $('[data-mfp-close]').off('click');
+                }
+            }
+        });
+    });
+})(jQuery);

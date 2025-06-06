@@ -1,13 +1,13 @@
-@use "./_mixins/medias" as medias;
-@use "./_mixins/_wrapper" as wrapper;
+@use "./_mixins/medias"as medias;
+@use "./_mixins/_wrapper"as wrapper;
 
 html,
 body {
-    height: 100%;
+   height: 100%;
 }
 
 .l-container {
-    min-height: 100%;
+   min-height: 100%;
 }
 
 .l-wrap {}
@@ -17,20 +17,165 @@ body {
    ========================================================================== */
 
 .l-header {
-    &__logo {}
+   position: fixed;
+   top: 0;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 58px;
+   background: #fff;
+   border-bottom: 1px solid #DBDBDB;
+   padding: 8px 0;
+   z-index: 100;
+
+   &__wrap {
+      @include wrapper.wrapper();
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__logo {
+      display: flex;
+      gap: 40px;
+   }
+
+   &__menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+   }
+
+   &__item {
+      text-decoration: none;
+   }
+
+   &__hamburger {
+      display: none;
+   }
+
+   &.is-menuOpen {
+      z-index: 120;
+   }
+
+   @include medias.breakpoint-down("md") {
+      &__hamburger {
+         display: flex;
+      }
+   }
+}
+
+.o-logo {
+   position: relative;
+
+   &+& {
+      &::before {
+         content: '';
+         position: absolute;
+         left: -20px;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 1px;
+         height: 20px;
+         background-color: #000;
+      }
+   }
+
+   &__img {
+      width: 110px;
+      height: 30px;
+      flex: 0 0 auto;
+
+      &--uniopen {
+         width: 137px;
+         height: 24px;
+         flex: 0 0 auto;
+      }
+   }
+}
+
+.o-hamburger {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   transition: 0.3s;
+
+   &::before,
+   &::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      border-radius: 100px;
+      background: #000;
+      transition: 0.3s;
+   }
+
+   &.is-active {
+      &::before {
+         transform: translateY(3px) rotateZ(15deg);
+      }
+
+      &::after {
+         transform: translateY(-3px) rotateZ(-15deg);
+      }
+   }
+
+   @media (hover: hover) {
+      &:hover {
+         transform: scaleY(-1);
+      }
+   }
 }
 
 /* ==========================================================================
    Main
    ========================================================================== */
 
-.l-main {}
+.l-main {
+   flex: 1 1 auto;
+}
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 
-.l-footer {}
+.l-footer {
+   margin-top: 100px;
+   background: #75654B;
+
+   &__wrap {
+      @include wrapper.wrapper();
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      color: #fff;
+   }
+
+   &__title {
+      font-size: 32px;
+      font-weight: 500;
+      flex: 0 0 auto;
+      border: 1px solid #fff;
+      padding: 8px 20px;
+   }
+
+   &__content {
+      font-size: 14px;
+   }
+
+   @include medias.breakpoint-down("md") {
+
+      &__wrap {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 20px;
+      }
+   }
+}
 
 /* ==========================================================================
    Media Queries

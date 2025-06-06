@@ -1,13 +1,45 @@
 {% extends './_layouts/_layout.tmpl' %}
 
 {% block content %}
-    <div class="aaa">dsada 21</div>
+    <div class="l-block">
+        <section id="kv" class="l-block__item l-block__item--kv">1</section>
+        <section id="video" class="l-block__item l-block__item--video">2</section>
+        <section id="discount" class="l-block__item l-block__item--discount">3</section>
+        <section id="extravagant" class="l-block__item l-block__item--extravagant">4</section>
+        <section id="enjoy" class="l-block__item l-block__item--enjoy">5</section>
+        <section id="savor" class="l-block__item l-block__item--savor">6</section>
+        <section id="life" class="l-block__item l-block__item--life">7</section>
+        <section id="finance" class="l-block__item l-block__item--finance">8</section>
+        <section id="card" class="l-block__item l-block__item--card">9</section>
+        <section id="notice" class="l-block__item l-block__item--notice">10</section>
+    </div>
+{% endblock %}
+
+{% block popups %}
+    {%- include './_partials/_popups.part' -%}
 {% endblock %}
 
 {% block scripts %}
     <script>
-        $('.aaa').click(function () {
-            console.log('123456789')
-        })
+        $('[data-section]').on('click', function (e) {
+            e.preventDefault();
+
+            var targetId = $(this).attr('data-section');
+            var $target = $('#' + targetId);
+
+            if ($target.length) {
+                var headerHeight = 58;
+                var offset = $target
+                    .offset()
+                    .top - headerHeight;
+
+                if (offset < 0) 
+                    offset = 0;
+                
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 500);
+            }
+        });
     </script>
 {% endblock %}
