@@ -1,0 +1,25 @@
+.o-btn {
+    box-sizing: border-box;
+    padding: 8px 16px;
+    color: #fff;
+    font-weight: bold;
+    background: #AD8F5E;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    text-decoration: none;
+
+    &--sm {
+        padding: 4px 8px;
+    }   
+
+    &--lg {
+        width: 120px;
+        padding: 12px 20px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background: #987A49;
+        }
+    }
+}

@@ -1,6 +1,66 @@
 @use "../_mixins/_bemit"as bemit;
 @use "../_variables/_others"as others;
 
+.t1 {
+    font-size: 48px;
+}
+
+.t2 {
+    font-size: 40px;
+}
+
+.t3 {
+    font-size: 32px;
+}
+
+.t4 {
+    font-size: 24px;
+}
+
+.t5 {
+    font-size: 20px;
+}
+
+.t6 {
+    font-size: 18px;
+}
+
+.t7 {
+    font-size: 14px;
+}
+
+.t-bold {
+    font-weight: bold;
+}
+
+.t-wh {
+    color: #FFF;
+}
+
+.t-og {
+    color: #FF8A3D;
+}
+
+.t-bg-wh {
+    background-color: #FFF;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-tal {
+    align-items: flex-start;
+}
+
+.u-flex-tac {
+    align-items: center;
+}
+
+.u-flex-tar {
+    align-items: flex-end;
+}
+
 .u-hidden {
     @include bemit.regular() {
         display: none;

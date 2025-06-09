@@ -15,8 +15,12 @@
    Author's custom styles
    ========================================================================== */
 
+@use "./_components/_banners";
 @use "./_components/_blocks";
+@use "./_components/_bottons";
+@use "./_components/_cards";
 @use "./_components/_forms";
+@use "./_components/_icons";
 
 /*------------------------     utilities     ------------------------*/
 @use "./_components/_utilities";

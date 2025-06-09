@@ -1,0 +1,237 @@
+@use "./_mixins/medias"as medias;
+
+.o-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &+& {
+        margin-top: 40px;
+    }
+
+    &__img {
+        display: block;
+        width: 253px;
+        height: 160px;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    @include medias.breakpoint-down("md") {
+        flex-direction: column;
+        gap: 10px;
+
+        &+& {
+            margin-top: 0;
+            margin-left: 40px;
+        }
+
+        &__img {
+            width: 126px;
+            height: 80px;
+        }
+
+        &__name {
+            font-size: 16px;
+            font-weight: normal;
+            gap: 0;
+        }
+    }
+}
+
+.c-discountCard {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    width: fit-content;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__total {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__task {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    &__new {
+        position: absolute;
+        top: -5px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        writing-mode: vertical-lr;
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        color: #DBDBDB;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 40px;
+            background-color: #DBDBDB;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.c-extravagantCard {
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.10);
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__add {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 1px;
+            height: calc(50% - 20px);
+            background: #DBDBDB;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__feedback {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        line-height: 1;
+    }
+
+    &__num {
+        font-size: 40px;
+        color: #FF8A3D;
+    }
+
+    &__more {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    &__high {
+        position: relative;
+        top: -11px;
+        right: -36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 40px;
+        background-color: #9B7BFF;
+    }
+}
+
+.c-enjoyCard {
+    display: flex;
+    gap: 80px;
+    padding: 40px;
+    background: #FFF;
+    box-shadow: -4px -4px 4px 0px rgba(0, 0, 0, 0.10);
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 160px;
+
+        &+& {
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 110px;
+                background-color: #9B7BFF;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    &__discount {
+        font-size: 14px;
+    }
+
+    &__num {
+        font-size: 40px;
+        color: #FF8A3D;
+    }
+}

@@ -1,0 +1,52 @@
+.o-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #AD8F5E;
+
+    mask: {
+        repeat: no-repeat;
+        position: center center;
+        size: contain;
+    }
+
+    &--arrow {
+        mask-image: url(../../images/icon/arrow.svg);
+    }
+
+    &--add {
+        width: 32px;
+        height: 32px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/add.svg);
+    }
+
+    &--line {
+        width: 50px;
+        height: 11px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/line.svg);
+    }
+
+    &--lineLg {
+        width: 120px;
+        height: 8px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/lineLg.svg);
+    }
+
+    &--lineRight {
+        width: 50px;
+        height: 11px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/lineRight.svg);
+    }
+}
+
+.o-iconBox {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #AD8F5E;
+}

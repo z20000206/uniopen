@@ -1,0 +1,342 @@
+@use "./_mixins/medias"as medias;
+
+.c-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__text {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    &__date {
+        color: #919191;
+    }
+
+    &__discount {
+        font-size: 20px;
+    }
+
+    &__icon {
+        &--left {
+            position: absolute;
+            left: -60px;
+        }
+    }
+}
+
+.c-kv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+        padding: 0 80px;
+    }
+
+    &__introduce {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    &__slogan {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    &__subSlogan {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &__action {
+        padding-bottom: 40px;
+
+        &--mb {
+            display: none;
+        }
+    }
+
+    &__scroll {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 76px;
+        width: 80px;
+        height: 80px;
+        color: #9B7BFF;
+        border-radius: 205.128px;
+        border: 1.026px dashed #9B7BFF;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -31px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 10px;
+            background-color: #9B7BFF;
+            animation: moveLine 1.5s linear infinite;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background-color: #CFC0FF;
+        }
+    }
+
+    @keyframes moveLine {
+        from {
+            top: -31px;
+        }
+
+        to {
+            top: 19px;
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        &__slogan {
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        &__subSlogan {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        &__action {
+            display: none;
+
+            &--mb {
+                display: flex;
+                margin-top: 20px;
+            }
+        }
+
+        &__item {
+            padding: 30px 40px 20px 40px;
+
+
+            &--card {
+                display: flex;
+                flex-direction: row;
+                padding: 30px 40px;
+            }
+        }
+    }
+}
+
+.c-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    &__img {
+        display: block;
+        width: 800px;
+        height: 450px;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+        &__img {
+            display: block;
+            width: 600px;
+            height: 336px;
+            flex: 0 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &__img {
+            display: block;
+            width: 300px;
+            height: 168px;
+            flex: 0 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.c-discount {
+    &__more {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+}
+
+.c-extravagant {
+    display: flex;
+    width: 100%;
+
+    &__wrap {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 44px;
+        padding-bottom: 29px;
+        width: 50%;
+        height: 500px;
+        background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    &__tab {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    &__item {
+        box-sizing: border-box;
+        position: relative;
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #AD8F5E;
+        background: #FFF2D7;
+        cursor: pointer;
+
+        &.is-active {
+            color: #FFF;
+            background: #9A7A5F;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 10px solid #9A7A5F;
+
+            }
+        }
+    }
+
+    &__more {
+        margin-top: 20px;
+    }
+
+    &__img {
+        display: block;
+        width: calc(50% + 180px);
+        height: 500px;
+        margin-top: 47px;
+        margin-left: -180px;
+        flex: 0 0 auto;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+
+        &__wrap {
+            justify-content: center;
+            width: 100%;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}
+
+.c-enjoy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-width: 800px;
+        height: 190px;
+        background: var(--Linear, linear-gradient(90deg, #E3CFAD 0.03%, #BB975D 99.97%));
+        z-index: -1;
+    }
+
+    &__more {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
