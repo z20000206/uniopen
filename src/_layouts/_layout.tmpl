@@ -45,29 +45,45 @@
 
     <body>
         <div class="l-container">
-            <header class="l-header">
-                <div class="l-header__wrap">
-                    <div class="l-header__logo">
-                        <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
-                            <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.svg' | relativePath }}" alt="中國信託">
-                        </a>
-                        <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
-                            <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
-                        </a>
+            {% if headerType == "process" %}
+                <header class="l-header">
+                    <div class="l-header__wrap">
+                        <div class="l-header__logo">
+                            <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
+                                <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.svg' | relativePath }}" alt="中國信託">
+                            </a>
+                            <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
+                                <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
+                            </a>
+                        </div>
+                        <a href="./index.html" class="l-header__back">回活動首頁</a>
                     </div>
-                    <div class="l-header__menu">
-                        <a href="#" class="l-header__item" data-section="discount">專屬禮遇</a>
-                        <a href="#" class="l-header__item" data-section="extravagant">輕奢體驗</a>
-                        <a href="#" class="l-header__item" data-section="enjoy">享樂日常</a>
-                        <a href="#" class="l-header__item" data-section="savor">品味時光</a>
-                        <a href="#" class="l-header__item" data-section="life">連結會員</a>
-                        <a href="#" class="l-header__item" data-section="finance">金融生活</a>
+                </header>
+            {% else %}
+                <header class="l-header">
+                    <div class="l-header__wrap">
+                        <div class="l-header__logo">
+                            <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
+                                <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.svg' | relativePath }}" alt="中國信託">
+                            </a>
+                            <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
+                                <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
+                            </a>
+                        </div>
+                        <div class="l-header__menu">
+                            <a href="#" class="l-header__item" data-section="discount">專屬禮遇</a>
+                            <a href="#" class="l-header__item" data-section="extravagant">輕奢體驗</a>
+                            <a href="#" class="l-header__item" data-section="enjoy">享樂日常</a>
+                            <a href="#" class="l-header__item" data-section="savor">品味時光</a>
+                            <a href="#" class="l-header__item" data-section="life">連結會員</a>
+                            <a href="#" class="l-header__item" data-section="finance">金融生活</a>
+                        </div>
+                        <div class="l-header__hamburger">
+                            <button class="o-hamburger"></button>
+                        </div>
                     </div>
-                    <div class="l-header__hamburger">
-                        <button class="o-hamburger"></button>
-                    </div>
-                </div>
-            </header>
+                </header>
+            {% endif %}
             <main class="l-main">
                 <div class="l-wrap">
                     {% block content %}{% endblock %}

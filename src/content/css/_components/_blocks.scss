@@ -50,6 +50,10 @@
             margin-bottom: 100px;
             background: url(../../images/section/card/bg.jpg) no-repeat center/cover;
         }
+
+        &--process {
+            margin-top: 72px;
+        }
     }
 
     @include medias.breakpoint-down("md") {

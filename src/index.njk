@@ -371,36 +371,6 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="c-financeCard__item c-carousel__slide swiper-slide">
-                                    <div class="c-financeCard__head">
-                                        <div class="c-financeCard__title">跨轉與外幣提/存款</div>
-                                        <div class="c-financeCard__discount">免手續費</div>
-                                    </div>
-                                    <div class="c-financeCard__content">持有本行有效存款帳戶成功申辦uniopen聯名卡、完成三項任務</div>
-                                    <div class="c-financeCard__more">
-                                        <a href="#" class="o-iconBox">
-                                            <div class="o-iconBox__text">活動詳情</div>
-                                            <div class="o-iconBox__icon">
-                                                <i class="o-icon o-icon--external"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="c-financeCard__item c-carousel__slide swiper-slide">
-                                    <div class="c-financeCard__head">
-                                        <div class="c-financeCard__title">跨轉與外幣提/存款</div>
-                                        <div class="c-financeCard__discount">免手續費</div>
-                                    </div>
-                                    <div class="c-financeCard__content">持有本行有效存款帳戶成功申辦uniopen聯名卡、完成三項任務</div>
-                                    <div class="c-financeCard__more">
-                                        <a href="#" class="o-iconBox">
-                                            <div class="o-iconBox__text">活動詳情</div>
-                                            <div class="o-iconBox__icon">
-                                                <i class="o-icon o-icon--external"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="o-carouselNav">
@@ -516,18 +486,18 @@
         });
 
         // swiper 金融生活
-        const $financeSwiper = $('[data-swiper="finance"]');
-        const totalSlides = $financeSwiper
-            .find('.swiper-slide')
-            .length;
-        const isSmallScreen = window.innerWidth < 1200;
-        const showNavigation = isSmallScreen || totalSlides > 3;
-
-        if (!showNavigation) {
-            $('[data-swiper-prev="finance"], [data-swiper-next="finance"]').hide();
-        } else {
-            $('[data-swiper-prev="finance"], [data-swiper-next="finance"]').show();
-        }
+   //     const $financeSwiper = $('[data-swiper="finance"]');
+   //     const totalSlides = $financeSwiper
+   //         .find('.swiper-slide')
+   //         .length;
+   //     const isSmallScreen = window.innerWidth < 1200;
+   //     const showNavigation = isSmallScreen || totalSlides > 3;
+//
+   //     if (!showNavigation) {
+   //         $('[data-swiper-prev="finance"], [data-swiper-next="finance"]').hide();
+   //     } else {
+   //         $('[data-swiper-prev="finance"], [data-swiper-next="finance"]').show();
+   //     }
 
         const financeSettings = $.extend(true, {}, carouselSettings, {
             freeMode: true,
@@ -535,12 +505,10 @@
             slidesPerView: "auto",
             autoplay: true,
             speed: 300,
-            navigation: showNavigation
-                ? {
-                    prevEl: '[data-swiper-prev="finance"]',
-                    nextEl: '[data-swiper-next="finance"]'
-                }
-                : {}
+             navigation: {
+                prevEl: '[data-swiper-prev="finance"]',
+                nextEl: '[data-swiper-next="finance"]'
+            }
         });
 
         new Swiper('[data-swiper="finance"]', financeSettings);
