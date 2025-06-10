@@ -148,7 +148,6 @@ body {
    ========================================================================== */
 
 .l-footer {
-   margin-top: 100px;
    background: #75654B;
 
    &__wrap {
@@ -177,6 +176,15 @@ body {
       &__wrap {
          flex-direction: column;
          align-items: flex-start;
+         gap: 20px;
+      }
+   }
+
+   @include medias.breakpoint-down("sm") {
+
+      &__wrap {
+         flex-direction: column;
+         align-items: center;
          gap: 20px;
       }
    }

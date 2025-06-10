@@ -1,0 +1,154 @@
+@use "../_mixins/medias"as medias;
+
+@mixin nav {
+
+    &__prev,
+    &__next {
+        position: absolute;
+        box-sizing: border-box;
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        margin-top: -70px;
+        border: 1px solid #DBDBDB;
+        background: #FFF;
+        transition: background-color ease 0.3s;
+
+        &.swiper-button-lock {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #AD8F5E;
+
+            mask: {
+                position: center;
+                size: contain;
+                repeat: no-repeat;
+            }
+
+            transition: background-color ease 0.3s;
+        }
+    }
+
+    &__prev {
+        &.swiper-button-prev {
+            left: 0;
+        }
+
+        &:after {
+            mask-image: url(../images/icon/arrow-left.svg);
+        }
+    }
+
+    &__next {
+        &.swiper-button-next {
+            right: 0;
+        }
+
+        &:after {
+            mask-image: url(../images/icon/arrow-right.svg);
+        }
+    }
+
+    &__pagination {
+        position: static;
+        display: inline-flex;
+        width: 100% !important;
+        justify-content: center;
+        margin-top: 28px;
+
+        &.swiper-pagination-horizontal {
+            width: auto;
+        }
+
+        &.swiper-pagination-bullets {
+            display: flex;
+            gap: 8px;
+
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #FFF;
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            .swiper-pagination-bullet-active {
+                background-color: #007d7d;
+            }
+        }
+    }
+
+    @media (hover: hover) {
+
+        &__prev,
+        &__next {
+            &:hover {
+                background: #AD8F5E;
+
+                &::after {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+
+        &__prev,
+        &__next {
+            width: 40px !important;
+            height: 40px !important;
+            flex: 0 0 40px !important;
+        }
+    }
+}
+
+.c-carousel {
+    $root: &;
+    position: relative;
+
+    @include nav;
+
+
+    @include medias.breakpoint-down("md") {
+
+    }
+
+    @include medias.breakpoint-down("sm") {
+
+    }
+}
+
+.o-carouselNav {
+    @include nav;
+    position: absolute;
+    bottom: 0;
+    left: -312px;
+    display: flex;
+    width: 92px;
+    height: 40px;
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 0px;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        margin-top: 0;
+    }
+
+    @include medias.breakpoint-down("sm") {
+        width: 100px;
+        height: 40px;
+    }
+}

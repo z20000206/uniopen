@@ -30,6 +30,7 @@
     &__icon {
         &--left {
             position: absolute;
+            top: 19px;
             left: -60px;
         }
     }
@@ -236,7 +237,7 @@
         padding-top: 44px;
         padding-bottom: 29px;
         width: 50%;
-        height: 500px;
+        min-height: 500px;
         background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
     }
 
@@ -338,5 +339,136 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+}
+
+.c-finance {
+    position: relative;
+    width: 100%;
+
+    &__head {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        max-width: 1440px;
+        min-height: 200px;
+        padding-top: 40px;
+        background: var(--Linear, linear-gradient(90deg, #E3CFAD 0.03%, #BB975D 99.97%));
+    }
+
+    &__title {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        max-width: 1120px;
+        margin-right: 0;
+        margin-left: auto;
+        padding-left: 35px;
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        max-width: 1020px;
+        margin-left: auto;
+        margin-right: 0;
+        z-index: 10;
+    }
+
+    @include medias.breakpoint-down("md") {
+        &__head {
+            padding-top: 20px;
+        }
+    }
+}
+
+.c-life {
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+
+    &__content {
+        display: flex;
+    }
+
+    &__introduce {
+        width: 100%;
+        max-width: 448px;
+        padding: 40px 40px 40px 60px;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__discount {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+}
+
+.c-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.c-notice {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #DBDBDB;
+
+    &__wrap {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__head {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    &__title {
+        color: #878787;
+        font-size: 20px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        width: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+            grid-template-rows 0.4s cubic-bezier(.5, 0, .5, 1),
+            opacity 0.35s;
+
+        &.is-active {
+            grid-template-rows: 1fr;
+            opacity: 1;
+        }
+    }
+
+    &__inner {
+        overflow: hidden;
+        transition: 0.35s;
     }
 }

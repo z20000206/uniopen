@@ -11,7 +11,15 @@
     }
 
     &--arrow {
+        width: 32px;
+        height: 32px;
         mask-image: url(../../images/icon/arrow.svg);
+    }
+
+    &--external {
+        width: 32px;
+        height: 32px;
+        mask-image: url(../../images/icon/external.svg);
     }
 
     &--add {
@@ -19,6 +27,14 @@
         height: 32px;
         background-color: #9B7BFF;
         mask-image: url(../../images/icon/add.svg);
+    }
+
+    &--open {
+        mask-image: url(../../images/icon/open.svg);
+    }
+
+    &--close {
+        mask-image: url(../../images/icon/close.svg);
     }
 
     &--line {

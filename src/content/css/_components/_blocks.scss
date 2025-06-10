@@ -28,11 +28,27 @@
         }
 
         &--discount {
-            background: url(../../images/section//discount//bg.jpg) no-repeat center/cover;
+            background: url(../../images/section/discount/bg.jpg) no-repeat center/cover;
         }
 
         &--extravagant {
             margin-top: 66px;
+        }
+
+        &--enjoy {
+            margin-top: 100px;
+            margin-bottom: 60px;
+        }
+
+        &--savor {
+            margin-top: 56px;
+            margin-bottom: 56px;
+        }
+
+        &--card {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            background: url(../../images/section/card/bg.jpg) no-repeat center/cover;
         }
     }
 
