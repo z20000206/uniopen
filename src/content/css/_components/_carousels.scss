@@ -131,8 +131,8 @@
 .o-carouselNav {
     @include nav;
     position: absolute;
-    bottom: 0;
-    left: -312px;
+    bottom: -120px;
+    right: 992px;
     display: flex;
     width: 92px;
     height: 40px;

@@ -11,8 +11,8 @@
     }
 
     &--arrow {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         mask-image: url(../../images/icon/arrow.svg);
     }
 
@@ -20,6 +20,20 @@
         width: 24px;
         height: 24px;
         mask-image: url(../../images/icon/external.svg);
+    }
+
+    &--limited {
+        width: 14px;
+        height: 168px;
+        background-color: #dbdbdb;
+        mask-image: url(../../images/icon/limited.svg);
+    }
+
+    &--offer {
+        width: 14px;
+        height: 168px;
+        background-color: #dbdbdb;
+        mask-image: url(../../images/icon/offer.svg);
     }
 
     &--add {

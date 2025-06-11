@@ -78,45 +78,67 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        height: 100%;
         font-size: 14px;
         line-height: 1;
     }
 
-    &__total {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    &__task {
+    &__date {
         font-size: 14px;
         color: #919191;
     }
 
-    &__new {
+    &__task {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 100%;
+        gap: 8px;
+        flex: 1 1 auto;
+    }
+
+    &__reward {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__focus {
+        font-size: 30px;
+        font-weight: bold;
+        color: #FF8A3D;
+    }
+
+    &__icon {
         position: absolute;
-        top: -5px;
-        right: 0;
+        top: -15px;
+        right: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        writing-mode: vertical-lr;
-        font-size: 14px;
-        letter-spacing: 2.8px;
-        color: #DBDBDB;
+    }
 
-        &::before {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 40px;
-            background-color: #DBDBDB;
-            margin-bottom: 10px;
-        }
+    &__total {
+        position: absolute;
+        bottom: -18px;
+        display: flex;
+        padding: 4px 10px 6px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #9B7BFF;
+        border-radius: 20px;
+        border: 1px solid #CFC0FF;
+        background: #FFF;
     }
 }
 
 .c-extravagantCard {
+    box-sizing: border-box;
+    position: relative;
     display: flex;
     gap: 20px;
     padding: 40px 20px;
@@ -124,6 +146,7 @@
     box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.10);
 
     &__item {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -167,6 +190,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        font-size: 14px;
         line-height: 1;
     }
 
@@ -176,6 +200,7 @@
     }
 
     &__more {
+        text-align: center;
         font-size: 14px;
         color: #919191;
     }
@@ -188,6 +213,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: fit-content;
         padding: 20px 40px;
         background-color: #9B7BFF;
     }
@@ -195,6 +221,9 @@
     @include medias.breakpoint-down("sm") {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        min-width: 350px;
+        padding: 30px 30px 40px 30px;
 
         &__add {
             position: relative;
@@ -221,13 +250,25 @@
                 left: calc(50% + 20px);
             }
         }
+
+        &__high {
+            position: absolute;
+            flex-direction: row;
+            top: auto;
+            right: auto;
+            bottom: -30px;
+            gap: 10px;
+            padding: 10px 20px;
+        }
     }
 }
 
 .c-enjoyCard {
+    box-sizing: border-box;
     display: flex;
-    gap: 80px;
+    gap: 40px;
     padding: 40px;
+    width: 100%;
     background: #FFF;
     box-shadow: -4px -4px 4px 0px rgba(0, 0, 0, 0.10);
 
@@ -237,14 +278,14 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        width: 160px;
+        width: calc((100% - 2px - 80px) / 3);
 
         &+& {
             &::before {
                 content: '';
                 position: absolute;
                 display: block;
-                left: -40px;
+                left: -20px;
                 top: 50%;
                 transform: translateY(-50%);
                 width: 1px;
@@ -262,12 +303,40 @@
     }
 
     &__discount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 14px;
     }
 
     &__num {
-        font-size: 40px;
+        font-size: 48px;
+        font-weight: bold;
         color: #FF8A3D;
+    }
+
+    @include medias.breakpoint-down("sm") {
+        gap: 20px;
+        padding: 30px 16px;
+
+        &__item {
+            width: calc((100% - 2px - 40px) / 3);
+
+            &+& {
+                &::before {
+                    content: '';
+                    left: -10px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__num {
+            font-size: 28px;
+        }
     }
 }
 
@@ -285,7 +354,7 @@
         flex-direction: column;
         gap: 20px;
         padding: 40px;
-        width: 300px;
+        width: 300px !important;
         background-color: #fff;
         border: 1px solid #DBDBDB;
 
@@ -295,6 +364,10 @@
 
         &+& {
             border-right: none;
+        }
+
+        &:last-child {
+            border-right: 1px solid #DBDBDB;
         }
     }
 
@@ -314,8 +387,29 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        height: 100%;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text {
         font-size: 18px;
     }
+
+    &__farther {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    &__more {}
 
     @include medias.breakpoint-down("md") {
         margin-top: 104px;
@@ -346,6 +440,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
 
     &__title {
@@ -358,12 +453,46 @@
         display: inline-block;
         width: 24px;
         height: 24px;
-        background-image: url(../../images/section/card/word.png);
+
+        &--word {
+            background-image: url(../../images/section/card/word.png);
+        }
+
+        &--gold {
+            background-image: url(../../images/section/card/gold.png);
+        }
     }
 
     &__text {
         font-size: 24px;
         font-weight: 500;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        color: #878787;
+        padding-left: 28px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 13.5px;
+            left: 11.5px;
+            display: inline-block;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #878787;
+        }
     }
 
     &__more {
@@ -372,11 +501,14 @@
         align-items: flex-end;
         margin-top: 10px;
     }
-    
+
     @include medias.breakpoint-down("sm") {
+        padding: 20px 10px;
+
         &__img {
             width: 120px;
             height: 76px;
+            padding: 16px 12px;
         }
     }
 }

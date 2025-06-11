@@ -38,6 +38,26 @@
             left: -60px;
         }
     }
+
+    @include medias.breakpoint-down("md") {
+        &__text {
+            font-size: 22px;
+        }
+
+        &__date {
+            font-size: 14px;
+        }
+
+        &__discount {
+            font-size: 18px;
+        }
+
+        &__icon {
+            &--left {
+                top: 12px;
+            }
+        }
+    }
 }
 
 .c-kv {
@@ -223,10 +243,21 @@
 }
 
 .c-discount {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+    }
+
     &__more {
         display: flex;
         justify-content: center;
-        margin-top: 35px;
+        margin-bottom: 113px;
     }
 }
 
@@ -236,19 +267,23 @@
 
     &__wrap {
         box-sizing: border-box;
+        position: relative;
+        top: -47px;
         display: flex;
         justify-content: flex-end;
         padding-top: 44px;
         padding-bottom: 29px;
-        width: 50%;
+        width: 55%;
         min-height: 500px;
         background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
     }
 
     &__content {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        padding-left: 20px;
+        padding-left: 48px;
+        padding-right: 48px;
     }
 
     &__tab {
@@ -278,7 +313,7 @@
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
                 border-top: 10px solid #9A7A5F;
-
+                z-index: 10;
             }
         }
     }
@@ -288,11 +323,12 @@
     }
 
     &__img {
+        position: absolute;
+        right: 0;
         display: block;
-        width: calc(50% + 180px);
+        width: calc(50% + 120px);
+        margin-left: -120px;
         height: 500px;
-        margin-top: 47px;
-        margin-left: -180px;
         flex: 0 0 auto;
         z-index: -1;
 
@@ -310,23 +346,66 @@
             width: 100%;
         }
 
+        &__item {
+            font-size: 16px;
+        }
+
         &__img {
             display: none;
+        }
+
+        &__more {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+
+        &__content {
+            padding-right: 20px;
+        }
+
+        &__title {
+            padding-left: 15px;
+        }
+
+        &__tab {
+            padding-left: 15px;
+        }
+
+        &__more {
+            margin-top: 52px;
         }
     }
 }
 
 .c-enjoy {
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
     width: 100%;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 800px;
+    }
 
     &__content {
         position: relative;
         display: flex;
         justify-content: center;
         padding-bottom: 20px;
+    }
+
+    &__card {
+        width: 100%;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     &__bg {
@@ -343,6 +422,17 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &__card {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        &__bg {
+            height: 146px;
+        }
     }
 }
 
@@ -372,6 +462,7 @@
 
     &__content {
         position: relative;
+        display: flex;
         width: 100%;
         max-width: 1020px;
         margin-left: auto;
@@ -387,16 +478,40 @@
 }
 
 .c-life {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 1200px;
-    border: 1px solid #DBDBDB;
-    background: #FFF;
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__wrap {
+        border: 1px solid #DBDBDB;
+        background: #FFF;
+    }
 
     &__content {
         display: flex;
     }
 
+    &__img {
+        display: block;
+        width: 752px;
+        height: 400px;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     &__introduce {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100%;
         max-width: 448px;
         padding: 40px 40px 40px 60px;
@@ -413,6 +528,78 @@
         flex-direction: column;
         font-size: 20px;
     }
+
+    &__more {
+        box-sizing: border-box;
+        display: flex;
+        height: 64px;
+        padding: 20px 40px 20px 60px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #DBDBDB;
+    }
+
+    &__rebate {
+        position: absolute;
+        top: 22px;
+        right: -60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #FFF;
+        background-color: #9B7BFF;
+    }
+
+    &__num {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        color: #919191;
+        padding-right: 20px;
+        border-right: 1px solid #DBDBDB;
+    }
+
+    @include medias.breakpoint-down("md") {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__introduce {
+            max-width: 100%;
+            padding: 20px 20px 20px 60px;
+        }
+
+        &__discount {
+            font-size: 18px;
+        }
+
+        &__action {
+            margin-top: 20px;
+        }
+
+        &__rebate {
+            top: 174px;
+            right: 0;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__more {
+            justify-content: flex-start;
+            padding: 20px;
+        }
+    }
 }
 
 .c-card {
@@ -424,6 +611,8 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+        max-width: 900px;
     }
 }
 
