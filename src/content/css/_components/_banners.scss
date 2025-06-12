@@ -436,6 +436,129 @@
     }
 }
 
+.c-savor {
+    width: 100%;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-height: 600px;
+        border-top: 1px solid #DBDBDB;
+        border-bottom: 1px solid #DBDBDB;
+    }
+
+    &__nav {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 68px 40px 40px;
+        margin-right: 0;
+        margin-left: auto;
+        border-right: 1px solid #DBDBDB;
+    }
+
+    &__item {
+        position: relative;
+        font-size: 14px;
+        color: #AD8F5E;
+        padding-left: 20px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 4px;
+            transform: translateY(-50%);
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #B9B9B9;
+        }
+
+        &.is-active {
+            color: #9B7BFF;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -2px;
+                transform: translateY(-50%);
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #CFC0FF;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 2px;
+                transform: translateY(-50%);
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #9B7BFF;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__panel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 572px;
+        height: 100%;
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        width: 820px;
+        height: 100%;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &.has-starbucksLogo {
+            &::before {
+                content: '';
+                position: absolute;
+                left: -50px;
+                top: 69px;
+                transform: translateY(-50%);
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-image: url(../../images/section/savor/starbucksLogo.png);
+                z-index: 10;
+            }
+        }
+    }
+}
+
 .c-finance {
     position: relative;
     width: 100%;
@@ -529,17 +652,6 @@
         font-size: 20px;
     }
 
-    &__more {
-        box-sizing: border-box;
-        display: flex;
-        height: 64px;
-        padding: 20px 40px 20px 60px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        border-top: 1px solid #DBDBDB;
-    }
-
     &__rebate {
         position: absolute;
         top: 22px;
@@ -562,10 +674,29 @@
         align-items: center;
     }
 
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
     &__item {
         color: #919191;
-        padding-right: 20px;
-        border-right: 1px solid #DBDBDB;
+        position: relative;
+
+        &+& {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                display: inline-block;
+                width: 1px;
+                height: 20px;
+                background-color: #DBDBDB;
+                transform: translateY(-50%);
+            }
+        }
     }
 
     @include medias.breakpoint-down("md") {

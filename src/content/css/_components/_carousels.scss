@@ -113,29 +113,28 @@
 }
 
 .c-carousel {
-    $root: &;
-    position: relative;
-
     @include nav;
 
+    $root: &;
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
 
-    @include medias.breakpoint-down("md") {
 
-    }
+    @include medias.breakpoint-down("md") {}
 
-    @include medias.breakpoint-down("sm") {
-
-    }
+    @include medias.breakpoint-down("sm") {}
 }
 
 .o-carouselNav {
     @include nav;
     position: absolute;
-    bottom: -120px;
+    bottom: -20px;
     right: 992px;
     display: flex;
     width: 92px;
     height: 40px;
+    z-index: 5;
 
     &__prev,
     &__next {
@@ -145,6 +144,12 @@
         height: 40px;
         flex: 0 0 auto;
         margin-top: 0;
+    }
+
+    &--savor {
+        top: 277px;
+        right: -47px;
+        transform: rotate(90deg);
     }
 
     @include medias.breakpoint-down("sm") {
