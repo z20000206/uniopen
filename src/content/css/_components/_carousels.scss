@@ -120,6 +120,17 @@
     margin-right: 0;
     margin-left: 0;
 
+    &--process {
+        .c-carousel__slide {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .c-carousel__slide:last-child {
+            width: 240px;
+        }
+    }
+
 
     @include medias.breakpoint-down("md") {}
 

@@ -49,6 +49,14 @@
     color: #FF8A3D;
 }
 
+.t-lh1 {
+    line-height: 1;
+}
+
+.t-lh12 {
+    line-height: 1.2;
+}
+
 .t-bg-wh {
     background-color: #FFF;
 }
@@ -69,12 +77,16 @@
     align-items: flex-end;
 }
 
+.t-noUnderline {
+    text-decoration: none;
+}
+
+.t-nowrap {
+    white-space: nowrap;
+}
+
 .u-hidden {
     @include bemit.regular() {
         display: none;
     }
-}
-
-.t-noUnderline {
-    text-decoration: none;
 }

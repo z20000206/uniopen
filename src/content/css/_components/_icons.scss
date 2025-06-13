@@ -11,9 +11,21 @@
     }
 
     &--arrow {
+        mask-image: url(../../images/icon/arrow-right.svg);
+    }
+
+    &--next {
+        width: 32px;
+        height: 32px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/next.svg);
+    }
+
+    &--nextSm {
         width: 24px;
         height: 24px;
-        mask-image: url(../../images/icon/arrow.svg);
+        background-color: FF8A3D;
+        mask-image: url(../../images/icon/next.svg);
     }
 
     &--external {
@@ -52,7 +64,7 @@
     }
 
     &--line {
-        width: 50px;
+        width: 40px;
         height: 11px;
         background-color: #9B7BFF;
         mask-image: url(../../images/icon/line.svg);
@@ -66,7 +78,7 @@
     }
 
     &--lineRight {
-        width: 50px;
+        width: 40px;
         height: 11px;
         background-color: #9B7BFF;
         mask-image: url(../../images/icon/lineRight.svg);
