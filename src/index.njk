@@ -29,9 +29,7 @@
                                     </div>
                                 </div>
                                 <div class="o-card">
-                                    <div class="o-card__img">
-                                        <img src="./content/images/section/kv/gold.png" alt="鈦金卡">
-                                    </div>
+                                    <div class="o-card__img" data-lottie="./content/images/section/kv/t.json"></div>
                                     <div class="o-card__name">
                                         <span>鈦金卡</span>
                                         <i class="o-icon o-icon--lineLg"></i>
@@ -996,7 +994,7 @@
                         <!-- 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !) -->
                         <div class="c-creditCard" data-view="desktop">
                             <div class="c-creditCard__img">
-                                <img src="./content/images/section/card/wordCard.jpg" alt="世界卡">
+                                <img src="./content/images/section/card/wordCard.png" alt="世界卡">
                             </div>
                             <div class="c-creditCard__content">
                                 <div class="c-creditCard__title">
@@ -1023,7 +1021,7 @@
                         <!-- 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !) -->
                         <div class="c-creditCard" data-view="desktop">
                             <div class="c-creditCard__img">
-                                <img src="./content/images/section/card/goldCard.jpg" alt="鈦金卡">
+                                <img src="./content/images/section/card/goldCard.png" alt="鈦金卡">
                             </div>
                             <div class="c-creditCard__content">
                                 <div class="c-creditCard__title">
@@ -1050,7 +1048,7 @@
                         <div class="c-creditCard u-hidden" data-view="mobile">
                             <div class="c-creditCatd__head u-flex u-m-auto">
                                 <div class="c-creditCard__img">
-                                    <img src="./content/images/section/card/wordCard.jpg" alt="世界卡">
+                                    <img src="./content/images/section/card/wordCard.png" alt="世界卡">
                                 </div>
                                 <div class="c-creditCard__title">
                                     <i class="c-creditCard__icon c-creditCard__icon--word"></i>
@@ -1079,7 +1077,7 @@
                         <div class="c-creditCard u-hidden" data-view="mobile">
                             <div class="c-creditCard__head u-flex u-m-auto">
                                 <div class="c-creditCard__img">
-                                    <img src="./content/images/section/card/goldCard.jpg" alt="鈦金卡">
+                                    <img src="./content/images/section/card/goldCard.png" alt="鈦金卡">
                                 </div>
                                 <div class="c-creditCard__title">
                                     <i class="c-creditCard__icon c-creditCard__icon--gold"></i>
@@ -1136,11 +1134,15 @@
         $('[data-section]').on('click', function (e) {
             e.preventDefault();
 
+            $('.o-hamburger').removeClass('is-active');
+            $('.c-menu').removeClass('is-active');
+            $('.l-header').removeClass('is-menuOpen');
+
             var targetId = $(this).attr('data-section');
             var $target = $('#' + targetId);
 
             if ($target.length) {
-                var headerHeight = 58;
+                var headerHeight = 68;
                 var offset = $target
                     .offset()
                     .top - headerHeight;
@@ -1148,9 +1150,11 @@
                 if (offset < 0) 
                     offset = 0;
                 
-                $('html, body').animate({
-                    scrollTop: offset
-                }, 500);
+                setTimeout(function () {
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 500);
+                }, 300);
             }
         });
 
@@ -1180,15 +1184,43 @@
             },
 
             on: {
-                slideChangeTransitionStart() {
+                init: function (swiper) {
+                    heightDetect(swiper);
+
+                    const index = swiper.realIndex;
+                    $('.c-savor__item')
+                        .removeClass('is-active')
+                        .eq(index)
+                        .addClass('is-active');
+                },
+
+                slideChangeTransitionStart: function () {
                     const index = this.realIndex;
                     $('.c-savor__item')
                         .removeClass('is-active')
                         .eq(index)
                         .addClass('is-active');
+                },
+
+                slideChange: function (swiper) {
+                    heightDetect(swiper);
+                },
+
+                setTranslate: function (swiper, translate) {
+                    console.log('目前 translate：', translate);
                 }
             }
+
         });
+
+        function heightDetect(swiper) {
+            var $slider = $('[data-swiper="savor"]');
+            var $currentSlide = $(swiper.slides[swiper.activeIndex]);
+            var $currentSlideItem = $currentSlide
+                .children()
+                .eq(0);
+            $slider.height($currentSlideItem.outerHeight());
+        }
 
         const savorSwiper = new Swiper('[data-swiper="savor"]', savorSettings);
         $('.c-savor__item').on('click', function () {

@@ -121,9 +121,11 @@
     margin-left: 0;
 
     &--savor {
+        transition: 0.5s;
+
         @at-root & #{$root} {
             &__slide {
-                height: fit-content !important;
+                // height: fit-content !important;
             }
 
             &__wrapper {

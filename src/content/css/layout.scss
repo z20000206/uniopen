@@ -152,10 +152,6 @@ body {
          gap: 28px;
       }
 
-      &__menu {
-         display: none;
-      }
-
       &__hamburger {
          display: flex;
       }
@@ -219,6 +215,123 @@ body {
             width: 104px;
             height: 18px;
          }
+      }
+   }
+}
+
+.c-menu {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+
+   &__item {
+      position: relative;
+      text-decoration: none;
+   }
+
+   &__share {
+      display: none;
+      width: 100%;
+      margin-top: 60px;
+   }
+
+   @include medias.breakpoint-down("md") {
+      position: fixed;
+      box-sizing: border-box;
+      top: 58px;
+      right: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      width: 100%;
+      height: 100vh;
+      background: url(../images/section/menu/bg.jpg) no-repeat bottom/cover;
+      transition: 0.3s;
+
+      &__item {
+         font-size: 20px;
+
+         &+& {
+            &::before {
+               content: none;
+            }
+         }
+      }
+
+      &__share {
+         display: block;
+      }
+
+      &.is-active {
+         right: 0;
+      }
+   }
+}
+
+.c-share {
+   width: 100%;
+
+   @include medias.breakpoint-down("md") {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &__title {
+         position: relative;
+         font-size: 18px;
+         text-align: center;
+         width: 100%;
+
+         &::before,
+         &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(50% - 36px);
+            height: 1px;
+            background: #CFC0FF;
+         }
+
+         &::after {
+            right: 0;
+         }
+      }
+
+      &__content {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         gap: 40px;
+      }
+
+      &__item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 10px;
+         text-decoration: none;
+      }
+
+      &__img {
+         display: block;
+         width: 48px;
+         height: 48px;
+         flex: 0 0 auto;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      &__name {
+         font-size: 14px;
+         color: #919191;
       }
    }
 }
