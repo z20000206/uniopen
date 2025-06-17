@@ -42,4 +42,27 @@ const carouselSettings = {
 };
 
 // AOS
-AOS.init({ offset: 120, delay: 0, duration: 700, once: true });
+AOS.init({
+    offset: 120,
+    delay: 0,
+    duration: 700,
+    once: true
+});
+
+// lottie 動畫
+$('[data-lottie]').each(function () {
+    lottie.loadAnimation({
+        container: this,
+        animType: 'svg',
+        loop: true,
+        autoplay: false,
+        path: $(this).data('lottie'),
+    }).play();
+});
+
+// loading
+$(window).on('load', function () {
+    $('[data-loading]').fadeOut(300, function () {
+        $(this).remove();
+    });
+});

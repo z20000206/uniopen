@@ -11,7 +11,7 @@
 
     &--sm {
         padding: 4px 8px;
-    }   
+    }
 
     &--lg {
         display: flex;
@@ -23,6 +23,33 @@
     @media (hover: hover) {
         &:hover {
             background: #987A49;
+        }
+    }
+}
+
+.o-btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 16px 8px 12px;
+    width: 136px;
+    border-radius: 100px;
+    border: 1px solid #AD8F5E;
+    background: #FFF;
+    cursor: pointer;
+
+    &__text {
+        color: #AD8F5E;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border: 1px solid #987A49;
+
+            &__text {
+                color: #987A49;
+            }
         }
     }
 }

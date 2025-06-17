@@ -120,28 +120,50 @@
     margin-right: 0;
     margin-left: 0;
 
-    &--process {
-        .c-carousel__slide {
-            width: 320px;
-            flex-shrink: 0;
-        }
+    &--savor {
+        @at-root & #{$root} {
+            &__slide {
+                height: fit-content !important;
+            }
 
-        .c-carousel__slide:last-child {
-            width: 240px;
+            &__wrapper {
+                height: 100%;
+            }
         }
     }
 
+    &--finance {
+        @at-root & #{$root} {
+            &__slide {
+                width: 300px;
+                flex-shrink: 0;
+            }
+        }
 
-    @include medias.breakpoint-down("md") {}
+        &--process {
+            @at-root & #{$root} {
+                &__slide {
+                    width: 320px;
+                    flex-shrink: 0;
+                }
 
-    @include medias.breakpoint-down("sm") {}
+                &__slide:last-child {
+                    width: 240px;
+                }
+            }
+        }
+
+
+        @include medias.breakpoint-down("md") {}
+
+        @include medias.breakpoint-down("sm") {}
+    }
 }
 
 .o-carouselNav {
     @include nav;
     position: absolute;
-    bottom: -20px;
-    right: 992px;
+    bottom: -104px;
     display: flex;
     width: 92px;
     height: 40px;
@@ -163,7 +185,14 @@
         transform: rotate(90deg);
     }
 
+    @include medias.breakpoint-down("md") {
+        &--savor {
+            display: none;
+        }
+    }
+
     @include medias.breakpoint-down("sm") {
+        bottom: -440px;
         width: 100px;
         height: 40px;
     }
