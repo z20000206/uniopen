@@ -1,9 +1,11 @@
+@use "./_mixins/medias"as medias;
+
 .o-btn {
     box-sizing: border-box;
     display: inline-block;
     padding: 8px 16px;
+    font-size: 20px;
     color: #fff;
-    font-weight: bold;
     background: #AD8F5E;
     border: 1px solid transparent;
     transition: 0.3s;
@@ -16,8 +18,12 @@
     &--lg {
         display: flex;
         justify-content: center;
-        width: 120px;
+        width: 122px;
         padding: 12px 20px;
+    }
+
+    @include medias.breakpoint-down("sm") {
+        font-size: 16px;
     }
 
     @media (hover: hover) {

@@ -3,8 +3,11 @@
 
 html,
 body {
-   width: 100vw;
    height: 100%;
+}
+
+body {
+   overflow-x: hidden;
 }
 
 .l-container {
@@ -190,7 +193,7 @@ body {
       width: 110px;
       height: 30px;
       flex: 0 0 auto;
-      object-fit: cover;
+      object-fit: contain;
 
       img {
          width: 100%;
@@ -369,7 +372,7 @@ body {
    &::before,
    &::after {
       content: "";
-      width: 35px;
+      width: 17px;
       height: 1px;
       border-radius: 100px;
       background: #000;
@@ -378,17 +381,11 @@ body {
 
    &.is-active {
       &::before {
-         transform: translateY(3px) rotateZ(15deg);
+         transform: translateY(3px) rotateZ(45deg);
       }
 
       &::after {
-         transform: translateY(-3px) rotateZ(-15deg);
-      }
-   }
-
-   @media (hover: hover) {
-      &:hover {
-         transform: scaleY(-1);
+         transform: translateY(-3px) rotateZ(-45deg);
       }
    }
 }

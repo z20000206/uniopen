@@ -57,9 +57,9 @@
                                         <div class="c-infoData__text">2025/7/11~2025/9/30於家樂福官網/App專屬線上申辦網址首次申辦，並於核卡後30天內於家樂福實體賣場刷滿1,000元，加碼送100元家樂福電子折價券</div>
                                         <div class="c-infoData__icon">
                                             <a href="#" class="o-iconBox">
-                                                <div class="o-iconBox__text">了解更多</div>
+                                                <div class="o-iconBox__text">立即申辦</div>
                                                 <div class="o-iconBox__icon">
-                                                    <i class="o-icon o-icon--arrow">立即申辦</i>
+                                                    <i class="o-icon o-icon--arrow"></i>
                                                 </div>
                                             </a>
                                         </div>
@@ -81,9 +81,9 @@
                                         </div>
                                         <div class="c-infoData__icon">
                                             <a href="#" class="o-iconBox">
-                                                <div class="o-iconBox__text">了解更多</div>
+                                                <div class="o-iconBox__text">立即申辦</div>
                                                 <div class="o-iconBox__icon">
-                                                    <i class="o-icon o-icon--arrow">立即申辦</i>
+                                                    <i class="o-icon o-icon--arrow"></i>
                                                 </div>
                                             </a>
                                         </div>
@@ -247,9 +247,9 @@
                         <div class="c-event__info">
                             <table class="c-table">
                                 <colgroup>
-                                    <col width="auto">
-                                    <col width="auto">
-                                    <col width="auto">
+                                    <col width="33%">
+                                    <col width="33%">
+                                    <col width="33%">
                                 </colgroup>
                                 <thead>
                                     <tr>
@@ -399,7 +399,7 @@
                     <div class="c-event__content">
                         <div class="c-event__title">市區停車</div>
                         <div class="c-event__text">世界卡刷卡消費達指定門檻、免費市區停車每日最高2小時</div>
-                        <div class="c-event__notice">*市區停車詳情請參照中國信託銀行<a href="o-link">市區停車權益網頁</a>公告為主</div>
+                        <div class="c-event__notice">*市區停車詳情請參照中國信託銀行<a href="#" class="o-link">市區停車權益網頁</a>公告為主</div>
                     </div>
                 </div>
             </div>

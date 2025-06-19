@@ -1,3 +1,5 @@
+@use "./_mixins/medias"as medias;
+
 .c-list {
     $root: &;
 
@@ -79,6 +81,20 @@
                         background-color: #FF8A3D;
                     }
                 }
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &__item {
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 21px;
+
+            &::before,
+            &::after {
+                top: 9.5px;
+                left: 8.5px;
             }
         }
     }

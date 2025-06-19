@@ -5,6 +5,7 @@
     width: 24px;
     height: 24px;
     background-color: #AD8F5E;
+    transition: .3s;
 
     mask: {
         repeat: no-repeat;
@@ -13,6 +14,7 @@
     }
 
     &--arrow {
+        margin-top: 1px;
         mask-image: url(../../images/icon/arrow-right.svg);
     }
 
@@ -31,6 +33,7 @@
     }
 
     &--external {
+        margin-bottom: 4px;
         width: 24px;
         height: 24px;
         mask-image: url(../../images/icon/external.svg);
@@ -111,9 +114,19 @@
     color: #AD8F5E;
     transition: 0.3s;
 
+    &--wh {
+        color: #FFF;
+    }
+
     @media (hover: hover) {
         &:hover {
             color: #987A49;
+
+            .o-iconBox__icon {
+                .o-icon {
+                    background-color: #987A49;
+                }
+            }
         }
     }
 }

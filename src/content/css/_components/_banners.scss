@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 
     &__head {
         position: relative;
@@ -22,7 +22,9 @@
     }
 
     &__date {
+        font-size: 16px;
         color: #919191;
+        text-align: center;
     }
 
     &__discount {
@@ -50,8 +52,6 @@
         }
 
         &__discount {
-            font-size: 18px;
-
             &--process {
                 text-align: center;
             }
@@ -73,14 +73,22 @@
 
     &__content {
         display: flex;
+        gap: 40px;
     }
 
     &__item {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 0 80px;
+        gap: 40px;
+        padding: 40px 0 40px 40px;
+        width: 600px;
         flex: 1 1 auto;
+
+        &--card {
+            align-items: center;
+            padding: 0 40px;
+        }
     }
 
     &__introduce {
@@ -135,7 +143,7 @@
         height: 80px;
         color: #9B7BFF;
         border-radius: 205.128px;
-        border: 1.026px dashed #9B7BFF;
+        border: 1.026px dashed #CFC0FF;
 
         &::after {
             content: '';
@@ -203,18 +211,28 @@
         }
 
         &__item {
+            width: 350px;
+            gap: 0;
             padding: 0;
 
             &--card {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                gap: 40px;
                 padding: 0;
             }
         }
 
         &__scroll {
+            font-size: 14px;
+            width: 70px;
+            height: 70px;
             margin-top: 70px;
+
+            &::before {
+                height: 50px;
+            }
         }
     }
 }
@@ -306,7 +324,7 @@
         justify-content: flex-end;
         padding-top: 40px;
         padding-bottom: 28px;
-        width: 55%;
+        width: 54.7%;
         min-height: 500px;
         background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
     }
@@ -442,7 +460,7 @@
         width: 100%;
         max-width: 800px;
         height: 190px;
-        background: var(--Linear, linear-gradient(90deg, #E3CFAD 0.03%, #BB975D 99.97%));
+        background: var(--Linear, linear-gradient(90deg, #BB975D 0.03%, #E3CFAD 99.97%));
         z-index: -1;
     }
 
@@ -635,7 +653,7 @@
 
         &__img {
             width: 100%;
-            height: 100%;
+            height: 390px;
 
             &.has-starbucksLogo {
                 &::before {
@@ -777,7 +795,6 @@
         height: 100px;
         padding: 10px;
         font-size: 20px;
-        font-weight: 500;
         color: #FFF;
         background-color: #9B7BFF;
     }
@@ -924,7 +941,7 @@
         gap: 80px;
         white-space: nowrap;
         margin-left: 259px;
-        padding: 40px;
+        padding: 40px 0 40px 40px;
         border-left: 1px solid #DBDBDB;
     }
 

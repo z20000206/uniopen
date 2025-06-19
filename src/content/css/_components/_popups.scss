@@ -5,6 +5,7 @@
     bottom: 0;
     left: 0;
     background: url(../../images/popup/bg.png) no-repeat center / cover;
+    background-color: #FFF;
     opacity: 1;
 
     @include medias.breakpoint-down('sm') {
@@ -64,7 +65,9 @@
     @include medias.breakpoint-down("md") {
         padding: 20px 15.5px 20px 0;
         width: 100%;
-        max-width: 576px;
+        max-width: 370px;
+        margin-top: 0;
+        margin-bottom: 0;
 
         &__content {
             padding-right: 15.5px;
@@ -156,7 +159,7 @@
     }
 
     &__title {
-        width: calc(100% / 3);
+        width: calc(40% - 3px);
         padding: 16px 20px;
         background: #FAF5EB;
         border-right: 1px solid #DBDBDB;
@@ -167,7 +170,9 @@
         flex-direction: column;
         gap: 10px;
         padding: 16px 20px;
-        width: calc(100% / 3) * 2;
+        width: 60%;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     &__notice {
@@ -179,19 +184,29 @@
         &__item {
             &--col {
                 flex-direction: column;
+
+                @at-root & #{$root} {
+                    &__title {
+                        width: 100%;
+                        border-right: none;
+                        border-bottom: 1px solid #DBDBDB;
+                    }
+
+                    &__content {
+                        width: 100%;
+                    }
+                }
             }
         }
 
         &__title {
             box-sizing: border-box;
-            width: 100%;
-            border-right: 0;
-            border-bottom: 1px solid #DBDBDB;
+            border-right: 1px solid #DBDBDB;
+            border-bottom: none;
         }
 
         &__content {
             box-sizing: border-box;
-            width: 100%;
         }
     }
 }
@@ -215,6 +230,8 @@
         padding-left: 21px;
 
         &--alpha {
+            padding-left: 18px;
+
             @at-root & #{$root} {
                 &__item {
                     list-style: lower-alpha;

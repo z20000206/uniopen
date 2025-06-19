@@ -132,6 +132,8 @@
     }
 
     &--finance {
+        margin-left: 20px;
+
         @at-root & #{$root} {
             &__slide {
                 width: 300px;
@@ -141,7 +143,15 @@
 
         @include medias.breakpoint-down("md") {}
 
-        @include medias.breakpoint-down("sm") {}
+        @include medias.breakpoint-down("sm") {
+            @at-root & #{$root} {
+                &__slide {
+                    width: 232px;
+                    height: 388px;
+                    flex-shrink: 0;
+                }
+            }
+        }
     }
 
     &--process {
@@ -159,6 +169,8 @@
 }
 
 .o-carouselNav {
+    $root: &;
+
     @include nav;
     position: absolute;
     bottom: -104px;
@@ -175,12 +187,28 @@
         height: 40px;
         flex: 0 0 auto;
         margin-top: 0;
+
+        &::after {
+            content: '';
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__next {
+        right: 10px !important;
     }
 
     &--savor {
         top: 277px;
         right: -47px;
         transform: rotate(90deg);
+
+        @at-root & #{$root} {
+            &__next {
+                right: 2px !important;
+            }
+        }
     }
 
     @include medias.breakpoint-down("md") {
@@ -190,7 +218,7 @@
     }
 
     @include medias.breakpoint-down("sm") {
-        bottom: -516px;
+        bottom: -466px;
         width: 100px;
         height: 40px;
     }

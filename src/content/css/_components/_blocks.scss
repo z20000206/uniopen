@@ -70,6 +70,7 @@
 
         &--finance {
             margin-top: 0;
+            margin-bottom: 90px;
         }
 
         &--card {
@@ -94,7 +95,7 @@
 
             &--discount {
                 margin: 0;
-                padding-top: 80px;
+                padding-top: 60px;
                 padding-bottom: 127px;
             }
 
@@ -123,11 +124,11 @@
 
             &--card {
                 margin-top: 0;
-                padding-top: 120px;
                 padding-bottom: 80px;
+                background: url(../../images/section/card/bgSm.jpg) no-repeat top/cover;
             }
 
-            &--novice {
+            &--notice {
                 margin-top: 0;
             }
         }
