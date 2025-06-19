@@ -161,8 +161,11 @@
                 flex-shrink: 0;
             }
 
-            &__slide:last-child {
-                width: 240px;
+            &__slide {
+                &:last-of-type {
+                    width: 240px;
+                    margin-right: 70px;
+                }
             }
         }
     }
@@ -214,6 +217,10 @@
     @include medias.breakpoint-down("md") {
         &--savor {
             display: none;
+        }
+
+        &--finance {
+            
         }
     }
 

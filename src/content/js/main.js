@@ -46,8 +46,7 @@ AOS.init({
     offset: 120,
     delay: 0,
     duration: 700,
-    once: true,
-    disable: 'mobile'
+    once: true
 });
 
 // lottie 動畫
@@ -67,3 +66,4 @@ $(window).on('load', function () {
         $(this).remove();
     });
 });
+

@@ -608,20 +608,21 @@
         }
 
         &__nav {
-            flex-direction: row;
-            margin: 0 auto;
-            padding: 20px;
-            border: none;
-            overflow-x: auto;
-            scrollbar-width: none;
+            box-sizing: border-box;
             position: sticky;
             top: 57px;
             left: 0;
             right: 0;
+            flex-direction: row;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
             background: #fff;
             border: none;
             border-bottom: 1px solid #DBDBDB;
             z-index: 99;
+            overflow-x: auto;
+            scrollbar-width: none;
         }
 
         &__item {
