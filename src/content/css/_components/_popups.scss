@@ -1,0 +1,234 @@
+@use "../_mixins/medias"as medias;
+
+.mfp-bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: url(../../images/popup/bg.png) no-repeat center / cover;
+    opacity: 1;
+
+    @include medias.breakpoint-down('sm') {
+        background: url(../../images/popup/bgSm.png) no-repeat center / cover;
+    }
+}
+
+.c-modal {
+    $root: &;
+
+    box-sizing: border-box;
+    position: relative;
+    width: 854px;
+    max-height: 550px;
+    margin: auto;
+    margin-top: 110px;
+    margin-bottom: 60px;
+    padding: 40px 18.5px 40px 0;
+    border: 1px solid #DBDBDB;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__title {
+        padding-bottom: 16px;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 1px solid #C9C9C9;
+    }
+
+    &__content {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-right: 18.5px;
+        width: 100%;
+        max-height: 470px;
+        overflow-y: auto;
+    }
+
+    &__close {
+        &.mfp-close {
+            top: -50px;
+            right: -1px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: url(../../images/popup/close.png) no-repeat center/contain;
+            opacity: 1;
+        }
+    }
+
+    @include medias.breakpoint-down("md") {
+        padding: 20px 15.5px 20px 0;
+        width: 100%;
+        max-width: 576px;
+
+        &__content {
+            padding-right: 15.5px;
+            max-height: 520px;
+        }
+    }
+}
+
+@include medias.breakpoint-down("md") {
+    .mfp-container {
+        padding: 0 20px;
+    }
+}
+
+.c-event {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__item {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    &__icon {
+        position: relative;
+        top: 8px;
+    }
+
+    &__tag {
+        display: flex;
+        padding: 4px 10px 6px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.2;
+        color: #9B7BFF;
+        border-radius: 20px;
+        border: 1px solid #CFC0FF;
+        background: #FFF;
+    }
+
+    &__info {
+        margin-top: 20px;
+    }
+
+    &__date {
+        color: #919191;
+    }
+
+    &__notice {
+        font-size: 14px;
+        color: #919191;
+    }
+}
+
+.c-infoData {
+    $root: &;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+
+    &__item {
+        display: flex;
+
+        &+& {
+            border-top: 1px solid #DBDBDB;
+        }
+    }
+
+    &__title {
+        width: calc(100% / 3);
+        padding: 16px 20px;
+        background: #FAF5EB;
+        border-right: 1px solid #DBDBDB;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px 20px;
+        width: calc(100% / 3) * 2;
+    }
+
+    &__notice {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    @include medias.breakpoint-down("md") {
+        &__item {
+            &--col {
+                flex-direction: column;
+            }
+        }
+
+        &__title {
+            box-sizing: border-box;
+            width: 100%;
+            border-right: 0;
+            border-bottom: 1px solid #DBDBDB;
+        }
+
+        &__content {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+}
+
+.c-warn {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 40px;
+    margin-left: 50px;
+
+    &__title {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 21px;
+
+        &--alpha {
+            @at-root & #{$root} {
+                &__item {
+                    list-style: lower-alpha;
+                }
+            }
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+        color: #919191;
+    }
+
+    @include medias.breakpoint-down("md") {
+        margin-left: 30px;
+    }
+}

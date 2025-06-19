@@ -1,0 +1,970 @@
+<!-- 專屬禮遇 -->
+<div id="discountpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>限時加碼</span>
+                            <div class="c-event__tag">限量71,111名</div>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/7/15</div>
+                        <div class="c-event__text">核卡30天內首刷滿711元最高送OPENPOINT<span class="t-og"> 711</span>點</div>
+                        <div class="c-event__notice">*需申請電子帳單及申辦自動代扣繳帳單方符合回饋資格</div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>新卡新戶禮</span>
+                            <div class="c-event__tag">限量71,111名</div>
+                        </div>
+                        <div class="c-event__date">2025/7/16~2025/9/30</div>
+                        <div class="c-event__text">核卡30天內，刷滿711元最高送OPENPOINT<span class="t-og"> 500</span>點</div>
+                        <div class="c-event__list">
+                            <div class="c-list c-list--sm">
+                                <div class="c-list__item">新戶OPENPOINT 500點</div>
+                                <div class="c-list__item c-list__item--og">新卡OPENPOINT 100點</div>
+                            </div>
+                        </div>
+                        <div class="c-event__notice">*假字假字假字假字假字，假字假字假字假字假字</div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+
+                        <div class="c-event__title">
+                            <span>專屬好禮</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/9/30</div>
+                        <div class="c-event__text">新朋友首刷加碼禮自由選</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item c-infoData__item--col">
+                                    <div class="c-infoData__title">家樂福<br>送100元家樂福電子折價券</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">2025/7/11~2025/9/30於家樂福官網/App專屬線上申辦網址首次申辦，並於核卡後30天內於家樂福實體賣場刷滿1,000元，加碼送100元家樂福電子折價券</div>
+                                        <div class="c-infoData__icon">
+                                            <a href="#" class="o-iconBox">
+                                                <div class="o-iconBox__text">了解更多</div>
+                                                <div class="o-iconBox__icon">
+                                                    <i class="o-icon o-icon--arrow">立即申辦</i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item c-infoData__item--col">
+                                    <div class="c-infoData__title">星巴克<br>請客星巴克中杯那堤一杯</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">於星巴克官網/App專屬線上申辦網址首次申辦，符合活動回饋享三重優惠：</div>
+                                        <div class="c-infoData__list">
+                                            <ol class="c-infoList">
+                                                <li class="c-infoList__item">最高享回饋OPENPOINT 30倍<br>2025/7/11-2025/8/31以uniopen聯名卡綁定星巴克隨行卡自動儲值功能，享自動儲值消費OPENPOINT 30倍(含原uniopen指定優惠商店回饋)<br>
+                                                    <span class="t9 t-gy">*每人最高回饋150點<br>*限1萬名</span></li>
+                                                <li class="c-infoList__item">贈送 24OZ女神圓蓋TOGO冷水杯乙個<br>贈送 24OZ女神圓蓋TOGO冷水杯乙個 2025/7/11-2025/9/30於星巴克APP完成星禮程會員與uniopen會員帳號連結及透過uniopen聯名卡綁定星巴克自動儲值功能，且自動儲值消費金額累積達5,000元(含)以上送24OZ女神圓蓋TOGO冷水杯乙個(價值780元)<br>
+                                                    <span class="t9 t-gy">*限量5,000名</span></li>
+                                                <li class="c-infoList__item">請客星巴克中杯那堤一杯<br>2025/7/11-2025/12/31於星巴克消費/儲值任一筆，可獲得星巴克中杯那堤一杯(價值125元)<br>
+                                                    <span class="t9 t-gy">*限量3萬名</span></li>
+                                            </ol>
+                                        </div>
+                                        <div class="c-infoData__icon">
+                                            <a href="#" class="o-iconBox">
+                                                <div class="o-iconBox__text">了解更多</div>
+                                                <div class="o-iconBox__icon">
+                                                    <i class="o-icon o-icon--arrow">立即申辦</i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">本活動信用卡申請書收件日於2025/7/11~2025/9/30(含)前且核准日須為2026/10/15(含)前核卡。</li>
+                        <li class="c-warn__item">刷卡消費認定皆需以該新卡刷卡消費為準，累計消費正、附卡合併計算，且消費金額計算為符合活動說明之核卡天數內之累計刷卡消費始得列入計算。</li>
+                        <li class="c-warn__item">刷卡消費認定不包含預借現金、基金申購、退貨、帳單分期(含長期循環轉換分期)、學費、繳稅、繳稅分期、學費分期、信用卡年費、信用卡相關手續費、利息及違約金等等，如為分期交易以全額請款金額認列。</li>
+                        <li class="c-warn__item">本活動新戶定義本次申辦前12個月內未曾持有任何中國信託信用卡正卡(不含簽帳金融卡)之客戶。每位新戶限參加一種信用卡新戶禮活動，若同時申辦兩種以上產品或同時申辦兩次以上同產品者，依核卡日、申請序號及卡種排序較前者判斷應適用之活動，卡種排序原則【uniopen聯名卡>遠東SOGO>LINE Pay>中油>和泰>華航卡商御卡>秀泰>101>Global Mall>南紡>大高>中信兄弟>漢神>中華電信>勤美>家扶>慈濟>紙風車>學學>商旅鈦金>英雄聯盟>ALL<br>ME>LaLaport>Agoda> >foodpanda】，排序若有異動請以本行網站最新公告為準，客戶如有指定符合該活動辦法之贈品者依其指定，其他情況視同同意由本行指定贈品；新卡定義為首次申辦uniopen聯名卡正卡者，即本次申辦日前未曾持有任一uniopen聯名卡正卡者，即未曾持有該產品任一卡別、卡種者。</li>
+                        <li class="c-warn__item">新戶/新卡回饋將於後將於符合資格後兩個月內撥入正卡人已完成連結之uniopen會員帳號內，回饋之OPENPOINT 以 OPENPOINT APP 揭露為準。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 輕奢體驗 -->
+<div id="extravagantpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>國內消費回饋</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/9/30</div>
+                        <div class="c-event__text">完成指定任務最高回饋OPENPOINT<span class="t-og"> 11%</span></div>
+                        <div class="c-event__notice">*需申請電子帳單及申辦自動代扣繳帳單方符合回饋資格</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">回饋項目</div>
+                                    <div class="c-infoData__content t-bg-yl">
+                                        <div class="c-infoData__text">回饋內容</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">一般消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">OPENPOINT 1%</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">統一集團品牌</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">OPENPOINT  2%</div>
+                                        <div class="c-infoData__notice">*每月回饋上限500點</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">踩點任務</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">完成uniopen會員連結，並登錄中信銀行app領券，每月於uniopen指定優惠商店消費：達2家回饋2%，達3家回饋3%，達4家(含)以上回饋4%</div>
+                                        <div class="c-infoData__notice">*每月限量5萬名、每月回饋上限500點</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">指定任務</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">使用家樂福錢包綁定uniopen聯名卡至家樂福賣場消費，單筆刷滿250元(含)以上，最高回饋4%折價券</div>
+                                        <div class="c-infoData__notice">*每月回饋上限300元折價券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>國外消費回饋</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/9/30</div>
+                        <div class="c-event__text">完成指定任務最高回饋OPENPOINT<span class="t-og"> 11%</span></div>
+                        <div class="c-event__notice">*需申請電子帳單及申辦自動代扣繳帳單方符合回饋資格</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">回饋項目</div>
+                                    <div class="c-infoData__content t-bg-yl">
+                                        <div class="c-infoData__text">回饋內容</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">指定國家消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">完成uniopen會員連結，並登錄中信銀行app領券。於日本、韓國、泰國、越南、菲律賓國外實體商店消費加碼最高回饋8%</div>
+                                        <div class="c-infoData__notice">*每月限量5萬名、每月回饋上限500點</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">國外實體商店消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">OPENPOINT  3%</div>
+                                        <div class="c-infoData__notice">*原消費回饋，回饋無上限</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">國外線上商店消費認定：網頁非以「tw」為網域名稱者，交易須收取國外交易手續費，相關費用依信用卡約定條款第十六條國外交易授權結匯辦理，請參閱本行信用卡約定條款約定。</li>
+                        <li class="c-warn__item">國外實體商店消費認定：該筆交易請款時，消費地或商店登記之國別碼於國外(非台灣)，且須為面對面交易(包括以實體卡、Apple Pay、Google Pay、Samsung Pay於實體商店支付)；網路交易、條碼支付或第三方支付恕不列入消費計算。相關交易判斷最終以中國信託銀行及國際組織系統資料為準。但如屬本行不回饋交易項目將不提供回饋。</li>
+                        <li class="c-warn__item">uniopen指定優惠商店消費及國外實體商店每月回饋上限計算方式為每月1日至月底日，uniopen聯名卡刷卡消費且已請款入帳完成之消費金額。</li>
+                        <li class="c-warn__item">參加uniopen優惠商店消費及日本、韓國、泰國、越南、菲律賓國外實體商店消費加碼活動，將於每月22日00:00開放領取優惠券，每月限量5萬名，舉例 : 參加2025/7/11~7/31活動須於2025/8/22 登錄領券，以此類推。</li>
+                        <li class="c-warn__item">符合消費回饋將於消費入帳後將正、附卡持卡人累積之OPENPOINT 合併計算後撥入正卡人已完成連結之uniopen會員帳號內，回饋之OPENPOINT 以 OPENPOINT APP 揭露為準。</li>
+                        <li class="c-warn__item">綁定家樂福錢包加碼活動注意事項說明：<br>
+                            <ol class="c-warn__list c-warn__list--alpha">
+                                <li class="c-warn__item">回饋金額以uniopen聯名卡綁定至家樂福錢包實際刷卡金額計算。</li>
+                                <li class="c-warn__item">本活動正附卡合併計算，每正卡歸戶每月限最高回饋家樂福300元現金折價券，以當月單筆超過250元之交易，逐筆金額加總計算回饋。如7月使用中國信託uniopen聯名卡綁定至家樂福錢包刷卡3筆，金額分別為100元、250元、995元，將回饋50元家樂福現金折價券(計算方式，250+995=1245，1245x4%=49.8，四捨五入回饋50元)</li>
+                                <li class="c-warn__item">參與活動前請先確認已下載中信銀行APP並註冊帳戶。家樂福現金折價券將以電子折價券型式發送至正卡持卡人之中信銀行APP帳戶，並於消費月之次次月中回饋，如2025/7/11~2025/7/31消費，將於2025/9/15前回饋；2025/8/1~2025/8/31消費，將於2025/10/15前回饋。</li>
+                                <li class="c-warn__item">限uniopen聯名卡綁定至家樂福錢包；分期付款適用本活動；實體卡消費或綁定Apple Pay、Google Pay等錢包支付、第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。</li>
+                                <li class="c-warn__item">折價券使用期間需於發送月當月月底前折抵使用完畢，如2025/09/15發送回饋，需於2025/09/30前折抵使用完畢，更多使用規則及限制依券上說明為準。</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 享樂日常 -->
+<div id="enjoypopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>開啟你的享樂日常</span>
+                        </div>
+                        <div class="c-event__text">消費回饋OPENPOINT無上限</div>
+                        <div class="c-event__info">
+                            <table class="c-table">
+                                <colgroup>
+                                    <col width="auto">
+                                    <col width="auto">
+                                    <col width="auto">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>國內一般消費</th>
+                                        <th>國外非實體商店消費</th>
+                                        <th>國外實體商店消費</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>最高回饋1%</td>
+                                        <td>最高回饋2%</td>
+                                        <td>最高回饋3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">國外線上商店消費認定：網頁非以「tw」為網域名稱者，交易須收取國外交易手續費，相關費用依信用卡約定條款第十六條國外交易授權結匯辦理，請參閱本行信用卡約定條款約定。</li>
+                        <li class="c-warn__item">國外實體商店消費認定：該筆交易請款時，消費地或商店登記之國別碼於國外(非台灣)，且須為面對面交易(包括以實體卡、Apple Pay、Google Pay、Samsung Pay於實體商店支付)；網路交易、條碼支付或第三方支付恕不列入消費計算。相關交易判斷最終以中國信託銀行及國際組織系統資料為準。但如屬本行不回饋交易項目將不提供回饋。</li>
+                        <li class="c-warn__item">uniopen指定優惠商店消費及國外實體商店每月回饋上限計算方式為每月1日至月底日，uniopen聯名卡刷卡消費且已請款入帳完成之消費金額。</li>
+                        <li class="c-warn__item">參加uniopen優惠商店消費及日本、韓國、泰國、越南、菲律賓國外實體商店消費加碼活動，將於每月22日00:00開放領取優惠券，每月限量5萬名，舉例 : 參加2025/7/11~7/31活動須於2025/8/22 登錄領券，以此類推。</li>
+                        <li class="c-warn__item">符合消費回饋將於消費入帳後將正、附卡持卡人累積之OPENPOINT 合併計算後撥入正卡人已完成連結之uniopen會員帳號內，回饋之OPENPOINT 以 OPENPOINT APP 揭露為準。</li>
+                        <li class="c-warn__item">綁定家樂福錢包加碼活動注意事項說明：<br>
+                            <ol class="c-warn__list c-warn__list--alpha">
+                                <li class="c-warn__item">回饋金額以uniopen聯名卡綁定至家樂福錢包實際刷卡金額計算。</li>
+                                <li class="c-warn__item">本活動正附卡合併計算，每正卡歸戶每月限最高回饋家樂福300元現金折價券，以當月單筆超過250元之交易，逐筆金額加總計算回饋。如7月使用中國信託uniopen聯名卡綁定至家樂福錢包刷卡3筆，金額分別為100元、250元、995元，將回饋50元家樂福現金折價券(計算方式，250+995=1245，1245x4%=49.8，四捨五入回饋50元)</li>
+                                <li class="c-warn__item">參與活動前請先確認已下載中信銀行APP並註冊帳戶。家樂福現金折價券將以電子折價券型式發送至正卡持卡人之中信銀行APP帳戶，並於消費月之次次月中回饋，如2025/7/11~2025/7/31消費，將於2025/9/15前回饋；2025/8/1~2025/8/31消費，將於2025/10/15前回饋。</li>
+                                <li class="c-warn__item">限uniopen聯名卡綁定至家樂福錢包；分期付款適用本活動；實體卡消費或綁定Apple Pay、Google Pay等錢包支付、第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。</li>
+                                <li class="c-warn__item">折價券使用期間需於發送月當月月底前折抵使用完畢，如2025/09/15發送回饋，需於2025/09/30前折抵使用完畢，更多使用規則及限制依券上說明為準。</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 品味時光 -->
+<!-- startpopup -->
+<div id="startpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>星巴克</span>
+                        </div>
+                        <div class="c-event__info">
+                            <table class="c-table">
+                                <colgroup>
+                                    <col width="50%">
+                                    <col width="50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>買一送一</th>
+                                        <th>咖啡豆、咖啡用品享9折</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>每月第一個週一大杯</td>
+                                        <td>
+                                            <div class="c-table__content">
+                                                <span>每週四咖啡豆系列、咖啡用品(含包袋類)享9折</span>
+                                                <span class="t-rd">(部分聯名商品/特色門市商品不適用)</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">買1送1活動適用活動期間2025/7/11~2025/12/31每月第一個週一(8/4、9/1、10/6、11/3、12/1) 。</li>
+                        <li class="c-warn__item">購買咖啡商品9折優惠期間為2025/7/11~2025/12/31。</li>
+                        <li class="c-warn__item">咖啡豆、掛耳咖啡、即溶咖啡實際品項與數量依門市陳列實品為準，售完為止。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- parkingpopup -->
+<div id="parkingpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>星巴克</span>
+                        </div>
+                        <div class="c-event__text">百貨店內停車最高2小時免費</div>
+                        <div class="c-event__info">
+                            <table class="c-table">
+                                <colgroup>
+                                    <col width="33%">
+                                    <col width="33%">
+                                    <col width="33%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>家樂福</th>
+                                        <th>統一時代百貨</th>
+                                        <th>統一夢時代百貨</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>消費不限金額享1小時免費</td>
+                                        <td>消費滿500元享2小時免費</td>
+                                        <td>消費享2小時免費</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">市區停車</div>
+                        <div class="c-event__text">世界卡刷卡消費達指定門檻、免費市區停車每日最高2小時</div>
+                        <div class="c-event__notice">*市區停車詳情請參照中國信託銀行<a href="o-link">市區停車權益網頁</a>公告為主</div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">免費停車注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">統一夢時代百貨當日折抵2小時停車，正附卡停車優惠分開計算，單次折抵限用一張uniopen 聯名卡磁條過卡，且不與夢時代館內其他卡別優惠併用。</li>
+                        <li class="c-warn__item">家樂福汐科店、豐原店、北門店、大墩店不適用；家樂福超市店少數有停車場，請依照當店停車公告為主。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- dailypopup -->
+<div id="dailypopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>家樂福</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/7/15</div>
+                        <div class="c-event__text">消費最高回饋10%</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">1元加購OPEN好物</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">2025/8/1~2025/12/1活動期間每月1日家樂福品牌日，至家樂福賣場內使用uniopen聯名卡，單筆刷滿799元(含)以上，即可以1元加購「OPEN好物」一個</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">自有品牌日最高回饋10%</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">2025/10/01~2025/12/31活動期間家樂福量販店單筆刷滿「家樂福自有品牌商品」滿599元(含)以上，並使用家樂福錢包綁定uniopen聯名卡支付，最高可獲得家樂福60元現金折價券</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>生鮮商品</span>
+                        </div>
+                        <div class="c-event__date">2025/10/01~2025/12/31</div>
+                        <div class="c-event__text">購買「生鮮商品」單筆滿259元(含)以上，最高享10%回饋</div>
+                        <div class="c-event__list">
+                            <div class="c-list c-list--sm">
+                                <div class="c-list__item">家樂福量販店、超市店賣場內門市：最高可獲得家樂福26元現金折價券</div>
+                                <div class="c-list__item c-list__item--og">Mia C’bon門市：最高可享Mia C’bon 26元現金折價券</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">1元加購OPEN好物活動注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">正附卡合併計算，每正卡歸戶當日限加購一個、限消費原店加購。</li>
+                        <li class="c-warn__item">全臺量販店限量25,000個(依家樂福各門市配置數量為主)，OPEN好物將於收銀櫃檯結帳時直接領取。</li>
+                        <li class="c-warn__item">全臺超市店限量5,000個 (依家樂福各門市配置數量為主)，活動當日消費刷卡後，系統判斷符合活動規則，將存入OPEN好物商品加購券至正卡持卡人之家樂福APP會員帳戶，請於結帳前確認已啟用電子優惠券功能，並於當月月底前通知持有商品加購券之會員；收到通知後，請至原消費店出示商品加購券加購，恕不接受跨店加購。加購期間：當月20號至次月10號，如8月活動，回店加購期間為2025/8/20~2025/9/10。OPEN好物品以實物為主，數量有限，換完為止。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">自有品牌日活動注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">本活動正附卡合併計算，每正卡歸戶每日限回饋一次，每次最高回饋60元家樂福現金折價券。</li>
+                        <li class="c-warn__item">本活動單筆消費金額不含：家樂福生鮮商品、家樂福酒類商品、家樂福自有品牌“TEX”、家樂福量販商品提貨劵、儲值禮物卡、儲值家樂福錢包、預購、家樂福背心袋、垃圾專用袋。</li>
+                        <li class="c-warn__item">家樂福超市店、家樂福線上購物恕不適用。</li>
+                        <li class="c-warn__item">家樂福現金折價券將於收銀櫃檯結帳時直接領取；若選用電子優惠券，請至家樂福APP首頁＞現金折價券＞可使用檢視。</li>
+                        <li class="c-warn__item">若因系統異常導致無法立即給予現金折價券，請至服務中心登記，其回饋金額將換算成會員紅利點數，於消費日起往後二週內匯入會員帳戶，如2025/10/01消費，將於2025/10/15前匯入會員帳戶。</li>
+                        <li class="c-warn__item">家樂福現金折價券使用期間：消費日隔天開始使用7天，如2025/10/01消費回饋的折價券使用期限為2025/10/02~2025/10/08，更多使用規則及限制依券上說明為準。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">1元加購OPEN好物活動注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">正附卡合併計算，每正卡歸戶每日限回饋一次，每次最高回饋26元家樂福現金折價券，並以當日符合活動門檻第一筆消費金額回饋，家樂福量販店、超市店擇一參加。</li>
+                        <li class="c-warn__item">生鮮商品包含包含新鮮雞蛋、熟食、海鮮魚肉、蔬果、麵包、肉類商品，不含日配乳製品與專櫃寄賣食品。家樂福線上購物恕不適用。</li>
+                        <li class="c-warn__item">家樂福現金折價券及Mia C’bon、將於收銀櫃檯結帳時直接領取；若選用家樂福現金折價券電子優惠券，請至家樂福APP首頁＞現金折價券＞可使用檢視。</li>
+                        <li class="c-warn__item">Mia C’bon不適用店別：台北大葉店、台北林森店、永和比漾店、中壢SOGO店、新竹大遠百店、台中中友店、高雄義享店、Dream Plaza店。</li>
+                        <li class="c-warn__item">若因系統異常導致無法立即給予現金折價券，請至服務中心登記，其回饋金額將換算成會員紅利點數，於消費日起往後二週內匯入會員帳戶，如2025/10/01消費，將於2025/10/15前匯入會員帳戶。</li>
+                        <li class="c-warn__item">若因退貨而導致原購買金額減少，不符合本活動折價券發送門檻，需於退貨時一併將折價券退回，否則不接受退貨。</li>
+                        <li class="c-warn__item">家樂福現金折價券使用期間：消費日隔天開始使用7天，如2025/10/01消費回饋的折價券使用期限為2025/10/02~2025/10/08，更多使用規則及限制依券上說明為準。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- foodpopup -->
+<div id="foodpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>輕食美饌</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/12/31</div>
+                        <div class="c-event__text">假字假字假字，假字假字假字假字假字假字</div>
+                        <div class="c-event__notice">*假字假字假字，假字假字假字假字假字假字假字假字假字</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">統一夢時代</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">指定餐館消費不限金額送OPENPOINT 8%(最高)</div>
+                                        <div class="c-infoData__notice">*適用每週六、日</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">Mister Donut%</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">甜甜圈、點心、現做飲品買4送2</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">COLD STONE</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">買1送1(中杯以上)</div>
+                                        <div class="c-infoData__notice">*適用每週五</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">聖娜多堡</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">消費滿250元折30元</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">21世紀風味館</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">消費滿400元折50元</div>
+                                        <div class="c-infoData__notice">*適用每週五</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">聖德科斯</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">消費滿888元折50元</div>
+                                        <div class="c-infoData__notice">*適用每週日</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">統一夢時代滿額送OPENPOINT活動適用期間為2025/7/11~2025/12/31(每週六、日)指定用餐店櫃請依統一夢時代官網-活動公告與說明及夢時代指定用餐店櫃現場說明為準。每月每卡回饋上限200點OPENPOINT｜總贈點上限每月100萬點。</li>
+                        <li class="c-warn__item">Mister Donut買4送2活動適用期間為2025/7/11~2025/12/31，可挑選6個甜甜圈、點心、現做飲品，優先贈送其中2個價低品項，不可與其他行銷優惠合併使用。商品種類與數量以各門市現場供應為準，數量有限售完為止。7-ELEVEN門市Mister Donut專櫃、外送及預訂服務不適用本優惠。</li>
+                        <li class="c-warn__item">聖娜多堡滿250元折抵30元，需為單筆消費且消費商品僅限麵包、吐司、糕點、現煮飲品享優惠。恕無法折抵品項：乳品、香草小泡芙、禮盒、馬修嚴選商品、春上布丁蛋糕、法藍四季商品、吳寶春商品...等非Semeur聖娜品牌商品不列入折抵品項內。</li>
+                        <li class="c-warn__item">COLD STONE買1送1優惠活動期間為2025/7/11~2025/12/31(每週五) ，適用中杯以上(不含不含脆餅；價低者為優惠品項)，持實體信用卡，並全額支付方享優惠。冰淇淋口味以門市現有口味為主。本優惠每次限使用乙次乙組。本優惠限酷聖石冰淇淋直營門市使用，不適用外送平台與7-ELEVEN酷聖石複合店。</li>
+                        <li class="c-warn__item">21世紀風味館滿400元折50元活動期間為2025/7/11~2025/12/31(每週五)，適用優惠項目依店內公告為主。</li>
+                        <li class="c-warn__item">各優惠商店詳細優惠方案依各店公告為準。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- shoppingpopup -->
+<div id="shoppingpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>時尚購物</span>
+                        </div>
+                        <div class="c-event__date">2025/7/11~2025/12/31</div>
+                        <div class="c-event__text">假字假字假字，假字假字假字假字假字假字</div>
+                        <div class="c-event__notice">*假字假字假字，假字假字假字假字假字假字假字假字假字</div>
+                        <div class="c-event__info">
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">康是美</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">刷滿988送OPENPOINT 100點</div>
+                                        <div class="c-infoData__notice">*適用每週日</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">博客來</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">滿3,000送OPENPOINT 3%(最高)</div>
+                                        <div class="c-infoData__notice">*適用每週六、日</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">統一速邁樂</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">不限金額送OPENPOINT 5%(最高)</div>
+                                        <div class="c-infoData__notice">*適用每週四</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">BING sport/fit</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">滿額送OPENPOINT10%(最高)</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">ELEVEN</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">租借行動電源75折</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">DUSKIN</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">刷滿2,000元9折</div>
+                                        <div class="c-infoData__notice">*適用每週五、六、日</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">BEING spa</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">消費享9折優惠</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">博客來滿額送OPENPOINT 3%活動時間為2025/7/1-2025/12/31(每週六、日)並限定APP結帳。活動期間（以實際完成結帳流程之時間為準）於「博客來APP」購買全站商品(部分除外)單筆訂單實際消費滿3,000元且為成功交易者，博客來會員帳號已完成連結uniopen會員帳號將回饋OPENPOINT 3%。可多筆滿額訂單回饋，每月每會員帳號點數回饋上限200點，每月活動總回饋上限25,000點，額滿為止。額滿時間以博客來官網公告為準。</li>
+                        <li class="c-warn__item">統一速邁樂滿額送OPENPOINT 5%活動時間為2025/7/1-2025/12/31(每週四)，適用全台速邁樂加油中心(不含金門站)，需以實體卡整筆刷卡支付方享汽油發票金額之5%。</li>
+                        <li class="c-warn__item">OPENPOINT回饋(含原uniopen會員基本回饋0.33%)。本活動每月無回饋上限但限加入車輛油箱(提桶灌裝恕不適用)。</li>
+                        <li class="c-warn__item">租借行動電源租賃費用每小時12元，每日最高收費36元，未滿1小時者以1小時計費。租賃時信用卡需預先支付預授權金499元，如未於期限內歸還，該筆預授權金將不作退還。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- travelpopup -->
+<div id="travelpopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="c-event">
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>agoda訂房</span>
+                        </div>
+                        <div class="c-event__text">優惠9折起</div>
+                        <div class="c-event__info">
+                            <table class="c-table">
+                                <colgroup>
+                                    <col width="50%">
+                                    <col width="50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>鈦金卡</th>
+                                        <th>世界卡</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="c-table__content">
+                                                <span>享92折優惠</span>
+                                                <span class="t9 t-gy">*折扣上限USD30</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="c-table__content">
+                                                <span>享9折優惠</span>
+                                                <span class="t9 t-gy">*折扣上限USD30</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-event__item">
+                    <div class="c-event__icon">
+                        <div class="o-icon o-icon--lineChange"></div>
+                    </div>
+                    <div class="c-event__content">
+                        <div class="c-event__title">
+                            <span>日本消費最高回饋20%</span>
+                        </div>
+                        <div class="c-event__text">日本7-Eleven 單筆消費滿1,500日圓(含稅)，享300元日圓現金回饋</div>
+                        <div class="c-event__text">日本西武、SOGO單筆消費滿30,000日圓享3,000日圓現金回饋</div>
+                        <div class="c-event__text">日本環球影城單筆消費滿12,500日圓享2,500日圓現金回饋</div>
+                        <div class="c-event__more">
+                            <a href="#" class="o-iconBox">
+                                <div class="o-iconBox__text">更多優惠詳情</div>
+                                <div class="o-iconBox__icon">
+                                    <i class="o-icon o-icon--arrow"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">agoda訂房注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">訂房期間:即日起~2025/12/31；入住時間: 即日起~2026/12/31</li>
+                        <li class="c-warn__item">活動折扣僅適用於透過<a href="#" class="o-link">Agoda萬事達卡專屬活動頁面</a>，或透過網站和手機版網頁上指定連結 預訂的住宿。</li>
+                        <li class="c-warn__item">此優惠受Agoda相關條款限定，在出現爭議的情況下，將由Agoda及萬事達卡作出最終裁決。</li>
+                        <li class="c-warn__item">本促銷優惠僅適用於指定的預繳模式飯店，且須於線上支付房費（立即付款、延後扣款適用）, 請務必確認飯店搜尋頁面所顯示房型有「適用Mastecard TW Discount」標籤；到店付款之飯店/房型恕不適用此促銷優惠。</li>
+                        <li class="c-warn__item">本促銷優惠僅適用於稅前飯店房費，不包含當地稅項及服務費。</li>
+                        <li class="c-warn__item">本優惠由Mastecard信用卡國際組織提供，中國信託銀行僅代為轉達相關優惠訊息，持卡人對於相關活動內容如果有任何問題，請洽Mastecard信用卡國際組織。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">日本7-Eleven注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">2025年7月11日至2025年12月31日<br>
+                            <ol class="c-warn__list c-warn__list--alpha">
+                                <li class="c-warn__item">第一階段：2025年7月1日至9月30日（含首尾兩天）</li>
+                                <li class="c-warn__item">第二階段：2025年10月1日至12月31日（含首尾兩天）</li>
+                            </ol>
+                        </li>
+                        <li class="c-warn__item">7-11 Japan 優惠適用於線上及線下交易。</li>
+                        <li class="c-warn__item">活動期間內持卡人每個階段可享優惠一次。</li>
+                        <li class="c-warn__item">完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。 對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
+                        <li class="c-warn__item">如有任何爭議，萬事達卡將保留最終決定權，包括隨時暫停、更改或終止活動及其條款及細則，而毋須另行通知，所有優惠活動相關訊息以萬事達卡官方網站公告內容為準。</li>
+                        <li class="c-warn__item">本優惠由Mastecard信用卡國際組織提供，中國信託銀行僅代為轉達相關優惠訊息，持卡人對於相關活動內容如果有任何問題，請洽Mastecard信用卡國際組織。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">日本西武、SOGO注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">活動期間：2025/7/11-2025/12/31止<br>
+                            <ol class="c-warn__list c-warn__list--alpha">
+                                <li class="c-warn__item">第一階段：2025年7月1日至9月30日（含首尾兩天）</li>
+                                <li class="c-warn__item">第二階段：2025年10月1日至12月31日（含首尾兩天）</li>
+                            </ol>
+                        </li>
+                        <li class="c-warn__item">購買前需要前Mastercard Travel Rewards網站，透過符合資格的萬事達卡註冊並啟用優惠，<a href="#" class="o-link">立即註冊。</a>
+                        </li>
+                        <li class="c-warn__item">日本西武丶SOGO優惠只適用於線下交易活動期間內持卡人每個階段可享優惠一次。</li>
+                        <li class="c-warn__item">完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。 對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
+                        <li class="c-warn__item">如有任何爭議，萬事達卡將保留最終決定權，包括隨時暫停、更改或終止活動及其條款及細則，而毋須另行通知，所有優惠活動相關訊息以萬事達卡官方網站公告內容為準。</li>
+                        <li class="c-warn__item">本優惠由Mastecard信用卡國際組織提供，中國信託銀行僅代為轉達相關優惠訊息，持卡人對於相關活動內容如果有任何問題，請洽Mastecard信用卡國際組織。</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="c-warn">
+                <div class="c-warn__title">日本環球影城注意事項 : </div>
+                <div class="c-warn__content">
+                    <ol class="c-warn__list">
+                        <li class="c-warn__item">活動期間：2025/7/11-2025/12/31止<br>
+                            <ol class="c-warn__list c-warn__list--alpha">
+                                <li class="c-warn__item">第一階段：2025年7月1日至9月30日（含首尾兩天）</li>
+                                <li class="c-warn__item">第二階段：2025年10月1日至12月31日（含首尾兩天）</li>
+                            </ol>
+                        </li>
+                        <li class="c-warn__item">日本環球影城優惠適用於線下交易。</a>
+                    </li>
+                    <li class="c-warn__item">活動期間內持卡人每個階段可享優惠一次。</li>
+                    <li class="c-warn__item">完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。 對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
+                    <li class="c-warn__item">如有任何爭議，萬事達卡將保留最終決定權，包括隨時暫停、更改或終止活動及其條款及細則，而毋須另行通知，所有優惠活動相關訊息以萬事達卡官方網站公告內容為準。</li>
+                    <li class="c-warn__item">本優惠由Mastecard信用卡國際組織提供，中國信託銀行僅代為轉達相關優惠訊息，持卡人對於相關活動內容如果有任何問題，請洽Mastecard信用卡國際組織。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- morepopup -->
+<div id="morepopup" class="c-modal c-modal--sm mfp-hide">
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-event">
+            <div class="c-event__item">
+                <div class="c-event__icon">
+                    <div class="o-icon o-icon--lineChange"></div>
+                </div>
+                <div class="c-event__content">
+                    <div class="c-event__title">
+                        <span>國際機場接送/國際貴賓室</span>
+                    </div>
+                    <div class="c-event__text">假字假字假字，假字假字假字假字假字假字</div>
+                    <div class="c-event__info">
+                        <table class="c-table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>免費國際機場接送</th>
+                                    <th>免費國際貴賓室</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="c-table__content">
+                                            <span>每年最高2次</span>
+                                            <span class="t9 t-gy">*世界卡刷卡消費達指定門檻、國際機場免費接送最高1年2次</span>
+                                            <a href="#" class="o-iconBox" data-mfp-src="#morepopup">
+                                                <div class="o-iconBox__text">立即預約</div>
+                                                <div class="o-iconBox__icon">
+                                                    <i class="o-icon o-icon--arrow"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="c-table__content">
+                                            <span>每年最高4次</span>
+                                            <span class="t9 t-gy">*世界卡刷卡消費達指定門檻、國際貴賓室免費使用次數最高1年4次</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="c-event__item">
+                <div class="c-event__icon">
+                    <div class="o-icon o-icon--lineChange"></div>
+                </div>
+                <div class="c-event__content">
+                    <div class="c-event__title">
+                        <span>國外旅遊平安險</span>
+                    </div>
+                    <div class="c-event__text">刷uniopen聯名卡支付當次全額國際機票或8成以上國外團費，或全額公共運輸工具之票款，均可享高額旅行平安險保障。</div>
+                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="o-link">旅遊平安險權益網頁</a>公告為主。</div>
+                    <div class="c-event__info">
+                        <table class="c-table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>鈦金卡</th>
+                                    <th>世界卡</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2,000萬元</td>
+                                    <td>5,000萬元</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="c-event__item">
+                <div class="c-event__icon">
+                    <div class="o-icon o-icon--lineChange"></div>
+                </div>
+                <div class="c-event__content">
+                    <div class="c-event__title">
+                        <span>免費尊榮道路救援服務</span>
+                    </div>
+                    <div class="c-event__text">刷uniopen聯名卡達指定消費門檻享免費尊榮道路救援服務。</div>
+                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="o-link">道路救援服務權益網頁</a>公告為主。</div>
+                    <div class="c-event__info">
+                        <table class="c-table">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>鈦金卡</th>
+                                    <th>世界卡</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>每戶一年3次免費，每次50公里</td>
+                                    <td>每戶一年3次免費，每次100公里</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-warn">
+            <div class="c-warn__title">免費國際機場接送注意事項 : </div>
+            <div class="c-warn__content">
+                <ol class="c-warn__list">
+                    <li class="c-warn__item">每戶於2025年全年度期間內最多可享2次限定區域免費機場單程接或送。</li>
+                    <li class="c-warn__item">符合每戶前12 個月信用卡帳單累計新增指定消費金額達60萬元（含）以上。</li>
+                    <li class="c-warn__item">限定區域免費機場接送範圍如下:<br>
+                        <ol class="c-warn__list c-warn__list--alpha">
+                            <li class="c-warn__item">基隆市、台北市、新北市、桃園市、新竹縣市⇄松山國際機場、桃園國際機場</li>
+                            <li class="c-warn__item">苗栗縣、台中市、彰化縣、雲林縣、嘉義縣市⇄臺中航空站(清泉崗機場)</li>
+                            <li class="c-warn__item">台南市、高雄市、屏東縣⇄臺南航空站、高雄國際航空站(小港機場)</li>
+                        </ol>
+                    </li>
+                    <li class="c-warn__item">適用車型為國產四人座車，恕不提供持卡人指定車輛之種類、大小或廠牌。</li>
+                    <li class="c-warn__item">機場接送詳情請參照中國信託銀行<a href="#" class="o-link">國際機場接送權益網頁</a>公告為主。</li>
+                </ol>
+            </div>
+        </div>
+        <div class="c-warn">
+            <div class="c-warn__title">免費國際貴賓室注意事項 : </div>
+            <div class="c-warn__content">
+                <ol class="c-warn__list">
+                    <li class="c-warn__item">正、附卡持卡人享有免費國際機場指定貴賓室，但正、附卡持卡人應歸戶合計算使用次數。</li>
+                    <li class="c-warn__item">指定貴賓室包含桃園一航/二航環亞貴賓室、松山環亞貴賓室；桃園機場第二航廈環亞貴賓室；全球環亞貴賓室。</li>
+                    <li class="c-warn__item">國際機場貴賓室使用詳情請參照中國信託銀行<a href="#" class="o-link">國際機場貴賓室權益網頁</a>公告為主。</li>
+                    <li class="c-warn__item">指定消費門檻需達以下任一門檻近1個月信用卡帳單新增消費金額達2萬元（含）以上；或近3個月信用卡帳單累計新增消費金額達10萬元（含）以上；或近12月信用卡帳單累計新增消費金額達60萬元（含）以上。以上指定消費門檻所認得列入計算之「消費」係指信用卡帳單新增除經扣除退貨、退稅或帳務調整等因故退還款項（即負項交易）後之消費金額，且各項手續費、年費、利息、違約金、帳單分期款項、各項稅款、學費、違規罰緩、政府規費、公用事業費用代扣繳及公務機關之相關費用(含台電、省水、市水、瓦斯、縣市路邊停車費、燃料費、電信費、健保費等)均不列入計算；使用分期付款之交易，計算新增消費時係以各期實際入帳之分期款項金額為準。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,10 @@
+.o-link {
+    color: #AD8F5E;
+    transition: .3s;
+
+    @media (hover: hover) {
+        &:hover {
+            color: #987A49;
+        }
+    }
+}

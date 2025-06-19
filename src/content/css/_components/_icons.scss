@@ -1,3 +1,5 @@
+@use "../_mixins/medias"as medias;
+
 .o-icon {
     display: block;
     width: 24px;
@@ -70,6 +72,13 @@
         mask-image: url(../../images/icon/line.svg);
     }
 
+    &--lineChange {
+        width: 40px;
+        height: 11px;
+        background-color: #9B7BFF;
+        mask-image: url(../../images/icon/line.svg);
+    }
+
     &--lineLg {
         width: 120px;
         height: 8px;
@@ -83,6 +92,15 @@
         background-color: #9B7BFF;
         mask-image: url(../../images/icon/lineRight.svg);
     }
+
+    @include medias.breakpoint-down("md") {
+        &--lineChange {
+            width: 20px;
+            height: 11px;
+            background-color: #9B7BFF;
+            mask-image: url(../../images/icon/lineSm.svg);
+        }
+    }
 }
 
 .o-iconBox {
@@ -91,4 +109,11 @@
     gap: 4px;
     text-decoration: none;
     color: #AD8F5E;
+    transition: 0.3s;
+
+    @media (hover: hover) {
+        &:hover {
+            color: #987A49;
+        }
+    }
 }

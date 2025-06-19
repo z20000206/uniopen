@@ -1,0 +1,95 @@
+.c-list {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__item {
+        position: relative;
+        font-size: 18px;
+        font-weight: 400;
+        color: #878787;
+        padding-left: 27px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 13.5px;
+            left: 11.5px;
+            display: inline-block;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #9B7BFF;
+        }
+
+        &--og {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 13.5px;
+                left: 11.5px;
+                display: inline-block;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: #FF8A3D;
+            }
+        }
+    }
+
+    &--sm {
+        gap: 4px;
+
+        @at-root & #{$root} {
+            &__item {
+                position: relative;
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                padding-left: 24px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: 10px;
+                    display: inline-block;
+                    transform: translateY(-50%);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #9B7BFF;
+                }
+
+                &--og {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 12px;
+                        left: 10px;
+                        display: inline-block;
+                        transform: translateY(-50%);
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #FF8A3D;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c-infoList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding-left: 24px;
+    list-style-type: decimal;
+}
