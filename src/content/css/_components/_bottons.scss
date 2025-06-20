@@ -2,11 +2,11 @@
 
 .o-btn {
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     background: #AD8F5E;
     border: 1px solid transparent;
@@ -17,15 +17,11 @@
         padding: 4px 8px;
     }
 
-    &--lg {
-        display: flex;
-        justify-content: center;
-        width: 122px;
-        padding: 12px 20px;
-    }
-
-    @include medias.breakpoint-down("sm") {
-        font-size: 16px;
+    @include medias.breakpoint-up("lg") {
+        &--kv {
+            font-size: 20px;
+            padding: 12px 20px;
+        }
     }
 
     @media (hover: hover) {

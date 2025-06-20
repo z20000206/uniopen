@@ -126,10 +126,6 @@
 
     &__action {
         padding-bottom: 40px;
-
-        &--mb {
-            display: none;
-        }
     }
 
     &__scroll {
@@ -201,12 +197,7 @@
         }
 
         &__action {
-            display: none;
-
-            &--mb {
-                display: flex;
-                margin-top: 20px;
-            }
+            margin-top: 20px;
         }
 
         &__item {
@@ -458,7 +449,7 @@
         bottom: -20px;
         width: 100%;
         max-width: 940px;
-        height: 200px;
+        height: 218px;
         background: var(--Linear, linear-gradient(90deg, #BB975D 0.03%, #E3CFAD 99.97%));
         z-index: -1;
     }
@@ -476,7 +467,7 @@
         }
 
         &__bg {
-            height: 146px;
+            height: 144px;
         }
     }
 }
