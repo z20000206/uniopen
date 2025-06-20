@@ -18,12 +18,7 @@ $('.l-header__hamburger').click(function () {
     $('.o-hamburger').toggleClass('is-active')
     $('.c-menu').toggleClass('is-active')
     $('.l-header').toggleClass('is-menuOpen')
-})
-
-$('[data-burger-close]').click(function () {
-    $('.c-menu').toggleClass('is-active')
-    $('.l-header').toggleClass('is-menuOpen')
-    $('.o-hamburger').toggleClass('is-active')
+    $('body').toggleClass('is-menuOpen')
 })
 
 // swiper common setting
@@ -82,4 +77,27 @@ $(window).on('load', function () {
     });
 });
 
+// gotop
+$(function () {
 
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 70) {
+            $('.o-gotop').fadeIn();
+
+        } else {
+            $('.o-gotop').fadeOut();
+
+        }
+    });
+
+    $('.o-gotop').click(function () {
+        $('html,body').animate({
+            scrollTop: $('html').offset().top
+        })
+
+        return false;
+    });
+
+})
