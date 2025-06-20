@@ -45,7 +45,6 @@
         $('[data-mfp-src]').magnificPopup({
             callbacks: {
                 open: function () {
-                    $('body').addClass('is-popupOpen');
                     $('[data-mfp-close]').on('click', function (e) {
                         e.preventDefault();
                         $.magnificPopup.close();
@@ -53,7 +52,6 @@
                 },
                 close: function () {
                     $('[data-mfp-close]').off('click');
-                    $('body').removeClass('is-popupOpen');
                 }
             }
         });

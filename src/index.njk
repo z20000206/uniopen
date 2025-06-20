@@ -143,10 +143,11 @@
         <!-- 輕奢體驗 -->
         <section id="extravagant" class="l-block__item l-block__item--extravagant">
             <div class="l-block__content">
+                <div class="l-block__anchor" data-title="extravagant"></div>
                 <div class="c-extravagant">
                     <div class="c-extravagant__wrap" data-aos="zoom-out-right">
                         <div class="c-extravagant__content" data-aos="zoom-out-right" data-aos-delay="300">
-                            <div class="c-extravagant__title" data-title="extravagant">
+                            <div class="c-extravagant__title">
                                 <div class="c-title u-flex-tal t-wh">
                                     <div class="c-title__head">
                                         <div class="c-title__icon">
@@ -617,7 +618,7 @@
                                                                 },
                                                                 {
                                                                     title: '博客來',
-                                                                    discount: '週末滿額最高送OPENPOINT<span class="c-savorCard__num u-mb-md">3</span><span class="c-savorCard__unit">%</span>',
+                                                                    discount: '週末最高送OPENPOINT<span class="c-savorCard__num u-mb-md">3</span><span class="c-savorCard__unit">%</span>',
                                                                     img:''
                                                                 },
                                                                 {
@@ -1140,7 +1141,9 @@
                 effect: window.innerWidth <= 1200
                     ? 'fade'
                     : 'slide',
-                loop: false,
+                loop: window.innerWidth <= 1200
+                    ? false
+                    : true,
                 autoHeight: true,
                 slidesPerView: '1',
                 allowTouchMove: false,

@@ -168,6 +168,18 @@
         &+& {
             border-top: 1px solid #DBDBDB;
         }
+
+        &--half {
+            @at-root & #{$root} {
+                &__title {
+                    width: 50%;
+                }
+
+                &__content {
+                    width: 50%;
+                }
+            }
+        }
     }
 
     &__title {

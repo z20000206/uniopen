@@ -246,19 +246,19 @@
                         <div class="c-event__text">消費回饋OPENPOINT無上限</div>
                         <div class="c-event__info">
                             <div class="c-infoData c-infoData">
-                                <div class="c-infoData__item">
+                                <div class="c-infoData__item c-infoData__item--half">
                                     <div class="c-infoData__title">國內一般消費</div>
                                     <div class="c-infoData__content">
                                         <div class="c-infoData__text">最高回饋1%</div>
                                     </div>
                                 </div>
-                                <div class="c-infoData__item">
+                                <div class="c-infoData__item c-infoData__item--half">
                                     <div class="c-infoData__title">國外非實體商店消費</div>
                                     <div class="c-infoData__content">
                                         <div class="c-infoData__text">最高回饋2%</div>
                                     </div>
                                 </div>
-                                <div class="c-infoData__item">
+                                <div class="c-infoData__item c-infoData__item--half">
                                     <div class="c-infoData__title">國外實體商店消費</div>
                                     <div class="c-infoData__content">
                                         <div class="c-infoData__text">最高回饋3%</div>
