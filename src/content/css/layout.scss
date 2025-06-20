@@ -274,8 +274,7 @@ body {
    @include medias.breakpoint-down("md") {
       position: fixed;
       box-sizing: border-box;
-      top: 58px;
-      right: 100%;
+      inset: 58px 0 0 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -283,7 +282,8 @@ body {
       width: 100%;
       height: calc(100% - 58px);
       background: url(../images/section/menu/bg.jpg) no-repeat bottom/cover;
-      transition: 0.3s;
+      clip-path: circle(0% at 100% 0%);
+      transition: clip-path .4s linear;
 
       &__item {
          font-size: 20px;
@@ -305,7 +305,8 @@ body {
       }
 
       &.is-active {
-         right: 0;
+         clip-path: circle(150% at 0% 100%);
+         transition: clip-path .3s linear;
       }
    }
 
@@ -504,21 +505,46 @@ body {
    border: 0;
    background: url(../images/float/goTop.svg) no-repeat center center / contain;
    cursor: pointer;
-   opacity: 1;
-   transition: 0.6s ease;
+   opacity: 0;
+   visibility: hidden;
+   transition: .3s;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #FFF2D7c7;
+      transition: .3s ease;
+      opacity: 0;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #FFF;
+      z-index: -1;
+   }
+
+   &.is-show {
+      visibility: visible;
+      opacity: 1;
+   }
 
    @media (hover: hover) {
       &:hover {
          &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #d4b27b9d;
+            opacity: 1;
          }
       }
    }

@@ -1096,177 +1096,179 @@
 
     {% block scripts %}
         <script>
-            // 錨點控制
-            $('[data-section]').on('click', function (e) {
-                e.preventDefault();
+            $(function () {
+                // 錨點控制
+                $('[data-section]').on('click', function (e) {
+                    e.preventDefault();
 
-                $('.o-hamburger').removeClass('is-active');
-                $('.c-menu').removeClass('is-active');
-                $('.l-header').removeClass('is-menuOpen');
+                    $('.o-hamburger').removeClass('is-active');
+                    $('.c-menu').removeClass('is-active');
+                    $('.l-header').removeClass('is-menuOpen');
 
-                var targetTitle = $(this).attr('data-section');
-                var $target = $('[data-title="' + targetTitle + '"]');
-
-                if ($target.length) {
-                    var headerHeight = 88;
-                    var offset = $target
-                        .offset()
-                        .top - headerHeight;
-
-                    if (offset < 0) 
-                        offset = 0;
-                    
-                    setTimeout(function () {
-                        $('html, body').animate({
-                            scrollTop: offset
-                        }, 500);
-                    }, 300);
-                }
-            });
-
-            // tab切換
-            $('.c-extravagant__item').on('click', function () {
-                var tab = $(this).data('tab');
-                var $targetPanel = $('[data-panel="' + tab + '"]');
-
-                $('.c-extravagant__item').removeClass('is-active');
-                $(this).addClass('is-active');
-
-                $('[data-panel]').addClass('u-hidden');
-                $targetPanel.removeClass('u-hidden');
-            });
-
-            // swiper 品味時光
-            const savorSettings = $.extend(true, {}, carouselSettings, {
-                direction: 'vertical',
-                effect: window.innerWidth <= 1200
-                    ? 'fade'
-                    : 'slide',
-                loop: window.innerWidth <= 1200
-                    ? false
-                    : true,
-                autoHeight: true,
-                slidesPerView: '1',
-                allowTouchMove: false,
-                autoplay: false,
-
-                navigation: {
-                    prevEl: '[data-swiper-prev="savor"]',
-                    nextEl: '[data-swiper-next="savor"]'
-                },
-
-                on: {
-                    init: function (swiper) {
-                        heightDetect(swiper);
-
-                        const index = swiper.realIndex;
-                        $('.c-savor__item')
-                            .removeClass('is-active')
-                            .eq(index)
-                            .addClass('is-active');
-                    },
-
-                    slideChangeTransitionStart: function () {
-                        const index = this.realIndex;
-                        $('.c-savor__item')
-                            .removeClass('is-active')
-                            .eq(index)
-                            .addClass('is-active');
-                    },
-
-                    slideChange: function (swiper) {
-                        heightDetect(swiper);
-                    }
-                }
-            });
-
-            function heightDetect(swiper) {
-                var $slider = $('[data-swiper="savor"]');
-                var $currentSlide = $(swiper.slides[swiper.activeIndex]);
-                var $currentSlideItem = $currentSlide
-                    .children()
-                    .eq(0);
-                $slider.height($currentSlideItem.outerHeight());
-            }
-
-            const savorSwiper = new Swiper('[data-swiper="savor"]', savorSettings);
-
-            // 錨點
-            $('[data-savor-item]').on('click', function (e) {
-                e.preventDefault();
-
-                const $this = $(this);
-                const targetKey = $this.attr('data-savor-item');
-                const index = $('[data-savor-item]').index($this);
-                const $target = $('[data-savor-panel="' + targetKey + '"]');
-                savorSwiper.slideToLoop(index);
-
-                if (window.innerWidth < 1200) {
+                    var targetTitle = $(this).attr('data-section');
+                    var $target = $('[data-title="' + targetTitle + '"]');
 
                     if ($target.length) {
-                        const offset = $target
+                        var headerHeight = 88;
+                        var offset = $target
                             .offset()
-                            .top - 120;
-                        $('html, body').animate({
-                            scrollTop: offset
-                        }, 500);
+                            .top - headerHeight;
 
-                        $('[data-savor-item]')
-                            .removeClass('is-active')
-                            .eq(index)
-                            .addClass('is-active');
+                        if (offset < 0) 
+                            offset = 0;
+                        
+                        setTimeout(function () {
+                            $('html, body').animate({
+                                scrollTop: offset
+                            }, 500);
+                        }, 300);
+                    }
+                });
+
+                // tab切換
+                $('.c-extravagant__item').on('click', function () {
+                    var tab = $(this).data('tab');
+                    var $targetPanel = $('[data-panel="' + tab + '"]');
+
+                    $('.c-extravagant__item').removeClass('is-active');
+                    $(this).addClass('is-active');
+
+                    $('[data-panel]').addClass('u-hidden');
+                    $targetPanel.removeClass('u-hidden');
+                });
+
+                // swiper 品味時光
+                const savorSettings = $.extend(true, {}, carouselSettings, {
+                    direction: 'vertical',
+                    effect: window.innerWidth <= 1200
+                        ? 'fade'
+                        : 'slide',
+                    loop: window.innerWidth <= 1200
+                        ? false
+                        : true,
+                    autoHeight: true,
+                    slidesPerView: '1',
+                    allowTouchMove: false,
+                    autoplay: false,
+
+                    navigation: {
+                        prevEl: '[data-swiper-prev="savor"]',
+                        nextEl: '[data-swiper-next="savor"]'
+                    },
+
+                    on: {
+                        init: function (swiper) {
+                            heightDetect(swiper);
+
+                            const index = swiper.realIndex;
+                            $('.c-savor__item')
+                                .removeClass('is-active')
+                                .eq(index)
+                                .addClass('is-active');
+                        },
+
+                        slideChangeTransitionStart: function () {
+                            const index = this.realIndex;
+                            $('.c-savor__item')
+                                .removeClass('is-active')
+                                .eq(index)
+                                .addClass('is-active');
+                        },
+
+                        slideChange: function (swiper) {
+                            heightDetect(swiper);
+                        }
+                    }
+                });
+
+                function heightDetect(swiper) {
+                    var $slider = $('[data-swiper="savor"]');
+                    var $currentSlide = $(swiper.slides[swiper.activeIndex]);
+                    var $currentSlideItem = $currentSlide
+                        .children()
+                        .eq(0);
+                    $slider.height($currentSlideItem.outerHeight());
+                }
+
+                const savorSwiper = new Swiper('[data-swiper="savor"]', savorSettings);
+
+                // 錨點
+                $('[data-savor-item]').on('click', function (e) {
+                    e.preventDefault();
+
+                    const $this = $(this);
+                    const targetKey = $this.attr('data-savor-item');
+                    const index = $('[data-savor-item]').index($this);
+                    const $target = $('[data-savor-panel="' + targetKey + '"]');
+                    savorSwiper.slideToLoop(index);
+
+                    if (window.innerWidth < 1200) {
+
+                        if ($target.length) {
+                            const offset = $target
+                                .offset()
+                                .top - 120;
+                            $('html, body').animate({
+                                scrollTop: offset
+                            }, 500);
+
+                            $('[data-savor-item]')
+                                .removeClass('is-active')
+                                .eq(index)
+                                .addClass('is-active');
+                        }
+                    }
+                });
+
+                $(window).on('resize', () => {
+                    savorSwiper.update();
+                });
+
+                // swiper 金融生活
+                const financeSettings = $.extend(true, {}, carouselSettings, {
+                    freeMode: false,
+                    slidesPerView: 'auto',
+                    loop: true,
+                    autoplay: false,
+                    speed: 300,
+                    navigation: {
+                        prevEl: '[data-swiper-prev="finance"]',
+                        nextEl: '[data-swiper-next="finance"]'
+                    }
+                });
+
+                new Swiper('[data-swiper="finance"]', financeSettings);
+
+                // 注意事項展開收合
+                $('[data-toggle]').on('click', function (e) {
+                    e.preventDefault();
+                    const key = $(this).attr('data-toggle');
+
+                    $(this)
+                        .find('.o-icon')
+                        .toggleClass('o-icon--open')
+                        .toggleClass('o-icon--minus');
+
+                    $(`[data-toggle-panel="${key}"]`).toggleClass('is-active');
+                });
+
+                // 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !)
+                function toggleCreditCardView() {
+                    if ($(window).width() <= 768) {
+                        $('[data-view="mobile"]').removeClass('u-hidden');
+                        $('[data-view="desktop"]').addClass('u-hidden');
+                    } else {
+                        $('[data-view="desktop"]').removeClass('u-hidden');
+                        $('[data-view="mobile"]').addClass('u-hidden');
                     }
                 }
-            });
 
-            $(window).on('resize', () => {
-                savorSwiper.update();
-            });
-
-            // swiper 金融生活
-            const financeSettings = $.extend(true, {}, carouselSettings, {
-                freeMode: false,
-                slidesPerView: 'auto',
-                loop: true,
-                autoplay: false,
-                speed: 300,
-                navigation: {
-                    prevEl: '[data-swiper-prev="finance"]',
-                    nextEl: '[data-swiper-next="finance"]'
-                }
-            });
-
-            new Swiper('[data-swiper="finance"]', financeSettings);
-
-            // 注意事項展開收合
-            $('[data-toggle]').on('click', function (e) {
-                e.preventDefault();
-                const key = $(this).attr('data-toggle');
-
-                $(this)
-                    .find('.o-icon')
-                    .toggleClass('o-icon--open')
-                    .toggleClass('o-icon--minus');
-
-                $(`[data-toggle-panel="${key}"]`).toggleClass('is-active');
-            });
-
-            // 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !)
-            function toggleCreditCardView() {
-                if ($(window).width() <= 768) {
-                    $('[data-view="mobile"]').removeClass('u-hidden');
-                    $('[data-view="desktop"]').addClass('u-hidden');
-                } else {
-                    $('[data-view="desktop"]').removeClass('u-hidden');
-                    $('[data-view="mobile"]').addClass('u-hidden');
-                }
-            }
-
-            $(document).ready(function () {
-                toggleCreditCardView();
-
-                $(window).on('resize', function () {
+                $(document).ready(function () {
                     toggleCreditCardView();
+
+                    $(window).on('resize', function () {
+                        toggleCreditCardView();
+                    });
                 });
             });
         </script>

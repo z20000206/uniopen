@@ -15,11 +15,22 @@
 
 // header - hamburger
 $('.l-header__hamburger').click(function () {
-    $('.o-hamburger').toggleClass('is-active')
-    $('.c-menu').toggleClass('is-active')
-    $('.l-header').toggleClass('is-menuOpen')
-    $('body').toggleClass('is-menuOpen')
-})
+    var $hamburger = $(this).find('.o-hamburger');
+
+    if (!$hamburger.hasClass('is-active')) {
+        $hamburger.addClass('is-active');
+    } else {
+        setTimeout(function () {
+            $hamburger.removeClass('is-active');
+        }, 300);
+    }
+
+    $('.c-menu').toggleClass('is-active');
+    $('.l-header').toggleClass('is-menuOpen');
+    $('body').toggleClass('is-menuOpen');
+});
+
+
 
 // swiper common setting
 const carouselSettings = {
@@ -84,10 +95,10 @@ $(function () {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 70) {
-            $('.o-gotop').fadeIn();
+            $('.o-gotop').addClass('is-show');
 
         } else {
-            $('.o-gotop').fadeOut();
+            $('.o-gotop').removeClass('is-show');
 
         }
     });
