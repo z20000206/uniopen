@@ -378,7 +378,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">主打星</div>
+                                                    <div class="c-savorCard__head" data-nav-panel="start">主打星</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -426,7 +426,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">免費停車</div>
+                                                    <div class="c-savorCard__head"  data-nav-panel="parking">免費停車</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -484,7 +484,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">日常採購</div>
+                                                    <div class="c-savorCard__head" data-nav-panel="daily">日常採購</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -537,7 +537,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">輕食美饌</div>
+                                                    <div class="c-savorCard__head"  data-nav-panel="food">輕食美饌</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -607,7 +607,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">時尚購物</div>
+                                                    <div class="c-savorCard__head" data-nav-panel="shopping">時尚購物</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -685,7 +685,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">休閒旅遊</div>
+                                                    <div class="c-savorCard__head" data-nav-panel="travel">休閒旅遊</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -743,7 +743,7 @@
                                         <div class="c-savor__panel">
                                             <div class="c-savor__card">
                                                 <div class="c-savorCard">
-                                                    <div class="c-savorCard__head">更多權益</div>
+                                                    <div class="c-savorCard__head" data-nav-panel="more">更多權益</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
@@ -807,7 +807,7 @@
         <section id="life" class="l-block__item l-block__item--life">
             <div class="l-block__wrap l-block__wrap--life">
                 <div class="l-block__content">
-                    <div class="c-life" data-aos="zoom-in-up">
+                    <div class="c-life" data-aos="fade-up">
                         <div class="c-life__wrap">
                             <div class="c-life__content">
                                 <div class="c-life__introduce">
@@ -993,7 +993,7 @@
                         </div>
                         <!-- [data-view] 控制大小網切換，詳細邏輯請參考頁面下方 js -->
                         <!-- 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !) -->
-                        <div class="c-creditCard u-hidden" data-view="mobile" data-aos="zoom-out-right">
+                        <div class="c-creditCard" data-view="mobile" data-aos="zoom-out-right">
                             <div class="c-creditCatd__head u-flex u-m-auto">
                                 <div class="c-creditCard__img">
                                     <img src="./content/images/section/card/wordCard.jpg" alt="世界卡">
@@ -1024,7 +1024,7 @@
                         </div>
                         <!-- [data-view] 控制大小網切換，詳細邏輯請參考頁面下方 js -->
                         <!-- 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !) -->
-                        <div class="c-creditCard u-hidden" data-view="mobile"  data-aos="zoom-out-left">
+                        <div class="c-creditCard" data-view="mobile" data-aos="zoom-out-left">
                             <div class="c-creditCard__head u-flex u-m-auto">
                                 <div class="c-creditCard__img c-creditCard__img--t">
                                     <img src="./content/images/section/card/titaniumCard.jpg" alt="鈦金卡">
@@ -1185,9 +1185,33 @@
             }
 
             const savorSwiper = new Swiper('[data-swiper="savor"]', savorSettings);
-            $('.c-savor__item').on('click', function () {
-                const index = $(this).index();
-                savorSwiper.slideToLoop(index);
+
+            // 錨點
+            $('[data-savor-item]').on('click', function (e) {
+                e.preventDefault();
+
+                const $this = $(this);
+                const targetKey = $this.attr('data-savor-item');
+                const index = $('[data-savor-item]').index($this);
+                const $target = $('[data-savor-panel="' + targetKey + '"]');
+
+                if (window.innerWidth > 1200) {
+                    savorSwiper.slideToLoop(index);
+                } else {
+                    if ($target.length) {
+                        const offset = $target
+                            .offset()
+                            .top - 120;
+                        $('html, body').animate({
+                            scrollTop: offset
+                        }, 500);
+
+                        $('[data-savor-item]')
+                            .removeClass('is-active')
+                            .eq(index)
+                            .addClass('is-active');
+                    }
+                }
             });
 
             $(window).on('resize', () => {
@@ -1217,7 +1241,7 @@
                 $(this)
                     .find('.o-icon')
                     .toggleClass('o-icon--open')
-                    .toggleClass('o-icon--close');
+                    .toggleClass('o-icon--minus');
 
                 $(`[data-toggle-panel="${key}"]`).toggleClass('is-active');
             });

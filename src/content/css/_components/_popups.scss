@@ -189,7 +189,7 @@
         flex-direction: column;
         gap: 10px;
         padding: 16px 20px;
-        width: 60%;
+        width: calc(60% + 3px);
         word-break: break-word;
         overflow-wrap: break-word;
     }

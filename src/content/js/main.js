@@ -42,12 +42,27 @@ const carouselSettings = {
 };
 
 // AOS
-AOS.init({
-    offset: 120,
-    delay: 0,
-    duration: 700,
-    once: true
+$(window).on('load', function () {
+    AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 700,
+        once: true
+    });
+
+    $('[data-aos]').each(function () {
+        const $el = $(this);
+        const elTop = $el.offset().top;
+        const elHeight = $el.outerHeight();
+        const windowBottom = $(window).scrollTop() + $(window).height();
+
+        if (windowBottom >= elTop + elHeight / 2) {
+            $el.addClass('aos-animate');
+        }
+    });
 });
+
+
 
 // lottie 動畫
 $('[data-lottie]').each(function () {
@@ -66,4 +81,3 @@ $(window).on('load', function () {
         $(this).remove();
     });
 });
-
