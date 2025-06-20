@@ -84,7 +84,6 @@
         padding: 20px 15.5px 20px 0;
         width: 100%;
         height: auto;
-        max-width: 370px;
         margin-top: 0;
         margin-bottom: 0;
 
@@ -94,12 +93,6 @@
         }
     }
 }
-
-// @include medias.breakpoint-down("md") {
-//     .mfp-container {
-//         padding: 0 20px;
-//     }
-// }
 
 .c-event {
     display: flex;
