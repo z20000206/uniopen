@@ -806,13 +806,14 @@
         <!-- OPENPOINT生活圈 -->
         <section id="life" class="l-block__item l-block__item--life">
             <div class="l-block__wrap l-block__wrap--life">
+                <div class="l-block__anchor" data-title="life"></div>
                 <div class="l-block__content">
                     <div class="c-life" data-aos="fade-up">
                         <div class="c-life__wrap">
                             <div class="c-life__content">
                                 <div class="c-life__introduce">
                                     <div class="c-life__head">
-                                        <div class="c-life__title" data-title="life">
+                                        <div class="c-life__title" >
                                             <div class="c-title u-flex-tal">
                                                 <div class="c-title__head">
                                                     <div class="c-title__icon">
@@ -1194,10 +1195,10 @@
                 const targetKey = $this.attr('data-savor-item');
                 const index = $('[data-savor-item]').index($this);
                 const $target = $('[data-savor-panel="' + targetKey + '"]');
+                savorSwiper.slideToLoop(index);
 
-                if (window.innerWidth > 1200) {
-                    savorSwiper.slideToLoop(index);
-                } else {
+                if (window.innerWidth < 1200) {
+
                     if ($target.length) {
                         const offset = $target
                             .offset()
