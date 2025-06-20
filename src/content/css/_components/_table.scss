@@ -9,6 +9,7 @@
         text-align: left;
         padding: 16px 20px;
         border: 1px solid #DBDBDB;
+        vertical-align: top;
     }
 
     th {
@@ -22,6 +23,7 @@
     &__content {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         gap: 10px;
     }
 }

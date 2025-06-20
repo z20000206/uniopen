@@ -33,12 +33,14 @@
 
     box-sizing: border-box;
     position: relative;
-    width: 854px;
+    width: 100%;
+    height: calc( 100vh - 110px );
+    max-width: 854px;
     max-height: 550px;
     margin: auto;
-    margin-top: 110px;
-    margin-bottom: 60px;
+    margin-top: 50px;
     padding: 40px 18.5px 40px 0;
+    background-color: #FFF;
     border: 1px solid #DBDBDB;
     background: #fff;
 
@@ -78,9 +80,10 @@
         }
     }
 
-    @include medias.breakpoint-down("md") {
+    @include medias.breakpoint-down("sm") {
         padding: 20px 15.5px 20px 0;
         width: 100%;
+        height: auto;
         max-width: 370px;
         margin-top: 0;
         margin-bottom: 0;

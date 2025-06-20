@@ -80,10 +80,6 @@
                 opacity: 1;
                 transition: 0.3s;
             }
-
-            .swiper-pagination-bullet-active {
-                background-color: #007d7d;
-            }
         }
     }
 
@@ -92,6 +88,7 @@
         &__prev,
         &__next {
             &:hover {
+                border: none;
                 background: #AD8F5E;
 
                 &::after {
@@ -198,10 +195,6 @@
         }
     }
 
-    &__next {
-        right: 10px !important;
-    }
-
     &--savor {
         top: 277px;
         right: -47px;
@@ -228,5 +221,9 @@
         bottom: -466px;
         width: 100px;
         height: 40px;
+
+        &__next {
+            right: 10px !important;
+        }
     }
 }

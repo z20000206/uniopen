@@ -245,27 +245,26 @@
                         </div>
                         <div class="c-event__text">消費回饋OPENPOINT無上限</div>
                         <div class="c-event__info">
-                            <table class="c-table">
-                                <colgroup>
-                                    <col width="33%">
-                                    <col width="33%">
-                                    <col width="33%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>國內一般消費</th>
-                                        <th>國外非實體商店消費</th>
-                                        <th>國外實體商店消費</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>最高回饋1%</td>
-                                        <td>最高回饋2%</td>
-                                        <td>最高回饋3%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="c-infoData c-infoData">
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">國內一般消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">最高回饋1%</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">國外非實體商店消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">最高回饋2%</div>
+                                    </div>
+                                </div>
+                                <div class="c-infoData__item">
+                                    <div class="c-infoData__title">國外實體商店消費</div>
+                                    <div class="c-infoData__content">
+                                        <div class="c-infoData__text">最高回饋3%</div>
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
