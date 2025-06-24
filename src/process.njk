@@ -2,6 +2,8 @@
 
 {% set headerType = "process" %}
 
+{% block title %}連結 uniopen 會員流程{% endblock %}
+
 {% block content %}
     <div class="l-block">
         <div class="l-block__item l-block__item--process">
@@ -18,7 +20,13 @@
                                     <div class="o-icon o-icon--lineRight"></div>
                                 </div>
                             </div>
-                            <div class="c-title__discount c-title__discount--process"><span class="t-nowrap">請依照以下流程完成&nbsp;</span><span class="t-pop t-lh13 t-nowrap">uniopen</span><span class="t-nowrap">&nbsp;會員連結方能獲得OPENPOINT回饋</span><br><span class="t-nowrap">若您未註冊，請於收到實體卡後至</span><a href="#" class="o-link t-nowrap"> 中國信託網路銀行 </a><span class="t-nowrap">完成註冊</span></div>
+                            <div class="c-title__discount c-title__discount--process">
+                                <span class="t-nowrap">請依照以下流程完成&nbsp;</span>
+                                <span class="t-pop t-lh13 t-nowrap">uniopen</span>
+                                <span class="t-nowrap">&nbsp;會員連結方能獲得OPENPOINT回饋</span><br>
+                                <span class="t-nowrap">若您未註冊，請於收到實體卡後至</span>
+                                <a href="#" class="o-link t-nowrap" target="_blank" rel="noreferrer noopener" data-link> 中國信託網路銀行 </a>
+                                <span class="t-nowrap">完成註冊</span></div>
                         </div>
                     </div>
                     <!-- [data-swiper]：輪播呼叫套件識別用，必需要唯一值不可重複，請參考頁面下方 javascript 邏輯。 -->
@@ -27,7 +35,7 @@
                             <!-- [data-swiper]：輪播呼叫套件識別用，必需要唯一值不可重複，請參考頁面下方 javascript 邏輯。 -->
                             <div class="c-carousel c-carousel--process swiper" data-swiper="process">
                                 <div class="c-carousel__wrapper swiper-wrapper">
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step1">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 1</div>
@@ -35,7 +43,7 @@
                                             </div>
                                             <div class="c-processCard__content">
                                                 <span>註冊或登入</span>
-                                                <a href="#" class="o-link">中國信託網路銀行</a>
+                                                <a href="#" class="o-link" target="_blank" rel="noreferrer noopener" data-link>中國信託網路銀行</a>
                                             </div>
                                             <div class="c-processCard__img">
                                                 <img src="./content/images/section/process/step01.png" alt="step01">
@@ -45,14 +53,15 @@
                                             <i class="o-icon o-icon--next"></i>
                                         </div>
                                     </div>
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step2">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 2</div>
                                                 <div class="c-processCard__title">點選</div>
                                             </div>
                                             <div class="c-processCard__content">
-                                                <span class="c-processCard__order">信用卡<i class="o-icon o-icon--nextSm"></i>卡片管理<i class="o-icon o-icon--nextSm"></i></span>
+                                                <span class="c-processCard__order">信用卡<i class="o-icon o-icon--nextSm"></i>卡片管理<i class="o-icon o-icon--nextSm"></i>
+                                                </span>
                                                 <span>點選 uniopen 聯名卡</span>
                                             </div>
                                             <div class="c-processCard__img">
@@ -63,7 +72,7 @@
                                             <i class="o-icon o-icon--next"></i>
                                         </div>
                                     </div>
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step3">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 3</div>
@@ -80,7 +89,7 @@
                                             <i class="o-icon o-icon--next"></i>
                                         </div>
                                     </div>
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step4">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 4</div>
@@ -97,7 +106,7 @@
                                             <i class="o-icon o-icon--next"></i>
                                         </div>
                                     </div>
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step5">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 5</div>
@@ -115,7 +124,7 @@
                                             <i class="o-icon o-icon--next"></i>
                                         </div>
                                     </div>
-                                    <div class="c-process__item c-carousel__slide swiper-slide">
+                                    <div class="c-process__item c-carousel__slide swiper-slide" data-process-slide="step6">
                                         <div class="c-processCard">
                                             <div class="c-processCard__head">
                                                 <div class="c-processCard__step">Step 6</div>
@@ -143,12 +152,37 @@
 {% block scripts %}
     <script>
         // swiper
-        const processSettings = $.extend(true, {}, carouselSettings, {
-            loop: false,
-            slidesPerView: 'auto',
-            autoplay: false
-        });
+        $(function () {
+            const allProcessSlides = {};
+            const processSlideOrder = ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'];
 
-        new Swiper('[data-swiper="process"]', processSettings);
+            $('[data-swiper="process"] .swiper-slide').each(function () {
+                const key = $(this).attr('data-process-slide');
+                if (key) {
+                    allProcessSlides[key] = $(this).prop('outerHTML');
+                }
+            });
+
+            let processSwiper; 
+
+            function updateProcessSwiper(order) {
+                const $wrapper = $('[data-swiper="process"] .swiper-wrapper');
+                const newSlides = $.map(order, key => allProcessSlides[key]);
+
+                $wrapper
+                    .empty()
+                    .append(newSlides);
+
+                processSwiper = new Swiper('[data-swiper="process"]', $.extend(true, {}, carouselSettings, {
+                    loop: false,
+                    slidesPerView: 'auto',
+                    autoplay: false
+                }));
+
+                processSwiper.slideTo(0);
+            }
+
+            updateProcessSwiper(processSlideOrder);
+        });
     </script>
 {% endblock %}

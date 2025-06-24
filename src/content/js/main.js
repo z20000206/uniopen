@@ -81,11 +81,33 @@ $('[data-lottie]').each(function () {
     }).play();
 });
 
-// loading
+// loading (配合個人化調整，載入延遲800毫秒)
 $(window).on('load', function () {
-    $('[data-loading]').fadeOut(300, function () {
-        $(this).remove();
-    });
+    setTimeout(() => {
+        $('[data-loading]').fadeOut(300, function () {
+            $(this).hide();
+        });
+    }, 800);
+});
+
+// hyperlink(延遲700)
+$(document).on('click', '[data-link]', function (e) {
+    e.preventDefault();
+
+    const url = $(this).attr('href');
+    const target = $(this).attr('target');
+
+    $('[data-loading]').fadeIn(200);
+
+    setTimeout(function () {
+        $('[data-loading]').fadeOut(200, function () {
+            if (target === '_blank') {
+                window.open(url, '_blank');
+            } else {
+                window.location.href = url;
+            }
+        });
+    }, 700);
 });
 
 // gotop

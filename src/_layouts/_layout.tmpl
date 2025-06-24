@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>
-            {% block title %}中國信託 uniopen 聯名卡{% endblock %}
+            {% block title %}{% endblock %}
         </title>
 
         <meta property="og:type" content="website">
@@ -60,7 +60,7 @@
                                 <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
                             </a>
                         </div>
-                        <a href="./index.html" class="l-header__back">回活動首頁</a>
+                        <a href="./index.html" class="l-header__back" rel="noreferrer noopener" data-link>回活動首頁</a>
                     </div>
                 </header>
             {% else %}
@@ -87,13 +87,13 @@
                                     <div class="c-share">
                                         <div class="c-share__title">分享到</div>
                                         <div class="c-share__content">
-                                            <a href="https://social-plugins.line.me/lineit/share?url=https://tw.yahoo.com" class="c-share__item" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://social-plugins.line.me/lineit/share?url=https://tw.yahoo.com" class="c-share__item" target="_blank" rel="noopener noreferrer" data-link>
                                                 <div class="c-share__img">
                                                     <img src="./content/images/section/menu/line.svg" alt="Line">
                                                 </div>
                                                 <div class="c-share__name">LINE</div>
                                             </a>
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tw.yahoo.com" class="c-share__item" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tw.yahoo.com" class="c-share__item" target="_blank" rel="noopener noreferrer" data-link>
                                                 <div class="c-share__img">
                                                     <img src="./content/images/section/menu/facebook.svg" alt="Facebook">
                                                 </div>

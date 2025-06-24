@@ -638,11 +638,13 @@
 
         &__panel {
             flex-direction: column;
+            height: fit-content;
         }
 
         &__card {
             width: 100%;
             max-width: 100%;
+            height: fit-content;
         }
 
         &__img {
@@ -656,18 +658,6 @@
                 }
             }
         }
-    }
-
-    @include medias.breakpoint-down('md') {
-        &__panel {
-            height: fit-content;
-        }
-
-        &__card {
-            height: fit-content;
-        }
-
-        &__nav {}
     }
 
     @include medias.breakpoint-down('sm') {}
