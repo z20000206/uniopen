@@ -1195,7 +1195,16 @@
                 // 破壞重組
                 const allSavorSlides = {};
                 const allSavorItems = {};
-                const savorSlideOrder = ['start', 'parking', 'daily', 'food', 'shopping', 'travel', 'more'];
+                const allNavigationHTML = {};
+                const savorSlideOrder = [
+                    'start',
+                    'parking',
+                    'daily',
+                    'food',
+                    'shopping',
+                    'travel',
+                    'more'
+                ];
 
                 $('[data-swiper="savor"] .swiper-slide').each(function () {
                     const key = $(this).attr('data-savor-slide');
@@ -1211,9 +1220,27 @@
                     }
                 });
 
+                $('[data-swiper-prev="savor"]').each(function () {
+                    allNavigationHTML.prev = $(this).prop('outerHTML');
+                });
+                $('[data-swiper-next="savor"]').each(function () {
+                    allNavigationHTML.next = $(this).prop('outerHTML');
+                });
+
+                const $navContainer = $('.o-carouselNav--savor');
+                if ($navContainer.length > 0) {
+                    allNavigationHTML.container = $navContainer.prop('outerHTML');
+                    allNavigationHTML.containerParent = $navContainer.parent();
+                }
+
                 let savorSwiper;
 
                 function updateSavorSwiper(order) {
+                    if (savorSwiper) {
+                        savorSwiper.destroy(true, true);
+                        savorSwiper = null;
+                    }
+
                     const $wrapper = $('[data-swiper="savor"] .swiper-wrapper');
                     const newSlides = $.map(order, key => allSavorSlides[key]);
                     $wrapper
@@ -1228,6 +1255,36 @@
                         $itemWrapper
                             .empty()
                             .append(newItems);
+                    }
+
+                    let $prevBtn = $('[data-swiper-prev="savor"]');
+                    let $nextBtn = $('[data-swiper-next="savor"]');
+
+                    if ($prevBtn.length === 0 || $nextBtn.length === 0) {
+                        $('.o-carouselNav--savor').remove();
+
+                        if (allNavigationHTML.container && allNavigationHTML.containerParent) {
+                            allNavigationHTML
+                                .containerParent
+                                .prepend(allNavigationHTML.container);
+                        } else if (allNavigationHTML.prev && allNavigationHTML.next) {
+
+                            const navHTML = `
+                                <div class="o-carouselNav o-carouselNav--savor">
+                                    ${allNavigationHTML.prev}
+                                    ${allNavigationHTML.next}
+                                </div>
+                            `;
+                            $('[data-swiper="savor"]').before(navHTML);
+                        } else {
+                            const navHTML = `
+                                <div class="o-carouselNav o-carouselNav--savor">
+                                    <div class="o-carouselNav__prev swiper-button-prev" data-swiper-prev="savor"></div>
+                                    <div class="o-carouselNav__next swiper-button-next" data-swiper-next="savor"></div>
+                                </div>
+                            `;
+                            $('[data-swiper="savor"]').before(navHTML);
+                        }
                     }
 
                     $('[data-savor-item]')
@@ -1258,10 +1315,12 @@
                     const targetKey = $this.attr('data-savor-item');
                     const index = $('[data-savor-item]').index($this);
                     const $target = $('[data-savor-slide="' + targetKey + '"]');
-                    savorSwiper.slideToLoop(index);
+
+                    if (savorSwiper) {
+                        savorSwiper.slideToLoop(index);
+                    }
 
                     if (window.innerWidth < 1200) {
-
                         if ($target.length) {
                             const offset = $target
                                 .offset()
@@ -1279,11 +1338,14 @@
                 });
 
                 $(window).on('resize', () => {
-                    savorSwiper.update();
+                    if (savorSwiper) {
+                        savorSwiper.update();
+                    }
                 });
 
                 // swiper 金融生活
                 const allFinanceSlides = {};
+                const allFinanceNavigationHTML = {};
                 const financeSlideOrder = ['fx-tx', 'loan-gift', 'fin-task'];
 
                 $('[data-swiper="finance"] .swiper-slide').each(function () {
@@ -1293,9 +1355,27 @@
                     }
                 });
 
+                $('[data-swiper-prev="finance"]').each(function () {
+                    allFinanceNavigationHTML.prev = $(this).prop('outerHTML');
+                });
+                $('[data-swiper-next="finance"]').each(function () {
+                    allFinanceNavigationHTML.next = $(this).prop('outerHTML');
+                });
+
+                const $financeNavContainer = $('.o-carouselNav--finance');
+                if ($financeNavContainer.length > 0) {
+                    allFinanceNavigationHTML.container = $financeNavContainer.prop('outerHTML');
+                    allFinanceNavigationHTML.containerParent = $financeNavContainer.parent();
+                }
+
                 let financeSwiper;
 
                 function updateFinanceSwiper(order) {
+                    if (financeSwiper) {
+                        financeSwiper.destroy(true, true);
+                        financeSwiper = null;
+                    }
+
                     const $wrapper = $('[data-swiper="finance"] .swiper-wrapper');
                     const newSlides = $.map(order, key => allFinanceSlides[key]);
 
@@ -1303,10 +1383,44 @@
                         .empty()
                         .append(newSlides);
 
+                    let $prevBtn = $('[data-swiper-prev="finance"]');
+                    let $nextBtn = $('[data-swiper-next="finance"]');
+
+                    if ($prevBtn.length === 0 || $nextBtn.length === 0) {
+                        $('.o-carouselNav--finance').remove();
+
+                        if (allFinanceNavigationHTML.container && allFinanceNavigationHTML.containerParent) {
+                            allFinanceNavigationHTML
+                                .containerParent
+                                .prepend(allFinanceNavigationHTML.container);
+                        } else if (allFinanceNavigationHTML.prev && allFinanceNavigationHTML.next) {
+                            const navHTML = `
+                                <div class="o-carouselNav o-carouselNav--finance">
+                                    ${allFinanceNavigationHTML.prev}
+                                    ${allFinanceNavigationHTML.next}
+                                </div>
+                            `;
+                            $('[data-swiper="finance"]').before(navHTML);
+                        } else {
+                            const navHTML = `
+                                <div class="o-carouselNav o-carouselNav--finance">
+                                    <div class="o-carouselNav__prev swiper-button-prev" data-swiper-prev="finance"></div>
+                                    <div class="o-carouselNav__next swiper-button-next" data-swiper-next="finance"></div>
+                                </div>
+                            `;
+                                            $('[data-swiper="finance"]').before(navHTML);
+                        }
+                    }
+
                     financeSwiper = new Swiper('[data-swiper="finance"]', $.extend(true, {}, carouselSettings, {
-                        loop: false,
+                        loop: true,
                         slidesPerView: 'auto',
-                        autoplay: false
+                        autoplay: false,
+
+                        navigation: {
+                            prevEl: '[data-swiper-prev="finance"]',
+                            nextEl: '[data-swiper-next="finance"]'
+                        }
                     }));
 
                     financeSwiper.slideTo(0);

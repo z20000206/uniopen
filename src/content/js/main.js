@@ -81,7 +81,7 @@ $('[data-lottie]').each(function () {
     }).play();
 });
 
-// loading (配合個人化調整，載入延遲800毫秒)
+// loading (配合個人化調整，載入延遲800ms)
 $(window).on('load', function () {
     setTimeout(() => {
         $('[data-loading]').fadeOut(300, function () {
@@ -90,7 +90,7 @@ $(window).on('load', function () {
     }, 800);
 });
 
-// hyperlink(延遲700)
+// hyperlink(延遲700ms)
 $(document).on('click', '[data-link]', function (e) {
     e.preventDefault();
 
