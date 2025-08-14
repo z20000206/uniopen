@@ -45,13 +45,20 @@
         $('[data-mfp-src]').magnificPopup({
             callbacks: {
                 open: function () {
+                    $('body').addClass('is-popupOpen');
                     $('[data-mfp-close]').on('click', function (e) {
                         e.preventDefault();
                         $.magnificPopup.close();
                     });
+
+                    if (this.st.el.is('[data-mfp-alert]')) {
+                        $('.mfp-bg').addClass('mfp-bg--alert');
+                    }
                 },
                 close: function () {
                     $('[data-mfp-close]').off('click');
+                    $('.mfp-bg').removeClass('mfp-bg--alert');
+                    $('body').removeClass('is-popupOpen');
                 }
             }
         });

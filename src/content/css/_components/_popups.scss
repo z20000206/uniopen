@@ -20,11 +20,18 @@
         opacity: 0.95;
     }
 
+    &--alert {
+        background: rgba($color: #423E38, $alpha: 0.7) !important;
+
+        &::after {
+            content: none;
+        }
+    }
+
     @include medias.breakpoint-down('sm') {
         &::after {
             background: url(../../images/popup/bgSm.png) no-repeat top left / 100% 110%;
         }
-
     }
 }
 
@@ -34,7 +41,7 @@
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: calc( 100vh - 110px );
+    height: calc(100vh - 110px);
     max-width: 854px;
     max-height: 550px;
     margin: auto;
@@ -70,13 +77,25 @@
 
     &__close {
         &.mfp-close {
-            top: -50px;
+            top: -51px;
             right: -1px;
             width: 50px;
             height: 50px;
             border: none;
             background: url(../../images/popup/close.png) no-repeat center/contain;
             opacity: 1;
+        }
+    }
+
+    &--alert {
+        height: auto;
+        max-width: 880px;
+        padding: 0;
+
+        @at-root & #{$root} {
+            &__content {
+                padding: 0;
+            }
         }
     }
 
@@ -90,6 +109,19 @@
         &__content {
             padding-right: 15.5px;
             max-height: 520px;
+        }
+
+
+        &--alert {
+            width: calc(100% - 12px - 28px);
+            padding: 0;
+
+            @at-root & #{$root} {
+                &__content {
+                    padding: 0;
+                    max-height: 580px;
+                }
+            }
         }
     }
 }
@@ -271,5 +303,54 @@
 
     @include medias.breakpoint-down("md") {
         margin-left: 30px;
+    }
+}
+
+.c-alert {
+    display: flex;
+
+    &__img {
+        width: 100%;
+        max-width: 440px;
+        height: 440px;
+        // aspect-ratio: 1/1;
+    }
+
+    &__video {
+        width: 600px;
+        height: 337px;
+        flex: 0 0 auto;
+    }
+
+    &__content,
+    &__mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    @include medias.breakpoint-down("sm") {
+        flex-direction: column;
+        align-items: center;
+
+        &__img {
+            max-width: unset;
+            height: auto;
+        }
+
+        &__content {
+            padding: 20px;
+        }
+
+        &__mobile {
+            display: none;
+        }
+
+        &__video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
     }
 }

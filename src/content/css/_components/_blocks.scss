@@ -85,6 +85,13 @@
 
         &--process {
             margin-top: 58px;
+            background: url(../images/section/process/bg.jpg) no-repeat center top/1920px 680px, #fff;
+
+            @at-root & #{$root} {
+                &__content {
+                    align-items: flex-start;
+                }
+            }
         }
     }
 
@@ -137,6 +144,14 @@
 
             &--notice {
                 margin-top: 0;
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &__item {
+            &--process {
+                background: url(../images/section/process/bg-sm.jpg) no-repeat center top/768px 630px, #fff;
             }
         }
     }

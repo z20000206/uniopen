@@ -153,15 +153,58 @@
 
     &--process {
         @at-root & #{$root} {
-            &__slide {
-                width: 320px;
-                flex-shrink: 0;
-            }
 
             &__slide {
+                position: relative;
+                width: 320px;
+                flex-shrink: 0;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 100%;
+                    margin: 0 40px;
+                    background: #DBDBDB;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 24px;
+                    width: 32px;
+                    height: 32px;
+                    padding: 4px 0;
+                    background: url(../images/icon/next.svg) no-repeat center/contain, #fff;
+                }
+
+                &:first-of-type {
+                    padding-left: 80px;
+                }
+
                 &:last-of-type {
                     width: 240px;
                     margin-right: 70px;
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &--process {
+            @at-root & #{$root} {
+                &__slide {
+                    &:first-of-type {
+                        padding-left: 70px;
+                    }
                 }
             }
         }
@@ -212,9 +255,7 @@
             display: none;
         }
 
-        &--finance {
-            
-        }
+        &--finance {}
     }
 
     @include medias.breakpoint-down("sm") {

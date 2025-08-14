@@ -967,3 +967,45 @@
     </div>
 </div>
 </div>
+
+<!-- 離站提醒 -->
+<div id="step2popup" class="c-modal c-modal--alert mfp-hide">
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <img src="../content/images/popup/alert.jpg" class="c-alert__img" alt="離站提醒">
+            <div class="c-alert__content">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">不要錯過 !</div>
+                    <div class="c-alertCard__discount">星巴克 <span class="t-pl">買一送一</span></div>
+                    <div class="c-alertCard__discount">消費回饋最高 <span class="t-pl">OPENPOINT 11%</span></div>
+                    <div class="c-alertCard__action">
+                        <a href="#" target="_blank" class="o-btn">立即申辦</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 步驟頁 -->
+<!-- step 1 -->
+<div id="step1popup" class="c-modal c-modal--alert mfp-hide">
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/yxqnJ7HD4sU" title="【2025信託女子公開賽∣邀您為選手們加油】" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="../content/images/section/process/qrocde.jpg" alt="qrcode">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
