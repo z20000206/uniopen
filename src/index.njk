@@ -255,7 +255,7 @@
                                                                     img:'beans'
                                                                 }
                                                             ] -%}
-                                                        {% for item in data %}
+                                                        {%- for item in data -%}
                                                             <div class="c-savorCard__item">
                                                                 <div class="c-savorCard__discount">
                                                                     <div class="c-savorCard__introduce">
@@ -263,19 +263,19 @@
                                                                         <div class="c-savorCard__feedback">{{ item.feedback }}</div>
                                                                         <div class="c-savorCard__text">{{ item.text | safe }}</div>
                                                                     </div>
-                                                                    {% if item.img %}
+                                                                    {%- if item.img -%}
                                                                         <div class="c-savorCard__img">
                                                                             <img src="./content/images/section/savor/{{ item.img }}.png" alt="{{ item.img }}">
                                                                         </div>
-                                                                    {% endif %}
+                                                                    {%- endif -%}
                                                                     <div class="c-savorCard__icon">
-                                                                        <a href="#" class="c-popupIcon" data-mfp-src="#starbucksPopup">
+                                                                        <a href="" class="c-popupIcon" data-mfp-src="#starbucksPopup">
                                                                             <i class="o-icon o-icon--arrow"></i>
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        {% endfor %}
+                                                        {%- endfor -%}
                                                     </div>
                                                 </div>
                                             </div>
@@ -292,31 +292,35 @@
                                                     <div class="c-savorCard__head"  data-nav-panel="parking">停車禮遇</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
-                                                        {
-                                                                    title: '夢時代購物中心<br>(含統一時代百貨高雄店)',
-                                                                    feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
-                                                                    img:''
-                                                                },
-                                                                {
-                                                                    title: '統一時代百貨台北店<br>DREAM PLAZA',
-                                                                    feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
-                                                                    img:''
-                                                                },
-                                                                {
-                                                                    title: '家樂福量販',
-                                                                    feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">1</span>小時',
-                                                                    img:''
-                                                                },
-                                                                {
-                                                                    title: '市區停車',
-                                                                    feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
-                                                                    img:''
-                                                                }
-                                                            ] -%}
+                                                            {
+                                                                title: '夢時代購物中心<br>(含統一時代百貨高雄店)',
+                                                                feedback: '',
+                                                                text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
+                                                                img:'',
+                                                                popup:'dreamMallPopup'
+                                                            },
+                                                            {
+                                                                title: '統一時代百貨台北店<br>DREAM PLAZA',
+                                                                feedback: '',
+                                                                text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
+                                                                img:'',
+                                                                popup:'dreamPlazaPopup'
+                                                            },
+                                                            {
+                                                                title: '家樂福量販',
+                                                                feedback: '',
+                                                                text: '<span class="c-savorCard__num u-mb-md">1</span>小時',
+                                                                img:'',
+                                                                popup:'carrefourParkPopup'
+                                                            },
+                                                            {
+                                                                title: '市區停車',
+                                                                feedback: '',
+                                                                text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
+                                                                img:'',
+                                                                popup:'cityParkPopup'
+                                                            }
+                                                        ] -%}
                                                         {% for item in data %}
                                                             <div class="c-savorCard__item">
                                                                 <div class="c-savorCard__introduce">
@@ -330,7 +334,7 @@
                                                                     </div>
                                                                 {% endif %}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
@@ -356,25 +360,29 @@
                                                                     title: '家樂福量販/超市',
                                                                     feedback: '',
                                                                     text: '<span class="c-savorCard__num u-mb-md">1</span>元加購價',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'carrefourGoodsPopup'
                                                                 },
                                                                 {
                                                                     title: '統一生機',
                                                                     feedback: '',
                                                                     text: '<span class="c-savorCard__num t4 u-mb-md">專屬優惠商品</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'organicPopup'
                                                                 },
                                                                 { 
                                                                     title: '鮮拾網',
                                                                     feedback: '最高回饋',
                                                                     text: '購物金<span class="c-savorCard__num u-mb-md">100</span>元',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'10martPopup'
                                                                 },
                                                                 { 
                                                                     title: '聖德科斯',
                                                                     feedback: '最高回饋',
                                                                     text: '折價券<span class="c-savorCard__num u-mb-md">50</span>元',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'santacruzPopup'
                                                                 }
                                                             ] -%}
                                                         {% for item in data %}
@@ -390,7 +398,7 @@
                                                                     </div>
                                                                 {% endif %}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
@@ -416,37 +424,43 @@
                                                                     title: '夢時代購物中心<br>(含統一時代百貨高雄店)',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENOPINT<span class="c-savorCard__num u-mb-md">8</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'dreamMallFoodPopup'
                                                                 },
                                                                 {
                                                                     title: '21 PLUS / 21風味館',
                                                                     feedback: '',
                                                                     text: '買<span class="c-savorCard__num u-mb-md">1</span>送<span class="c-savorCard__num u-mb-md">1</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'21PlusPopup'
                                                                 },
                                                                 {
                                                                     title: 'COLD STONE',
                                                                     feedback: '',
                                                                     text: '買<span class="c-savorCard__num u-mb-md">1</span>送<span class="c-savorCard__num u-mb-md">1</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'coldstonePopup'
                                                                 },
                                                                 {
                                                                     title: 'Mister Donut',
                                                                     feedback: '',
                                                                     text: '買<span class="c-savorCard__num u-mb-md">4</span>送<span class="c-savorCard__num u-mb-md">2</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'misterDonutPopup'
                                                                 },
                                                                 {
                                                                     title: 'Semeur聖娜多堡',
                                                                     feedback: '最高',
                                                                     text: '折價<span class="c-savorCard__num u-mb-md">30</span>元',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'misterDonutPopup'
                                                                 },
                                                                 {
                                                                     title: '台北W飯店',
                                                                     feedback: '',
                                                                     text: '餐飲<span class="c-savorCard__num u-mb-md">9</span>折',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'wHotelPopup'
                                                                 }
                                                             ] -%}
                                                         {% for item in data %}
@@ -462,7 +476,7 @@
                                                                     </div>
                                                                 {% endif %}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
@@ -488,49 +502,57 @@
                                                                     title: '康是美',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">120</span>點',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'cosmedPopup'
                                                                 },
                                                                 {
                                                                     title: '7-ELEVEN',
                                                                     feedback: '',
                                                                     text: '租借行動電源<span class="c-savorCard__num u-mb-md">6</span>折',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'ibonPopup'
                                                                 },
                                                                 {
                                                                     title: 'Yahoo購物',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">5</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'yahooMallPopup'
                                                                 },
                                                                 {
                                                                     title: '速邁樂加油中心',
                                                                     feedback: '',
                                                                     text: '回饋 OPENPOINT<span class="c-savorCard__num u-mb-md">5</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'mechSmilePopup'
                                                                 },
                                                                 {
                                                                     title: '7-Foodomo',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">10</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'foodomoPopup'
                                                                 },
                                                                 {
                                                                     title: '博客來',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">3</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'booksPopup'
                                                                 },
                                                                 {
                                                                     title: 'icash Pay',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">5</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'icashPayPopup'
                                                                 },
                                                                 {
                                                                     title: 'DUSKIN',
                                                                     feedback: '最高回饋',
                                                                     text: '購物金<span class="c-savorCard__num u-mb-md">200</span>元',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'duskinPopup'
                                                                 }
                                                             ] -%}
                                                         {% for item in data %}
@@ -546,7 +568,7 @@
                                                                     </div>
                                                                 {% endif %}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
@@ -632,46 +654,50 @@
                                                                     title: 'Agoda 訂房網',
                                                                     feedback: '',
                                                                     text: '優惠<span class="c-savorCard__num u-mb-md">9</span>折起',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'agodaPopup'
                                                                 },
                                                                 {
                                                                     title: '日本7-ELEVEN',
                                                                     feedback: '',
                                                                     text: '最高回饋<span class="c-savorCard__num u-mb-md">20</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'overseasTravelPopup'
                                                                 },
                                                                 {
                                                                     title: '日本環球影城',
                                                                     feedback: '',
                                                                     text: '最高回饋<span class="c-savorCard__num u-mb-md">10</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'overseasTravelPopup'
                                                                 },
                                                                 {
                                                                     title: '日本sogo、西武百貨',
                                                                     feedback: '',
                                                                     text: '最高回饋<span class="c-savorCard__num u-mb-md">15</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'overseasTravelPopup'
                                                                 }
                                                             ] -%}
-                                                        {% for item in data %}
+                                                        {%- for item in data -%}
                                                             <div class="c-savorCard__item">
                                                                 <div class="c-savorCard__introduce">
                                                                     <div class="c-savorCard__title">{{ item.title | safe }}</div>
                                                                     <div class="c-savorCard__feedback">{{ item.feedback }}</div>
                                                                     <div class="c-savorCard__text">{{ item.text | safe }}</div>
                                                                 </div>
-                                                                {% if item.img %}
+                                                                {%- if item.img -%}
                                                                     <div class="c-savorCard__img">
                                                                         <img src="./content/images/section/savor/{{ item.img }}.png" alt="{{ item.img }}">
                                                                     </div>
-                                                                {% endif %}
+                                                                {%- endif -%}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
                                                             </div>
-                                                        {% endfor %}
+                                                        {%- endfor -%}
                                                     </div>
                                                 </div>
                                             </div>
@@ -692,46 +718,46 @@
                                                                     title: '免費國際機場接送',
                                                                     feedback: '',
                                                                     text: '每年最高<span class="c-savorCard__num u-mb-md">2</span>次',
-                                                                    img:''
+                                                                    img:'airportPopup'
                                                                 },
                                                                 {
                                                                     title: '免費國際貴賓室',
                                                                     feedback: '',
                                                                     text: '每年最高<span class="c-savorCard__num u-mb-md">4</span>次',
-                                                                    img:''
+                                                                    img:'vipRoomPopup'
                                                                 },
                                                                 {
                                                                     title: '國外旅遊平安險',
                                                                     feedback: '',
                                                                     text: '最高保障<span class="c-savorCard__num u-mb-md">5,000</span>萬',
-                                                                    img:''
+                                                                    img:'safeInsurancePopup'
                                                                 },
                                                                 {
                                                                     title: '免費道路救援服務',
-                                                                    feedback: '',
+                                                                    feedback: 'roadsidePopup',
                                                                     text: '每年<span class="c-savorCard__num u-mb-md">3</span>次',
                                                                     img:''
                                                                 }
                                                             ] -%}
-                                                        {% for item in data %}
+                                                        {%- for item in data -%}
                                                             <div class="c-savorCard__item">
                                                                 <div class="c-savorCard__introduce">
                                                                     <div class="c-savorCard__title">{{ item.title | safe }}</div>
                                                                     <div class="c-savorCard__feedback">{{ item.feedback }}</div>
                                                                     <div class="c-savorCard__text">{{ item.text | safe }}</div>
                                                                 </div>
-                                                                {% if item.img %}
+                                                                {%- if item.img -%}
                                                                     <div class="c-savorCard__img">
                                                                         <img src="./content/images/section/savor/{{ item.img }}.png" alt="{{ item.img }}">
                                                                     </div>
-                                                                {% endif %}
+                                                                {%- endif -%}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
                                                             </div>
-                                                        {% endfor %}
+                                                        {%- endfor -%}
                                                     </div>
                                                 </div>
                                             </div>
@@ -1045,488 +1071,6 @@
 
 {% block popups %}
     {%- include './_partials/_popups.part' -%}
-
-    {# ==================== 享樂生活 ==================== #}
-    <!-- 統一集團企業 popup -->
-    <div id="uniPresidentPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">統一企業集團消費回饋最高7%</div>
-                        <div class="l-contentBlock__subTitle">完成任務踩點最高回饋 <span>OPENPOINT 7%</span></div>
-                        <div class="l-contentBlock__content">
-                            <table class="c-table c-table--break">
-                                {%- set table01 = [
-                                        { title: '國內一般消費', value: '2%', note: '(無上限)' },
-                                        { title: '統一企業集團加碼', value: '2%', note: '(上限500點/月)' },
-                                        { title: '統一企業集團任務踩點', value: '最高4%', note: '(上限500點/月)' }
-                                    ] -%}
-                                <thead>
-                                    <tr>
-                                        {%- for item in table01 -%}
-                                            <th>{{ item.title }}</th>
-                                        {%- endfor -%}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        {%- for item in table01 -%}
-                                            <td data-title="{{ item.title }}">
-                                                <div class="c-table__content">
-                                                    {{ item.value }}
-                                                    <span class="t-note">{{ item.note }}</span>
-                                                </div>
-                                            </td>
-                                        {%- endfor -%}
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item">
-                        <div class="t6 t-bold">踩點任務說明</div>
-                        <div class="l-contentBlock__content">
-                            <table class="c-table c-table--vertical">
-                                <tr>
-                                    <th>任務一</th>
-                                    <td>登入中信銀行APP領券</td>
-                                </tr>
-                                <tr>
-                                    <th>任務二</th>
-                                    <td>
-                                        <div class="c-table__content">
-                                                每月於統一企業集團消費(需為不同品牌)
-                                                <div class="c-list">
-                                                <div class="c-list__item">消費2家：加碼1%</div>
-                                                <div class="c-list__item">消費3家：加碼2%</div>
-                                                <div class="c-list__item">消費4家：加碼3%</div>
-                                                <div class="c-list__item">消費5家以上：加碼4%</div>
-                                            </div>
-                                            <span class="t-note">(加碼回饋上限每月500點)</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <a href="#" class="o-link" target="_blank">統一集團踩點品牌判斷方式
-                            <i class="o-link__icon"></i>
-                        </a>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">國內一般消費及統一企業集團加碼活動之當月消費入帳中獲得之OPENPOINT，將於商店請款結帳後計算，並5個工作日撥入正卡人已於中信銀行APP完成連結之uniopen會員帳號內；統一企業集團消費額外回饋2%為正、附卡合併計算，計算週期係為每日曆月1~31日之已完成商店請款之消費。例：9/1~9/30入帳之交易屬於9月回饋，全月回饋上限500點。</li>
-                                    <li class="c-list__item">參加統一企業集團踩點任務加碼活動每月回饋上限計算方式為每月1日至月底日，且次月15日前商店完成請款。需於活動期間每月至中信銀行APP完成優惠券領取(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例:參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推。將以領取成功且符合活動規則為回饋依據。活動回饋將於符合資格後兩個月內撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號內。</li>
-                                    <li class="c-list__item">回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 家樂福錢包 popup -->
-    <div id="carrefourWalletPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">綁定家樂福錢包消費最高回饋11%</div>
-                        <div class="l-contentBlock__subTitle">使用家樂福錢包綁定 uniopen 聯名卡，至家樂福賣場消費單筆刷滿500元(含)以上，<span>最高加碼回饋4%</span> 現金折價券</div>
-                        <div class="l-contentBlock__content">
-                            <span class="t-note">*每月回饋上限300元折價券</span>
-                        </div>
-                        <div class="l-contentBlock__content">
-                            <table class="c-table c-table--break">
-                                {%- set table02 = [
-                                    { title: '國內一般消費', value: '1%', note: '(無上限)' },
-                                    { title: '統一企業集團加碼', value: '2%', note: '(上限500點/月)' },
-                                    { title: '統一企業集團任務踩點', value: '最高4%', note: '(上限500點/月)' },
-                                    { title: '綁定家樂福錢包', value: '最高4%', note: '(上限300元折價券/月)' }
-                                ] -%}
-                                <thead>
-                                    <tr>
-                                        {%- for item in table02 -%}
-                                            <th>{{ item.title }}</th>
-                                        {%- endfor -%}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        {%- for item in table02 -%}
-                                            <td data-title="{{ item.title }}">
-                                                <div class="c-table__content">
-                                                    {{ item.value }}
-                                                    <span class="t-note">{{ item.note }}</span>
-                                                </div>
-                                            </td>
-                                        {%- endfor -%}
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">本活動限uniopen聯名卡正卡卡友完成綁定家樂福APP之家樂福錢包，方始計算回饋資格。</li>
-                                    <li class="c-list__item">本活動限具有uniopen聯名卡正卡卡友身份，方可參與活動。</li>
-                                    <li class="c-list__item">需以uniopen聯名卡綁定至家樂福錢包後之實際刷卡金額計算，分期付款不適用；本活動不適用於中國信託uniopen聯名卡實體卡、Apple Pay、Google Pay、第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)。</li>
-                                    <li class="c-list__item">家樂福賣場包含：家樂福量販店、家樂福超市店。</li>
-                                    <li class="c-list__item">本活動正附卡合併計算，每歸戶每月回饋上限NT300元家樂福現金折價券，以當月刷卡累積滿NT500元(含)以上之金額計算，最高享4%回饋。活動回饋以刷卡金額NT500元的倍數計算，不足NT500元無條件捨去。例如：
-                                        <ul class="c-list c-list--alpha">
-                                            <li class="c-list__item">若當月累積刷卡金額為NT499 元，因未達NT500元門檻，無法獲得回饋。</li>
-                                            <li class="c-list__item">若當月累積刷卡金額為NT950 元，可回饋金額為NT20元現金折價券(500×4%=20)。</li>
-                                            <li class="c-list__item">若當月累積刷卡金額為NT2,550 元，可回饋金額為NT100元現金折價券(2,500×4%=100)。</li>
-                                        </ul>
-                                    </li>
-                                    <li class="c-list__item">參與活動前請先確認已下載中國信託行動銀行APP並完成註冊&登錄。家樂福現金折價券將以電子折價券型式發送至正卡持卡人之中國信託行動銀行APP優惠券券夾，並於消費月之次次月底前陸續回饋，例如2025/08/21~2025/08/31消費，將於2025/10/31前回饋；2025/09/01~2025/09/30消費，將於2025/11/30前回饋。</li>
-                                    <li class="c-list__item">家樂福現金折價券使用注意事項：
-                                        <ul class="c-list c-list--alpha">
-                                            <li class="c-list__item">折價券使用期間：發送月次月底前折抵使用完畢，例如2025/10/31發送回饋，需於2025/11/30前折抵使用完畢，更多使用規則及限制依券上說明為準。</li>
-                                            <li class="c-list__item">折價券需搭配uniopen聯名卡會員使用，請於使用效期截止前兌換完畢，逾期視同作廢，恕不補發。</li>
-                                            <li class="c-list__item">折價券只可於家樂福賣場內折抵商品消費金額，不能兌換現金，亦不可找零。</li>
-                                            <li class="c-list__item">折價券不適用於購買：菸類、酒類商品(葡萄酒除外)、藥局藥品、嬰幼兒奶粉與配方食品、防疫專用酒精、快篩試劑、刮刮卡、福袋商品、家樂福量販商品提貨券、儲值禮物卡、儲值家樂福錢包、享樂券、虛擬儲值(如線上遊戲點數卡等)、安裝運費、大宗採購、台北市/新北市專用垃圾袋與環保兩用袋、美食街、商店街及家樂福線上購物之消費金額。</li>
-                                            <li class="c-list__item">以折價券所購買之商品，僅適用於換貨，不得辦理退貨。</li>
-                                            <li class="c-list__item">折價券不得與其他優惠活動併用。</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 國外消費 popup -->
-    <div id="overseasPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">國外消費最高回饋11%</div>
-                        <div class="l-contentBlock__subTitle">日本、韓國、泰國、越南、菲律賓國外實體商店消費 <span>最高加碼8%</span></div>
-                        <div class="l-contentBlock__content">
-                            <span class="t-note">*加碼回饋上限每月500點</span>
-                        </div>
-                        <div class="l-contentBlock__content">
-                            <table class="c-table">
-                                {%- set table03 = [
-                                    { title: '國外實體商店消費', value: '3%', note: '(無上限)' },
-                                    { title: '指定國家消費加碼', value: '最高8%', note: '(上限500點/月)' }
-                                ] -%}
-                                <thead>
-                                    <tr>
-                                        {%- for item in table03 -%}
-                                            <th>{{ item.title }}</th>
-                                        {%- endfor -%}
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        {%- for item in table03 -%}
-                                            <td data-title="{{ item.title }}">
-                                                <div class="c-table__content">
-                                                    {{ item.value }}
-                                                    <span class="t-note">{{ item.note }}</span>
-                                                </div>
-                                            </td>
-                                        {%- endfor -%}
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">國外實體商店消費認定：該筆交易請款時，消費地或商店登記之國別碼於國外(非台灣)，且須為面對面交易(包括以實體卡、Apple Pay、Google Pay、Samsung Pay於實體商店支付)；網路交易、條碼支付或第三方支付恕不列入消費計算。相關交易判斷最終以中國信託銀行及國際組織系統資料為準。但如屬本行不回饋交易項目將不提供回饋。</li>
-                                    <li class="c-list__item">國外消費之OPENPOINT回饋將正、附卡持卡人已請款入帳完成消費金額累積之OPENPOINT 合併計算約5個工作日撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號內；參加指定國外實體商店消費加碼活動每月回饋上限計算方式為每月1日至月底日，且次月15日前商店完成請款。需於活動期間每月至中信銀行APP完成優惠券領取(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例 : 參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推。將以領取成功且符合活動規則為回饋依據。活動回饋將於消費後次次月底撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號內。</li>
-                                    <li class="c-list__item">回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# ==================== 推薦優惠 ==================== #}
-    <!-- 星巴克 popup -->
-    <div id="starbucksPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">星巴克</div>
-                        <div class="l-contentBlock__subTitle">每週一購買指定商品最優享 <span>買1送1</span></div>
-                        <div class="l-contentBlock__content">
-                            <table class="c-table c-table--vertical">
-                                <tr>
-                                    <th>大杯(含)以上飲料</th>
-                                    <td>買1送1</td>
-                                </tr>
-                                <tr>
-                                    <th>咖啡用品、咖啡豆系列</th>
-                                    <td>9折</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">活動日期：2025/8/21~2025/9/30，每週一營業時間內於星巴克實體門市營業期間購買兩杯大杯(含)以上容量/冰熱/口味皆一致的飲料，其中一杯由星巴克招待。每人每次至多買二送二，飲料限當場一次領取。2025/8/21~2025/12/31，每週一營業時間內於星巴克實體門市營業期間購買咖啡用品、咖啡設備、咖啡豆全類別系列、咖啡設備可享 9折優惠︒</li>
-                                    <li class="c-list__item">本活動限使用中國信託uniopen聯名卡實體卡、感應式支付(如：Apple Pay、Google Pay、Samsung Pay)，不適用綁定星巴克隨行卡或星巴克APP支付、行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。交易金額須以uniopen聯名卡單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合活動資格。</li>
-                                    <li class="c-list__item">買1送1活動不適用於部分指定門市以及車道服務、外送外賣、電話預訂與行動預點服務。不適用門市如下：松山機場、松機T2、一航廈3F、新二航廈B2、二航廈4F、二航廈5F、二航廈D3、二航管制4F、小港國際站、青埔、六家、烏日、苗栗高鐵、彰化高鐵、雲林高鐵、嘉義高鐵、台南高鐵、左營高鐵、南港車站、南港高鐵、松山車站、台鐵一、板橋車站、中壢休息站、湖口休息站、西湖休息站、泰安南、泰安北、清水站1F、清水站3F、南投休息站、西螺、東山休息站、關廟南、仁德南、仁德北、古坑休息站、花蓮和平、洄瀾、福隆觀海、日月潭、中埔穀倉、奇美博物館、墾丁福華、海生館、花蓮理想、龍門、101典藏、京站、萬里、南港LALA、星巴克典藏DREAM PLAZA台北門市。咖啡用品不適用於車道服務、外送外賣、電話預訂、行動預點服務與星巴克典藏DREAM PLAZA台北門市。</li>
-                                    <li class="c-list__item">活動優惠僅適用指定品項，並依各門市現貨為準。</li>
-                                    <li class="c-list__item">原價購買與享有優惠折扣之飲料如更換需加價指定品項植物奶皆需收費。</li>
-                                    <li class="c-list__item">折扣、優惠、兌換星禮程回饋與優惠、各行銷活動恕不合併使用。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# ==================== 停車禮遇 ==================== #}
-    <!-- 家樂福停車 popup-->
-    <div id="carrefourParkPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">家樂福</div>
-                        <div class="l-contentBlock__subTitle">家樂福量販店購物當日不限消費金額享 <span>免費停車1小時</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">家樂福量販店免費停車優惠請於停車繳費機進行聯名卡優惠折抵或至服務台換取停車抵用券方可使用。</li>
-                                    <li class="c-list__item">家樂福汐科店、豐原店、北門店、大墩店不適用；家樂福超市店少數有停車場，請依照當店停車公告為主。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 統一時代百貨停車 popup-->
-    <div id="dreamPlazaPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">統一時代百貨台北店、DREAM PLAZA</div>
-                        <div class="l-contentBlock__subTitle">統一時代百貨台北店、DREAM PLAZA購物當日消費滿500元享 <span>免費停汽車2小時</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">當日館內持卡累積消費滿500元，享停汽車優惠2小時，消費折抵與卡友加碼優惠合計最多4小時。</li>
-                                    <li class="c-list__item">本活動適用於統一時代百貨台北店丨DREAM PLAZA「實體專櫃」參加，「統一時代線上購」不適用。</li>
-                                    <li class="c-list__item">本活動僅限中國信託uniopen聯名卡實體卡消費方享優惠，不含感應式支付(如：Apple Pay、Google Pay、Samsung Pay)、綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)或使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。正卡、附卡可分別參加活動，每卡每日限享1次優惠，每次限停1輛車。</li>
-                                    <li class="c-list__item">本優惠不得轉讓或折換現金，亦不得與其他優惠合併使用，扣抵之停車費將不開立發票，詳細活動辦法以館內現場公告為準。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 夢時代停車 popup-->
-    <div id="dreamMallPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">夢時代購物中心(含統一時代百貨高雄店)</div>
-                        <div class="l-contentBlock__subTitle">夢時代購物中心(含統一時代百貨高雄店)購物當日消費不限金額享 <span>免費停車2小時</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">單次折抵限用一張uniopen聯名卡實體卡磁條過卡，不得與其他卡別優惠併用。正卡、附卡可分別參加活動，每卡每日限折抵乙次(乙台車)。折抵時，該uniopen聯名卡須為有效卡。</li>
-                                    <li class="c-list__item">本優惠不得轉讓或折換現金，亦不得與其他優惠合併使用，扣抵之停車費將不開立發票。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 市區停車 popup-->
-    <div id="dreamMallPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">市區停車</div>
-                        <div class="l-contentBlock__subTitle">夢時代購物世界卡刷卡消費達指定門檻享 <span>免費市區停車2小時</span></div>
-                        <div class="l-contentBlock__content">
-                            <span class="t-note">*每日最高2小時，每月最高10次</span>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                               市區停車詳情請參照 <a href="https://www.ctbcbank.com/twrbo/zh_tw/cc_index/cc_additional/cc_add_index/cc_add_urbanpark.html" target="_blank">中國信託銀行市區停車權益網頁</a>公告為主。
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# ==================== 生活優選 ==================== #}
-    <!-- 家樂福生活用品 popup-->
-    <div id="carrefourGoodsPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">家樂福</div>
-                        <div class="l-contentBlock__subTitle">每月1日家樂福品牌日至家樂福賣場內單筆刷滿799元(含)以上，即可以 <span>1元加購「OPEN好物」一個</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">家樂福1日品牌日活動期間2025/10/1~2025/12/1(每月1號)，消費正附卡合併計算，每正卡歸戶當日限加購一個、限消費原店加購。</li>
-                                    <li class="c-list__item">全臺量販店限量25,000個(依家樂福各門市配置數量為主)，OPEN好物將於收銀櫃檯結帳時直接領取。全臺超市店限量5,000個 (依家樂福各門市配置數量為主)，活動當日消費刷卡後，系統判斷符合活動規則，將存入OPEN好物商品加購券至正卡持卡人之家樂福APP會員帳戶，請於結帳前確認已啟用電子優惠券功能，並於當月月底前通知持有商品加購券之會員；收到通知後，請至原消費店出示商品加購券加購，恕不接受跨店加購。加購期間：當月20號至次月10號，例如10月活動，回店加購期間為2025/10/20~2025/11/10，且加購商品為10月份限定「超值好物」。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 統一生機 popup-->
-    <div id="organicPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">統一生機</div>
-                        <div class="l-contentBlock__date">2025/8/21~2025/12/31</div>
-                        <div class="l-contentBlock__content">
-                            <div class="t6">待補</div>
-                        </div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">待補待補待補待補待補待補待補待補</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 鮮拾購物網 popup-->
-    <div id="10martPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">鮮拾購物網</div>
-                        <div class="l-contentBlock__subTitle">鮮拾網指定品牌首刷滿1,000元贈 <span>100元購物金</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">於鮮拾網站首次消費指定商品/品牌，每卡限回饋一次，購物金回饋上限為100元，限量共3000名。購物金回饋時間依站內公告之辦法為準。</li>
-                                    <li class="c-list__item">本活動限直接使用中國信託uniopen聯名卡支付，不適用綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)等交易。活動期間訂單以實際完成結帳流程之訂購時間為準，交易金額須單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合回饋資格，單筆訂單恕不累計、不同訂單恕不累計贈送。</li>
-                                    <li class="c-list__item">首刷禮門檻以實際結帳金額計算，分期付款不適用。將於符合首刷禮資格且商品全數出貨後約莫三週(不含例假日)，系統會自動發送購物金至會員帳戶，恕無法指定回饋禮歸戶之日期、時間。</li>
-                                    <li class="c-list__item">購物金使用期限：購物金自發放日起算，有效期限為60天，逾期未使用者自動失效，恕不補發或折現，請於期限內完成使用。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 聖德科斯 popup-->
-    <div id="santacruzPopup" class="c-modal c-modal--sm mfp-hide">
-        <button type="button" class="c-modal__close mfp-close"></button>
-        <div class="c-modal__body">
-            <div class="c-modal__content">
-                <div class="l-contentBlock">
-                    <div class="l-contentBlock__item">
-                        <div class="l-contentBlock__title">聖德科斯</div>
-                        <div class="l-contentBlock__subTitle">每週日於聖德科斯單筆消費滿688元送 <span>折價券50元</span></div>
-                    </div>
-                    <div class="l-contentBlock__item t-note">
-                        <div class="c-warn">
-                            <div class="c-warn__title">注意事項 :</div>
-                            <div class="c-warn__content">
-                                <ul class="c-list c-list--decimal">
-                                    <li class="c-list__item">每卡友每週限贈送1次50折價券，每月限量1,000筆，送完為止，使用效期如券上說明。</li>
-                                    <li class="c-list__item">50元折價券使用方式：下筆消費需滿500元即可使用50元折價券折抵。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# ==================== 輕食美饌 ==================== #}
-
 {% endblock %}
 
 {% block scripts %}
@@ -1846,7 +1390,7 @@
 
                     on: {
                         init(swiper) {
-                            swiper.slideTo(0, 0, false); 
+                            swiper.slideTo(0, 0, false);
                         }
                     }
                 }));
