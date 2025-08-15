@@ -65,31 +65,20 @@
             <div class="c-loader"></div>
         </div>
         <div class="l-container">
-            {% if headerType == "process" %}
-                <header class="l-header">
-                    <div class="l-header__wrap">
-                        <div class="l-header__logo">
-                            <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
-                                <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.png' | relativePath }}" alt="中國信託">
-                            </a>
-                            <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
-                                <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
-                            </a>
-                        </div>
-                        <a href="./index.html" class="l-header__back" rel="noreferrer noopener" data-link>回活動首頁</a>
+
+            <header class="l-header">
+                <div class="l-header__wrap">
+                    <div class="l-header__logo">
+                        <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
+                            <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.png' | relativePath }}" alt="中國信託">
+                        </a>
+                        <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
+                            <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
+                        </a>
                     </div>
-                </header>
-            {% else %}
-                <header class="l-header">
-                    <div class="l-header__wrap">
-                        <div class="l-header__logo">
-                            <a href="https://www.ctbcbank.com" class="o-logo" target="_blank" rel="noreferrer noopener">
-                                <img class="o-logo__img" src="{{ '/content/images/logo/ctbc.png' | relativePath }}" alt="中國信託">
-                            </a>
-                            <a href="#" class="o-logo" target="_blank" rel="noreferrer noopener">
-                                <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
-                            </a>
-                        </div>
+                    {% if headerType == "process" %}
+                        <a href="./index.html" class="l-header__back" rel="noreferrer noopener" data-link>回活動首頁</a>
+                    {% else %}
                         <div class="l-header__menu">
                             <div class="c-menu">
                                 <a href="#" class="c-menu__item" data-section="enjoy">享樂日常</a>
@@ -97,7 +86,7 @@
                                 <a href="#" class="c-menu__item" data-section="finance">金融生活</a>
                                 <a href="#" class="c-menu__item" data-section="discount">專屬禮遇</a>
                                 <a href="#" class="c-menu__item" data-section="life">連結會員</a>
-                                <a href="#" class="c-menu__btn" data-section="card">回到活動首頁</a>
+                                <a href="#" class="c-menu__btn" data-section="card">立即申辦</a>
                                 <div class="c-menu__share">
                                     <div class="c-share">
                                         <div class="c-share__title">分享到</div>
@@ -122,9 +111,9 @@
                         <div class="l-header__hamburger">
                             <button class="o-hamburger"></button>
                         </div>
-                    </div>
-                </header>
-            {% endif %}
+                    {% endif %}
+                </div>
+            </header>
             <main class="l-main">
                 <div class="l-wrap">
                     {% block content %}{% endblock %}
@@ -134,13 +123,18 @@
                 <a href="https://www.ctbcbank.com/twrbo/zh_tw/index/ctbc_aboutCTBC/ctbc_legal/ctbc_finances.html?targetTab=ctbc_finances_tab2" class="t-noUnderline" target="_blank" rel="noreferrer noopener">
                     <div class="l-footer__wrap">
                         <div class="l-footer__title">謹慎理財 信用至上</div>
-                        <div class="l-footer__content">信用卡循環年利率：本行ARM指數+加碼利率(5.97%~13.47%)；上限為15%，預借現金手續費為每筆預借金額X3.5%+150元，循環利率基準日為104年9月1日，其他費用請上官網查詢</div>
+                        <div class="l-footer__content">信用卡循環年利率：本行ARMs指數+加碼利率(5.97%~13.47%)；上限為15%，預借現金手續費為每筆預借金X3.5%+150元，循環利率基準日為104年9月1日，其他費用請上官網查詢</div>
                     </div>
                 </a>
             </footer>
             <div class="l-floating">
-                <div class="l-floating__gotop">
-                    <button type="button" class="o-gotop"></button>
+                <div class="l-floating__content">
+                    <a href="#" class="l-floating__card">
+                        <img src="./content/images/float/card.png" alt="">
+                    </a>
+                    <div class="l-floating__gotop">
+                        <button type="button" class="o-gotop"></button>
+                    </div>
                 </div>
             </div>
         </div>

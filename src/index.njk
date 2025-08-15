@@ -17,7 +17,7 @@
                                         <img class="c-kv__img" src="./content/images/section/kv/uniopen.svg" alt="uniopen">
                                         聯名卡
                                     </div>
-                                    <div class="c-kv__discount">消費回饋最高享 <span class="c-kv__discount c-kv__discount--highlight">11%</span></div>
+                                    <div class="c-kv__discount u-mt-lg">消費回饋最高享 <span class="c-kv__discount c-kv__discount--highlight">11%</span></div>
                                     <div class="c-kv__discount">指定卡友日最優享 <span class="c-kv__discount c-kv__discount--highlight">買1送1</span></div>
                                 </div>
                                 <div class="c-kv__action">
@@ -68,7 +68,7 @@
                         <div class="c-video__content">
                             <iframe src="https://www.youtube.com/embed/yxqnJ7HD4sU" title="【2025信託女子公開賽∣邀您為選手們加油】" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <div class="c-video__more">
-                                <div class="c-video__text"> 
+                                <div class="c-video__text">
                                     <span class="t6 t-bold t-lh12 t-ls-sm">看不了影片嗎？</span>
                                     <span>手機掃碼 立即欣賞</span>
                                 </div>
@@ -148,10 +148,18 @@
                                 </div>
                             </div>
                             <div class="c-enjoy__discount">
-                                <div class="c-enjoy__item"><span class="t-wh">國內一般消費</span><span>1%</span></div>
-                                <div class="c-enjoy__item"><span class="t-wh">國外一般消費</span><span>2%</span></div>
-                                <div class="c-enjoy__item"><span class="t-wh">國外實體商店消費</span><span>3%</span></div>
-                                <div class="c-enjoy__item"><span class="t-wh">統一企業集團消費</span><span>3%</span></div>
+                                <div class="c-enjoy__item">
+                                    <span class="t-wh">國內一般消費</span>
+                                    <span>1%</span></div>
+                                <div class="c-enjoy__item">
+                                    <span class="t-wh">國外一般消費</span>
+                                    <span>2%</span></div>
+                                <div class="c-enjoy__item">
+                                    <span class="t-wh">國外實體商店消費</span>
+                                    <span>3%</span></div>
+                                <div class="c-enjoy__item">
+                                    <span class="t-wh">統一企業集團消費</span>
+                                    <span>3%</span></div>
                             </div>
                         </div>
                     </div>
@@ -849,7 +857,7 @@
                                         <div class="o-icon o-icon--lineRight"></div>
                                     </div>
                                 </div>
-                                <div class="c-title__discount">
+                                <div class="c-title__discount u-flex-center">
                                     <span>核卡30天內刷1筆最高享</span><img class="c-title__img" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen">
                                     <span>500點</span></div>
                             </div>
@@ -883,20 +891,20 @@
                                         <i class="o-icon o-icon--new"></i>
                                     </div>
                                 </div>
-                                <div class="c-discountCard__statu">新戶禮</div>
+                                <div class="c-discountCard__statu">新卡禮</div>
                             </div>
                         </div>
                         <div class="c-discount__more">
                             <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
                                 <div class="o-iconBox__text">年費辦法</div>
                                 <div class="o-iconBox__icon">
-                                    <i class="o-icon o-icon--arrow"></i>
+                                    <i class="o-icon o-icon--arrowRight"></i>
                                 </div>
                             </a>
                             <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
                                 <div class="o-iconBox__text">注意事項</div>
                                 <div class="o-iconBox__icon">
-                                    <i class="o-icon o-icon--arrow"></i>
+                                    <i class="o-icon o-icon--arrowRight"></i>
                                 </div>
                             </a>
                         </div>
@@ -1032,12 +1040,6 @@
                 </div>
             </div>
         </section>
-        <!-- 浮動錢包 -->
-        <div class="l-float">
-            <a href="#">
-                <img src="./content/images/float/card.png" alt="">
-            </a>
-        </div>
     </div>
 {% endblock %}
 
@@ -1358,6 +1360,12 @@
                     navigation: {
                         prevEl: '[data-swiper-prev="finance"]',
                         nextEl: '[data-swiper-next="finance"]'
+                    },
+
+                    on: {
+                        init(swiper) {
+                            swiper.slideTo(0, 0, false); 
+                        }
                     }
                 }));
 

@@ -99,7 +99,9 @@
 
     &__content {
         display: flex;
+        justify-content: center;
         gap: 40px;
+        width: 100%;
     }
 
     &__item {
@@ -356,7 +358,7 @@
         padding-top: 60px;
         padding-bottom: 60px;
         width: 54.7%;
-        min-width: 800px;
+        min-width: 840px;
         min-height: 500px;
         background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
     }
@@ -1060,9 +1062,5 @@
     &__item {
         font-size: 14px;
         color: #919191;
-    }
-
-    @include medias.breakpoint-down("md") {
-        margin-left: 30px;
     }
 }

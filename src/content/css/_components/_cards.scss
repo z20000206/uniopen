@@ -503,9 +503,10 @@
     gap: 10px;
     margin-top: 24px;
     padding: 8px;
+    width: 320px;
     background-color: #FFF;
     border: 1px solid #DBDBDB;
-    width: 320px;
+    box-shadow: 2px 4px 10px 0 rgba(174, 131, 62, 0.30);
 
     &__wrap {
         box-sizing: border-box;
@@ -535,6 +536,7 @@
     &__num {
         font-size: 64px;
         font-weight: 900;
+        letter-spacing: 2.56px;
     }
 
     &__icon {

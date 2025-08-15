@@ -20,6 +20,10 @@
         flex: 0 0 auto;
     }
 
+    &--arrowRight {
+        mask-image: url(../../images/icon/arrow-right.svg);
+    }
+
     &--next {
         width: 32px;
         height: 32px;
