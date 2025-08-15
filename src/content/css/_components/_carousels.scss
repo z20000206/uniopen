@@ -143,8 +143,8 @@
         @include medias.breakpoint-down("sm") {
             @at-root & #{$root} {
                 &__slide {
-                    width: 232px;
-                    height: 388px;
+                    width: 244px;
+                    height: 342px;
                     flex-shrink: 0;
                 }
             }
@@ -216,7 +216,7 @@
 
     @include nav;
     position: absolute;
-    bottom: -104px;
+    bottom: -95px;
     display: flex;
     width: 92px;
     height: 40px;
@@ -259,7 +259,7 @@
     }
 
     @include medias.breakpoint-down("sm") {
-        bottom: -466px;
+        bottom: -440px;
         width: 100px;
         height: 40px;
 

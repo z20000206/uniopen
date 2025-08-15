@@ -36,7 +36,14 @@
         margin-top: 80px;
 
         &--kv {
-            margin-top: 138px;
+            margin-top: 88px;
+            padding-bottom: 80px;
+            padding-top: 80px;
+            background: url(../../images/section/kv/bg.jpg) no-repeat center/cover;
+        }
+
+        &--video {
+            margin-top: 0;
         }
 
         &--discount {
@@ -45,10 +52,6 @@
             padding-top: 100px;
             padding-bottom: 147px;
             background: url(../../images/section/discount/bg.jpg) no-repeat center/cover;
-        }
-
-        &--extravagant {
-            margin-top: 0;
         }
 
         &--enjoy {
@@ -67,16 +70,8 @@
         }
 
         &--finance {
-            margin-top: 0;
+            margin-top: 100px;
             margin-bottom: 90px;
-        }
-
-        &--card {
-            overflow-x: hidden;
-            margin: 0;
-            padding-top: 80px;
-            padding-bottom: 80px;
-            background: url(../../images/section/card/bg.jpg) no-repeat center/cover;
         }
 
         &--notice {
@@ -100,21 +95,21 @@
             margin-top: 60px;
 
             &--kv {
-                margin-top: 118px;
+                margin-top: 66px;
+                margin-bottom: 0;
+                padding-top: 20px;
+                padding-bottom: 60px;
+                background: url(../../images/section/kv/bgSm.jpg) no-repeat center/cover;
             }
 
             &--video {
-                margin-top: 60px;
+                margin-top: 0;
             }
 
             &--discount {
                 margin: 0;
                 padding-top: 60px;
                 padding-bottom: 127px;
-            }
-
-            &--extravagant {
-                margin-top: 0;
             }
 
             &--enjoy {
@@ -133,13 +128,7 @@
             }
 
             &--finance {
-                margin-top: 0;
-            }
-
-            &--card {
-                margin-top: 0;
-                padding-bottom: 80px;
-                background: url(../../images/section/card/bgSm.jpg) no-repeat top/cover;
+                margin-top: 80px;
             }
 
             &--notice {

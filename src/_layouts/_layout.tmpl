@@ -41,7 +41,6 @@
         {% block styles %}{% endblock %}
         <!-- Page css / End -->
 
-
         <!-- DY Scripts -->
         <link rel="preconnect" href="//cdn.dynamicyield.com">
         <link rel="preconnect" href="//st.dynamicyield.com">
@@ -93,13 +92,12 @@
                         </div>
                         <div class="l-header__menu">
                             <div class="c-menu">
-                                <a href="#" class="c-menu__item" data-section="discount">專屬禮遇</a>
-                                <a href="#" class="c-menu__item" data-section="extravagant">輕奢體驗</a>
                                 <a href="#" class="c-menu__item" data-section="enjoy">享樂日常</a>
                                 <a href="#" class="c-menu__item" data-section="savor">品味時光</a>
-                                <a href="#" class="c-menu__item" data-section="life">連結會員</a>
                                 <a href="#" class="c-menu__item" data-section="finance">金融生活</a>
-                                <a href="#" class="c-menu__btn" data-section="card">立即擁有</a>
+                                <a href="#" class="c-menu__item" data-section="discount">專屬禮遇</a>
+                                <a href="#" class="c-menu__item" data-section="life">連結會員</a>
+                                <a href="#" class="c-menu__btn" data-section="card">回到活動首頁</a>
                                 <div class="c-menu__share">
                                     <div class="c-share">
                                         <div class="c-share__title">分享到</div>
@@ -132,7 +130,7 @@
                     {% block content %}{% endblock %}
                 </div>
             </main>
-            <footer class="l-footer">
+            <footer class="l-footer {% if headerType == "process" %}l-footer--process{% endif %}">
                 <a href="https://www.ctbcbank.com/twrbo/zh_tw/index/ctbc_aboutCTBC/ctbc_legal/ctbc_finances.html?targetTab=ctbc_finances_tab2" class="t-noUnderline" target="_blank" rel="noreferrer noopener">
                     <div class="l-footer__wrap">
                         <div class="l-footer__title">謹慎理財 信用至上</div>
