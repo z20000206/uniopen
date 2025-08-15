@@ -33,34 +33,56 @@
 
 // popup
 (function ($, undefined) {
-    'use strict';
+  'use strict';
 
-    $.extend($.magnificPopup.defaults, {
-        fixedBgPos: true,
-        removalDelay: 0,
-        showCloseBtn: false
+  $.extend($.magnificPopup.defaults, {
+    fixedBgPos: true,
+    removalDelay: 0,
+    showCloseBtn: false
+  });
+
+  let mfpInited = false;
+
+  function initMagnificDelegated() {
+    if (mfpInited) return;
+    mfpInited = true;
+
+    $(document).magnificPopup({
+      type: 'inline',                
+      delegate: '[data-mfp-src]',     
+      midClick: true,                 
+      callbacks: {
+        beforeOpen: function (e) {
+          const ev = this.st.el && this.st.el[0];
+          if (ev && ev.tagName === 'A') {
+            history.replaceState(null, '', location.pathname + location.search);
+          }
+        },
+        open: function () {
+          $('body').addClass('is-popupOpen');
+
+          $(document)
+            .off('click.mfpClose')
+            .on('click.mfpClose', '[data-mfp-close]', function (e) {
+              e.preventDefault();
+              $.magnificPopup.close();
+            });
+
+          if (this.st.el && this.st.el.is('[data-mfp-alert]')) {
+            $('.mfp-bg').addClass('mfp-bg--alert');
+          }
+        },
+        close: function () {
+          $(document).off('click.mfpClose');
+          $('.mfp-bg').removeClass('mfp-bg--alert');
+          $('body').removeClass('is-popupOpen');
+        }
+      }
     });
+  }
 
-    $(function () {
-        $('[data-mfp-src]').magnificPopup({
-            callbacks: {
-                open: function () {
-                    $('body').addClass('is-popupOpen');
-                    $('[data-mfp-close]').on('click', function (e) {
-                        e.preventDefault();
-                        $.magnificPopup.close();
-                    });
+  $(function () {
+    initMagnificDelegated(); 
+  });
 
-                    if (this.st.el.is('[data-mfp-alert]')) {
-                        $('.mfp-bg').addClass('mfp-bg--alert');
-                    }
-                },
-                close: function () {
-                    $('[data-mfp-close]').off('click');
-                    $('.mfp-bg').removeClass('mfp-bg--alert');
-                    $('body').removeClass('is-popupOpen');
-                }
-            }
-        });
-    });
 })(jQuery);

@@ -96,11 +96,9 @@
                                         </div>
                                         <div class="c-title__text">享樂日常OPEN</div>
                                     </div>
-                                    <div class="c-title__discount">
+                                    <div class="c-title__discount c-title__discount--uniopen">
                                         <span>完成指定任務</span>
-                                        <span>最高享</span>
-                                        <img class="c-title__img" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen">
-                                        <span>11%</span>
+                                        <span class="u-flex u-flex-tac"><span>最高享&nbsp</span><img class="c-title__img c-title__img--sm" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen"><span>&nbsp11%</span></span>
                                     </div>
                                 </div>
                             </div>
@@ -527,7 +525,7 @@
                                                                     popup:'mechSmilePopup'
                                                                 },
                                                                 {
-                                                                    title: '7-Foodomo',
+                                                                    title: 'Foodomo',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">10</span><span class="c-savorCard__unit">%</span>',
                                                                     img:'',
@@ -599,7 +597,7 @@
                                                                 {
                                                                     title: '台北時代寓所',
                                                                     feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">延遲退房</span>至13:00',
+                                                                    text: '<span class="c-savorCard__num t4 u-mb-md">延遲退房</span>至13:00',
                                                                     img:''
                                                                 },
                                                                 {
@@ -718,25 +716,29 @@
                                                                     title: '免費國際機場接送',
                                                                     feedback: '',
                                                                     text: '每年最高<span class="c-savorCard__num u-mb-md">2</span>次',
-                                                                    img:'airportPopup'
+                                                                    img:'',
+                                                                    popup: 'airportPopup'
                                                                 },
                                                                 {
                                                                     title: '免費國際貴賓室',
                                                                     feedback: '',
                                                                     text: '每年最高<span class="c-savorCard__num u-mb-md">4</span>次',
-                                                                    img:'vipRoomPopup'
+                                                                    img:'',
+                                                                    popup: 'vipRoomPopup'
                                                                 },
                                                                 {
                                                                     title: '國外旅遊平安險',
                                                                     feedback: '',
                                                                     text: '最高保障<span class="c-savorCard__num u-mb-md">5,000</span>萬',
-                                                                    img:'safeInsurancePopup'
+                                                                    img:'',
+                                                                    popup: 'safeInsurancePopup'
                                                                 },
                                                                 {
                                                                     title: '免費道路救援服務',
                                                                     feedback: 'roadsidePopup',
                                                                     text: '每年<span class="c-savorCard__num u-mb-md">3</span>次',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup: 'roadsidePopup'
                                                                 }
                                                             ] -%}
                                                         {%- for item in data -%}
@@ -845,7 +847,9 @@
                                         </div>
                                         <div class="c-financeCard__content">
                                             <div class="c-financeCard__detail">
-                                                <div class="c-financeCard__text">{{ item.text }}</div>
+                                                {% if item.text %}
+                                                    <div class="c-financeCard__text">{{ item.text | safe}}</div>
+                                                {% endif %}
                                                 <div class="c-financeCard__list">
                                                     <div class="c-list">{{ item.list | safe }}</div>
                                                 </div>
@@ -883,7 +887,7 @@
                                         <div class="o-icon o-icon--lineRight"></div>
                                     </div>
                                 </div>
-                                <div class="c-title__discount u-flex-center">
+                                <div class="c-title__discount c-title__discount--uniopen u-flex-center">
                                     <span>核卡30天內刷1筆最高享</span><img class="c-title__img" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen">
                                     <span>500點</span></div>
                             </div>
@@ -921,7 +925,7 @@
                             </div>
                         </div>
                         <div class="c-discount__more">
-                            <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
+                            <a href="#" class="o-iconBox">
                                 <div class="o-iconBox__text">年費辦法</div>
                                 <div class="o-iconBox__icon">
                                     <i class="o-icon o-icon--arrowRight"></i>
@@ -968,7 +972,7 @@
                                     </div>
                                     <div class="c-life__action">
                                         <div class="c-life__item">
-                                            <a href="#" class="o-iconBox" target="_blank" rel="noreferrer noopener" data-link>
+                                            <a href="https://link.openpoint.com.tw/BA5KHb1X" class="o-iconBox" target="_blank" rel="noreferrer noopener" data-link>
                                                 <div class="o-iconBox__text">下載OPENPOINT APP</div>
                                                 <div class="o-iconBox__icon">
                                                     <i class="o-icon o-icon--external"></i>
