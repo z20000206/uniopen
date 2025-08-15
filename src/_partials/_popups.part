@@ -42,7 +42,7 @@
                 <div class="l-contentBlock__item">
                     <div class="t6 t-bold">踩點任務說明</div>
                     <div class="l-contentBlock__content">
-                        <table class="c-table c-table--vertical">
+                        <table class="c-table c-table--vertical c-table--verticalSm">
                             <tr>
                                 <th>任務一</th>
                                 <td>登入中信銀行APP領券</td>
@@ -1097,7 +1097,7 @@
                     <div class="l-contentBlock__title">國外旅遊</div>
                     <div class="l-contentBlock__subTitle">最優享 <span>現金回饋 20%</span></div>
                     <div class="l-contentBlock__content">
-                        <table class="c-table c-table--vertical">
+                        <table class="c-table c-table--vertical c-table--verticalSm">
                             <tbody>
                                 <tr>
                                     <th>日本7-ELEVEN</th>
