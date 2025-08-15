@@ -30,8 +30,6 @@ $('.l-header__hamburger').click(function () {
     $('body').toggleClass('is-menuOpen');
 });
 
-
-
 // swiper common setting
 const carouselSettings = {
     loop: true,

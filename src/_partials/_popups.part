@@ -398,7 +398,7 @@
                     <div class="c-event__content">
                         <div class="c-event__title">市區停車</div>
                         <div class="c-event__text">世界卡刷卡消費達指定門檻、免費市區停車每日最高2小時</div>
-                        <div class="c-event__notice">*市區停車詳情請參照中國信託銀行<a href="#" class="o-link">市區停車權益網頁</a>公告為主</div>
+                        <div class="c-event__notice">*市區停車詳情請參照中國信託銀行<a href="#" class="t-link">市區停車權益網頁</a>公告為主</div>
                     </div>
                 </div>
             </div>
@@ -749,7 +749,7 @@
                 <div class="c-warn__content">
                     <ol class="c-warn__list">
                         <li class="c-warn__item">訂房期間:即日起~2025/12/31；入住時間: 即日起~2026/12/31</li>
-                        <li class="c-warn__item">活動折扣僅適用於透過<a href="#" class="o-link">Agoda萬事達卡專屬活動頁面</a>，或透過網站和手機版網頁上指定連結 預訂的住宿。</li>
+                        <li class="c-warn__item">活動折扣僅適用於透過<a href="#" class="t-link">Agoda萬事達卡專屬活動頁面</a>，或透過網站和手機版網頁上指定連結 預訂的住宿。</li>
                         <li class="c-warn__item">此優惠受Agoda相關條款限定，在出現爭議的情況下，將由Agoda及萬事達卡作出最終裁決。</li>
                         <li class="c-warn__item">本促銷優惠僅適用於指定的預繳模式飯店，且須於線上支付房費（立即付款、延後扣款適用）, 請務必確認飯店搜尋頁面所顯示房型有「適用Mastecard TW Discount」標籤；到店付款之飯店/房型恕不適用此促銷優惠。</li>
                         <li class="c-warn__item">本促銷優惠僅適用於稅前飯店房費，不包含當地稅項及服務費。</li>
@@ -785,7 +785,7 @@
                                 <li class="c-warn__item">第二階段：2025年10月1日至12月31日（含首尾兩天）</li>
                             </ol>
                         </li>
-                        <li class="c-warn__item">購買前需要前Mastercard Travel Rewards網站，透過符合資格的萬事達卡註冊並啟用優惠，<a href="#" class="o-link">立即註冊。</a>
+                        <li class="c-warn__item">購買前需要前Mastercard Travel Rewards網站，透過符合資格的萬事達卡註冊並啟用優惠，<a href="#" class="t-link">立即註冊。</a>
                         </li>
                         <li class="c-warn__item">日本西武丶SOGO優惠只適用於線下交易活動期間內持卡人每個階段可享優惠一次。</li>
                         <li class="c-warn__item">完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。 對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
@@ -879,7 +879,7 @@
                         <span>國外旅遊平安險</span>
                     </div>
                     <div class="c-event__text">刷uniopen聯名卡支付當次全額國際機票或8成以上國外團費，或全額公共運輸工具之票款，均可享高額旅行平安險保障。</div>
-                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="o-link">旅遊平安險權益網頁</a>公告為主。</div>
+                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="t-link">旅遊平安險權益網頁</a>公告為主。</div>
                     <div class="c-event__info">
                         <table class="c-table">
                             <colgroup>
@@ -911,7 +911,7 @@
                         <span>免費尊榮道路救援服務</span>
                     </div>
                     <div class="c-event__text">刷uniopen聯名卡達指定消費門檻享免費尊榮道路救援服務。</div>
-                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="o-link">道路救援服務權益網頁</a>公告為主。</div>
+                    <div class="c-event__notice">*活動詳情請參照中國信託銀行<a href="#" class="t-link">道路救援服務權益網頁</a>公告為主。</div>
                     <div class="c-event__info">
                         <table class="c-table">
                             <colgroup>
@@ -949,7 +949,7 @@
                         </ol>
                     </li>
                     <li class="c-warn__item">適用車型為國產四人座車，恕不提供持卡人指定車輛之種類、大小或廠牌。</li>
-                    <li class="c-warn__item">機場接送詳情請參照中國信託銀行<a href="#" class="o-link">國際機場接送權益網頁</a>公告為主。</li>
+                    <li class="c-warn__item">機場接送詳情請參照中國信託銀行<a href="#" class="t-link">國際機場接送權益網頁</a>公告為主。</li>
                 </ol>
             </div>
         </div>
@@ -959,7 +959,7 @@
                 <ol class="c-warn__list">
                     <li class="c-warn__item">正、附卡持卡人享有免費國際機場指定貴賓室，但正、附卡持卡人應歸戶合計算使用次數。</li>
                     <li class="c-warn__item">指定貴賓室包含桃園一航/二航環亞貴賓室、松山環亞貴賓室；桃園機場第二航廈環亞貴賓室；全球環亞貴賓室。</li>
-                    <li class="c-warn__item">國際機場貴賓室使用詳情請參照中國信託銀行<a href="#" class="o-link">國際機場貴賓室權益網頁</a>公告為主。</li>
+                    <li class="c-warn__item">國際機場貴賓室使用詳情請參照中國信託銀行<a href="#" class="t-link">國際機場貴賓室權益網頁</a>公告為主。</li>
                     <li class="c-warn__item">指定消費門檻需達以下任一門檻近1個月信用卡帳單新增消費金額達2萬元（含）以上；或近3個月信用卡帳單累計新增消費金額達10萬元（含）以上；或近12月信用卡帳單累計新增消費金額達60萬元（含）以上。以上指定消費門檻所認得列入計算之「消費」係指信用卡帳單新增除經扣除退貨、退稅或帳務調整等因故退還款項（即負項交易）後之消費金額，且各項手續費、年費、利息、違約金、帳單分期款項、各項稅款、學費、違規罰緩、政府規費、公用事業費用代扣繳及公務機關之相關費用(含台電、省水、市水、瓦斯、縣市路邊停車費、燃料費、電信費、健保費等)均不列入計算；使用分期付款之交易，計算新增消費時係以各期實際入帳之分期款項金額為準。</li>
                 </ol>
             </div>

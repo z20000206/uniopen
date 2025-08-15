@@ -1,15 +1,22 @@
+@use "./_mixins/medias"as medias;
+
 .c-table {
+    $root: &;
+
     width: 100%;
     border-collapse: collapse;
     text-align: center;
     font-size: 16px;
+    table-layout: fixed;
 
     th,
     td {
+        box-sizing: border-box;
         text-align: left;
         padding: 16px 20px;
         border: 1px solid #DBDBDB;
         vertical-align: top;
+        text-align: center;
     }
 
     th {
@@ -25,5 +32,90 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 10px;
+    }
+
+    &--vertical {
+        text-align: start;
+
+        th {
+            background-color: #FAF5EB;
+            width: 40%;
+            text-align: start;
+        }
+    }
+
+    &--break {
+        th {
+            padding: 16px 12px;
+        }
+    }
+
+    @include medias.breakpoint-down("sm") {
+        &--break {
+            display: block;
+            border-collapse: collapse;
+
+            >thead {
+                display: none;
+            }
+
+            >tbody {
+                display: flex;
+                flex-direction: column;
+
+                >tr {
+                    width: 100%;
+                    border: 1px solid #DBDBDB;
+                    border-bottom: none;
+
+                    &:last-of-type {
+                        border-bottom: 1px solid #DBDBDB;
+                    }
+
+                    >td {
+                        display: flex;
+                        width: 100%;
+                        padding: 0;
+                        border: none;
+                    }
+
+                    >td {
+                        position: relative;
+                        border-bottom: 1px solid #DBDBDB;
+
+                        &::before {
+                            content: attr(data-title);
+                            box-sizing: border-box;
+                            position: relative;
+                            display: inline-flex;
+                            width: 40%;
+                            flex: 0 0 auto;
+                            padding: 16px 20px;
+                            background-color: #FAF5EB;
+                            text-align: start;
+                            border-right: 1px solid #DBDBDB;
+                        }
+
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+
+            @at-root & #{$root} {
+                &__content {
+                    box-sizing: border-box;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    padding: 16px 20px;
+                    flex: 1;
+
+                    span {
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
     }
 }
