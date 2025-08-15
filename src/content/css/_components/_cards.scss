@@ -99,6 +99,7 @@
     &__discount {
         display: flex;
         align-items: center;
+        gap: 4px;
         font-size: 36px;
     }
 
@@ -151,9 +152,10 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        font-size: 24px;
+        font-size: 26px;
         font-weight: bold;
         line-height: 1.2;
+        letter-spacing: 1.04px;
         border-bottom: 1px solid #DBDBDB;
         background: #FAF5EB;
     }
@@ -256,7 +258,7 @@
     &__num {
         position: relative;
         top: -1px;
-        font-size: 30px;
+        font-size: 32px;
         font-weight: bold;
         line-height: 1.2;
         color: #9B7BFF;
@@ -281,8 +283,7 @@
         display: block;
         width: 150px;
         height: 150px;
-        margin-top: 4px;
-        padding: 10px 32px;
+        margin-top: 20px;
         flex: 0 0 auto;
 
         img {
@@ -362,8 +363,8 @@
         &__img {
             width: 120px;
             height: 120px;
-            padding: 0;
             margin-top: 0;
+            margin-left: 12px;
         }
     }
 }
@@ -401,9 +402,18 @@
         &:last-child {
             border-right: 1px solid #DBDBDB;
         }
+
+        &.swiper-slide-active {
+            background: #FFF;
+            box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.15);
+            z-index: 5;
+        }
     }
 
     &__head {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         padding-bottom: 20px;
         border-bottom: 1px solid #CFC0FF;
     }
@@ -417,6 +427,7 @@
         display: flex;
         align-items: flex-start;
         gap: 4px;
+        font-size: 24px;
         color: #9B7BFF;
         font-weight: bold;
         line-height: 1.2;
@@ -448,13 +459,18 @@
     }
 
     @include medias.breakpoint-down("sm") {
+
+        &__wrap {
+            padding-left: 20px;
+        }
+
         &__head {
             padding-bottom: 10px;
         }
 
         &__title,
         &__discount {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         &__content {
@@ -466,10 +482,14 @@
             padding: 30px 20px;
 
             &.swiper-slide-active {
-                background: #FFF;
                 box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.15);
-                z-index: 5;
             }
+        }
+
+        &__img {
+            width: 140px;
+            height: 23px;
+            margin-bottom: 1px;
         }
     }
 }
@@ -616,7 +636,7 @@
         padding-top: 4px;
     }
 
-    &__discount{
+    &__discount {
         padding-top: 20px;
 
         &+& {

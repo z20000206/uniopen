@@ -26,15 +26,6 @@
 
         &--og {
             &::before {
-                content: '';
-                position: absolute;
-                top: 13px;
-                left: 11px;
-                display: inline-block;
-                transform: translateY(-50%);
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
                 background-color: #FF8A3D;
             }
         }

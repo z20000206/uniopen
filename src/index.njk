@@ -67,15 +67,24 @@
                         </div>
                         <div class="c-video__content">
                             <iframe src="https://www.youtube.com/embed/yxqnJ7HD4sU" title="【2025信託女子公開賽∣邀您為選手們加油】" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="c-video__more">
+                                <div class="c-video__text"> 
+                                    <span class="t6 t-bold t-lh12 t-ls-sm">看不了影片嗎？</span>
+                                    <span>手機掃碼 立即欣賞</span>
+                                </div>
+                                <div class="c-video__qrcode">
+                                    <img src="./content/images/section/video/qrcode.png" alt="qrcode">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- 輕奢體驗 -->
-        <section id="extravagant" class="l-block__item l-block__item--extravagant">
+        <section id="enjoy" class="l-block__item l-block__item--enjoy">
             <div class="l-block__content">
-                <div class="l-block__anchor" data-title="extravagant"></div>
+                <div class="l-block__anchor" data-title="enjoy"></div>
                 <div class="c-enjoy">
                     <div class="c-enjoy__wrap" data-aos="zoom-out-right">
                         <div class="c-enjoy__content" data-aos="zoom-out-right" data-aos-delay="300">
@@ -139,10 +148,10 @@
                                 </div>
                             </div>
                             <div class="c-enjoy__discount">
-                                <div class="c-enjoy__item">國內一般消費 <span class="t-pl">1%</span></div>
-                                <div class="c-enjoy__item">國外一般消費 <span class="t-pl">2%</span></div>
-                                <div class="c-enjoy__item">國外實體商店消費 <span class="t-pl">3%</span></div>
-                                <div class="c-enjoy__item">統一企業集團消費 <span class="t-pl">3%</span></div>
+                                <div class="c-enjoy__item"><span class="t-wh">國內一般消費</span><span>1%</span></div>
+                                <div class="c-enjoy__item"><span class="t-wh">國外一般消費</span><span>2%</span></div>
+                                <div class="c-enjoy__item"><span class="t-wh">國外實體商店消費</span><span>3%</span></div>
+                                <div class="c-enjoy__item"><span class="t-wh">統一企業集團消費</span><span>3%</span></div>
                             </div>
                         </div>
                     </div>
@@ -226,15 +235,15 @@
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
                                                                 {
-                                                                    title: '大杯(含)以上飲料',
+                                                                    title: '大杯(含)以上飲料<br>好友分享',
                                                                     feedback: '',
                                                                     text: '買<span class="c-savorCard__num u-mb-md">1</span>送<span class="c-savorCard__num u-mb-md">1</span>',
                                                                     img:'coffee'
                                                                 },
                                                                 {
-                                                                    title: '咖啡豆、咖啡用品',
+                                                                    title: '咖啡豆、咖啡用品<br>咖啡豆',
                                                                     feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">9</span>折優惠',
+                                                                    text: '<span class="c-savorCard__num u-mb-md">9</span>折',
                                                                     img:'beans'
                                                                 }
                                                             ] -%}
@@ -275,10 +284,10 @@
                                                     <div class="c-savorCard__head"  data-nav-panel="parking">停車禮遇</div>
                                                     <div class="c-savorCard__content">
                                                         {%- set data = [
-                                                                {
-                                                                    title: '家樂福量販',
+                                                        {
+                                                                    title: '夢時代購物中心<br>(含統一時代百貨高雄店)',
                                                                     feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">1</span>小時',
+                                                                    text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
                                                                     img:''
                                                                 },
                                                                 {
@@ -288,9 +297,9 @@
                                                                     img:''
                                                                 },
                                                                 {
-                                                                    title: '夢時代購物中心<br>(含統一時代百貨高雄店)',
+                                                                    title: '家樂福量販',
                                                                     feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">2</span>小時',
+                                                                    text: '<span class="c-savorCard__num u-mb-md">1</span>小時',
                                                                     img:''
                                                                 },
                                                                 {
@@ -344,7 +353,7 @@
                                                                 {
                                                                     title: '統一生機',
                                                                     feedback: '',
-                                                                    text: '<span class="c-savorCard__num u-mb-md">專屬優惠商品</span>',
+                                                                    text: '<span class="c-savorCard__num t4 u-mb-md">專屬優惠商品</span>',
                                                                     img:''
                                                                 },
                                                                 { 
@@ -426,7 +435,7 @@
                                                                     img:''
                                                                 },
                                                                 {
-                                                                    title: 'W Taipei',
+                                                                    title: '台北W飯店',
                                                                     feedback: '',
                                                                     text: '餐飲<span class="c-savorCard__num u-mb-md">9</span>折',
                                                                     img:''
@@ -480,7 +489,7 @@
                                                                     img:''
                                                                 },
                                                                 {
-                                                                    title: 'Yahoo購物中心',
+                                                                    title: 'Yahoo購物',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">5</span><span class="c-savorCard__unit">%</span>',
                                                                     img:''
@@ -630,7 +639,7 @@
                                                                     img:''
                                                                 },
                                                                 {
-                                                                    title: '日本西武百貨',
+                                                                    title: '日本sogo、西武百貨',
                                                                     feedback: '',
                                                                     text: '最高回饋<span class="c-savorCard__num u-mb-md">15</span><span class="c-savorCard__unit">%</span>',
                                                                     img:''
@@ -741,7 +750,7 @@
                                     <div class="c-title__icon">
                                         <div class="o-icon o-icon--line t-bg-wh"></div>
                                     </div>
-                                    <div class="c-title__text">開啟你的金融生活</div>
+                                    <div class="c-title__text">金融生活OPEN</div>
                                 </div>
                                 <div class="c-title__discount">卡友專屬投資理財優惠</div>
                             </div>
@@ -880,6 +889,12 @@
                         <div class="c-discount__more">
                             <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
                                 <div class="o-iconBox__text">年費辦法</div>
+                                <div class="o-iconBox__icon">
+                                    <i class="o-icon o-icon--arrow"></i>
+                                </div>
+                            </a>
+                            <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
+                                <div class="o-iconBox__text">注意事項</div>
                                 <div class="o-iconBox__icon">
                                     <i class="o-icon o-icon--arrow"></i>
                                 </div>
