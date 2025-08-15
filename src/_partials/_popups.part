@@ -11,7 +11,7 @@
                     <div class="l-contentBlock__content">
                         <table class="c-table c-table--break">
                             {%- set table01 = [
-                                        { title: '國內一般消費', value: '2%', note: '(無上限)' },
+                                        { title: '國內一般消費', value: '1%', note: '(無上限)' },
                                         { title: '統一企業集團加碼', value: '2%', note: '(上限500點/月)' },
                                         { title: '統一企業集團任務踩點', value: '最高4%', note: '(上限500點/月)' }
                                     ] -%}
@@ -365,7 +365,7 @@
                     <div class="c-warn">
                         <div class="c-warn__title">注意事項 :</div>
                         <div class="c-warn__content">
-                               市區停車詳情請參照 <a href="https://www.ctbcbank.com/twrbo/zh_tw/cc_index/cc_additional/cc_add_index/cc_add_urbanpark.html" target="_blank">中國信託銀行市區停車權益網頁</a>公告為主。
+                               市區停車詳情請參照 <a href="https://www.ctbcbank.com/twrbo/zh_tw/cc_index/cc_additional/cc_add_index/cc_add_urbanpark.html" target="_blank" class="t-link">中國信託銀行市區停車權益網頁</a>公告為主。
                             </div>
                     </div>
                 </div>
@@ -589,7 +589,7 @@
         <div class="c-modal__content">
             <div class="l-contentBlock">
                 <div class="l-contentBlock__item">
-                    <div class="l-contentBlock__title">COLD STONE</div>
+                    <div class="l-contentBlock__title">Mister Donut</div>
                     <div class="l-contentBlock__subTitle">指定品項享 <span>買4送2</span></div>
                 </div>
                 <div class="l-contentBlock__item t-note">
@@ -597,7 +597,7 @@
                         <div class="c-warn__title">注意事項 :</div>
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
-                                <li class="c-list__item">挑選六個甜甜圈、點心、現做飲品(不包括罐裝飲品、牛奶、冰品及罐裝水)，優先贈送其中二個價低品項，不可與其他行銷優惠合併使用，亦不得兌換現金。商品種類與數量以各門市現場供應為準，數量有限售完為止。部分販售現做飲品門市可至Mister Donut官網查詢。</li>
+                                <li class="c-list__item">挑選六個甜甜圈、點心、現做飲品(不包括罐裝飲品、牛奶、冰品及罐裝水)，優先贈送其中二個價低品項，不可與其他行銷優惠合併使用，亦不得兌換現金。商品種類與數量以各門市現場供應為準，數量有限售完為止。部分販售現做飲品門市可至<a href="www.misterdonut.com.tw" class="t-link" target="_blank">Mister Donut官網</a>官網查詢。</li>
                                 <li class="c-list__item">Mister Donut全門市適用。7-ELEVEN門市Mister Donut專櫃、外送及預訂服務不適用本優惠。</li>
                                 <li class="c-list__item">本活動限出示及使用中國信託uniopen聯名卡實體卡消費支付。</li>
                             </ul>
@@ -610,7 +610,7 @@
 </div>
 
 <!-- Semeur聖娜多堡 -->
-<div id="misterDonutPopup" class="c-modal c-modal--sm mfp-hide">
+<div id="semeurPopup" class="c-modal c-modal--sm mfp-hide">
     <button type="button" class="c-modal__close mfp-close"></button>
     <div class="c-modal__body">
         <div class="c-modal__content">
@@ -984,7 +984,7 @@
                             <ul class="c-list c-list--decimal">
                                 <li class="c-list__item">入住時請於櫃檯主動開啟OPENPOINT APP紀錄uniopen會員帳號，回饋點數預計於住宿當月起算，次月月底前歸戶至留存之uniopen會員帳號。</li>
                                 <li class="c-list__item">本活動限出示使用中國信託uniopen聯名卡實體卡或Apple Pay綁定畫面，不適用其他感應式支付(如：Google Pay、Samsung Pay)、綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。</li>
-                                <li class="c-list__item">詳細活動辦法以本行及統一渡假村現場公告為準。OPENPOINT由統一超商發行，紅利點數相關問題，請電洽OPENPOINT客服中心0800-711-177(手機請撥02-2627-1650)或請mail至service@mail.openpoint.com.tw 並留下您的uniopen會員手機號碼、uniopen會員帳號、問題等以供查詢回覆。</li>
+                                <li class="c-list__item">詳細活動辦法以本行及統一渡假村現場公告為準。OPENPOINT由統一超商發行，紅利點數相關問題，請電洽OPENPOINT客服中心0800-711-177(手機請撥02-2627-1650)或請mail至<a href="mailto:service@mail.openpoint.com.tw" class="t-link">service@mail.openpoint.com.tw</a>並留下您的uniopen會員手機號碼、uniopen會員帳號、問題等以供查詢回覆。</li>
                             </ul>
                         </div>
                     </div>
@@ -1380,7 +1380,7 @@
 </div>
 
 <!-- 離站提醒 -->
-<div id="step2popup" class="c-modal c-modal--alert mfp-hide">
+{# <div id="step2popup" class="c-modal c-modal--alert mfp-hide">
     <button type="button" class="c-modal__close mfp-close"></button>
     <div class="c-modal__body">
         <div class="c-modal__content">
@@ -1399,7 +1399,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> #}
 
 <!-- 步驟頁 -->
 <!-- step 1 -->

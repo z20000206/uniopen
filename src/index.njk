@@ -451,7 +451,7 @@
                                                                     feedback: '最高',
                                                                     text: '折價<span class="c-savorCard__num u-mb-md">30</span>元',
                                                                     img:'',
-                                                                    popup:'misterDonutPopup'
+                                                                    popup:'semeurPopup'
                                                                 },
                                                                 {
                                                                     title: '台北W飯店',
@@ -592,25 +592,29 @@
                                                                     title: 'BEING spa / sport / fit',
                                                                     feedback: '最高回饋',
                                                                     text: 'OPENPOINT<span class="c-savorCard__num u-mb-md">10</span><span class="c-savorCard__unit">%</span>',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'beingPopup'
                                                                 },
                                                                 {
                                                                     title: '台北時代寓所',
                                                                     feedback: '',
                                                                     text: '<span class="c-savorCard__num t4 u-mb-md">延遲退房</span>至13:00',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'hotelResonancePopup'
                                                                 },
                                                                 {
                                                                     title: '統一渡假村',
                                                                     feedback: '',
                                                                     text: '贈OPENPOINT<span class="c-savorCard__num u-mb-md">300</span>點',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'uniResotPopup'
                                                                 },
                                                                 {
                                                                     title: '雄獅旅遊',
                                                                     feedback: '',
                                                                     text: '最高折價<span class="c-savorCard__num u-mb-md">800</span>元',
-                                                                    img:''
+                                                                    img:'',
+                                                                    popup:'liontravelPopup'
                                                                 }
                                                             ] -%}
                                                         {% for item in data %}
@@ -626,7 +630,7 @@
                                                                     </div>
                                                                 {% endif %}
                                                                 <div class="c-savorCard__icon">
-                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#popup">
+                                                                    <a href="#" class="c-popupIcon" data-mfp-src="#{{ item.popup }}">
                                                                         <i class="o-icon o-icon--arrow"></i>
                                                                     </a>
                                                                 </div>
@@ -735,7 +739,7 @@
                                                                 },
                                                                 {
                                                                     title: '免費道路救援服務',
-                                                                    feedback: 'roadsidePopup',
+                                                                    feedback: '',
                                                                     text: '每年<span class="c-savorCard__num u-mb-md">3</span>次',
                                                                     img:'',
                                                                     popup: 'roadsidePopup'
