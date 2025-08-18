@@ -13,7 +13,7 @@
     td {
         box-sizing: border-box;
         text-align: left;
-        padding: 16px 20px;
+        padding: 16px 16px;
         border: 1px solid #DBDBDB;
         vertical-align: top;
         text-align: center;
@@ -35,11 +35,10 @@
     }
 
     &--vertical {
-        text-align: start;
 
         th {
             background-color: #FAF5EB;
-            width: 60%;
+            width: 33%;
             text-align: start;
         }
 
@@ -123,9 +122,17 @@
             }
         }
 
+        &--vertical {
+            th {
+                width: 60%;
+                padding: 16px 10px;
+            }
+        }
+
         &--verticalSm {
             th {
-                width: 45%;
+                width: 40%;
+                padding: 16px 10px;
             }
         }
     }
