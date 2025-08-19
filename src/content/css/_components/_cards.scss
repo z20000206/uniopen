@@ -94,6 +94,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 24px;
+        white-space: nowrap;
     }
 
     &__discount {
@@ -101,6 +102,10 @@
         align-items: center;
         gap: 4px;
         font-size: 36px;
+
+        span {
+            white-space: nowrap;
+        }
     }
 
     &__num {
@@ -454,19 +459,13 @@
         gap: 8px;
     }
 
-    @media screen and (min-width:1550px) {
-        &__item {
-            &.swiper-slide-active {
-                box-shadow: none;
-            }
-        }
+    &__farther {
+        font-size: 14px;
+        color: #919191;
     }
 
     @include medias.breakpoint-down("md") {
         margin-top: 184px;
-    }
-
-    @include medias.breakpoint-down("sm") {
 
         &__wrap {
             padding-left: 20px;

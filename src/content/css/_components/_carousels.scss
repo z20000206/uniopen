@@ -129,24 +129,26 @@
     }
 
     &--finance {
-        margin-left: 80px;
+        margin-left: 250px;
 
         @at-root & #{$root} {
             &__slide {
-                width: 300px;
+                width: 350px;
                 height: 365px;
                 flex-shrink: 0;
             }
         }
 
-        @include medias.breakpoint-down("md") {}
+        @media screen and (max-width:1550px) {
+            margin-left: 80px;
+        }
 
-        @include medias.breakpoint-down("sm") {
+        @include medias.breakpoint-down("md") {
             margin-left: 0;
 
             @at-root & #{$root} {
                 &__slide {
-                    width: 260px;
+                    width: 304px;
                     height: 342px;
                 }
             }
@@ -218,7 +220,7 @@
 
     @include nav;
     position: absolute;
-    bottom: -95px;
+    bottom: -84px;
     display: flex;
     width: 92px;
     height: 40px;
@@ -253,18 +255,16 @@
     }
 
     @include medias.breakpoint-down("md") {
-        &--savor {
-            display: none;
-        }
-    }
-
-    @include medias.breakpoint-down("sm") {
         bottom: -440px;
         width: 100px;
         height: 40px;
 
         &__next {
             right: 10px !important;
+        }
+
+        &--savor {
+            display: none;
         }
     }
 }

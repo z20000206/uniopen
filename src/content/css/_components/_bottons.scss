@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     background: #AD8F5E;
     border: 1px solid transparent;
@@ -24,7 +24,6 @@
 
     @include medias.breakpoint-down("md") {
         &--kv {
-            font-size: 16px;
             padding: 8px 16px;
         }
     }

@@ -145,10 +145,12 @@ body {
 
    &__back {
       color: #AD8F5E;
+      font-size: 18px;
+      font-weight: bold;
       text-align: center;
       text-decoration: none;
       padding: 4px 10px;
-      border: 1px solid #AD8F5E;
+      border: 2px solid #AD8F5E;
       transition: .3s;
    }
 
@@ -161,10 +163,10 @@ body {
    }
 
    @media (hover: hover) {
-      &__btn {
+      &__back {
          &:hover {
             color: #987A49;
-            border: 1px solid #987A49;
+            border: 2px solid #987A49;
          }
       }
    }
@@ -181,6 +183,15 @@ body {
 
       &__hamburger {
          display: flex;
+      }
+   }
+
+   @media (hover: hover) {
+      &__btn {
+         &:hover {
+            color: #987A49;
+            border: 2px solid #987A49;
+         }
       }
    }
 }
@@ -254,6 +265,7 @@ body {
    &__item {
       position: relative;
       text-decoration: none;
+      font-size: 18px;
    }
 
    &__btn {
@@ -261,9 +273,11 @@ body {
       padding: 4px 10px;
       justify-content: center;
       align-items: center;
-      border: 1px solid #AD8F5E;
+      font-size: 18px;
+      font-weight: bold;
       color: #AD8F5E;
       text-decoration: none;
+      border: 2px solid #AD8F5E;
    }
 
    &__share {
@@ -322,7 +336,7 @@ body {
       &__btn {
          &:hover {
             color: #987A49;
-            border: 1px solid #987A49;
+            border: 2px solid #987A49;
          }
       }
    }

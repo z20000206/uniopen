@@ -41,6 +41,10 @@
     font-weight: bold;
 }
 
+.t-900 {
+    font-weight: 900;
+}
+
 .t-wh {
     color: #FFF;
 }
@@ -72,6 +76,12 @@
 
 .t-link {
     color: #AD8F5E;
+
+    @media (hover: hover) {
+        &:hover {
+            color: #987A49;
+        }
+    }
 }
 
 .t-bg-wh {

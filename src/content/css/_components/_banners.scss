@@ -16,9 +16,10 @@
 
     &__text {
         display: flex;
+        align-items: center;
         gap: 7px;
         white-space: nowrap;
-        font-size: 32px;
+        font-size: 36px;
         font-weight: bold;
         line-height: 1.2;
         letter-spacing: 1.28px;
@@ -35,7 +36,7 @@
     }
 
     &__discount {
-        font-size: 20px;
+        font-size: 24px;
         gap: 4px;
 
         &--uniopen {
@@ -46,14 +47,14 @@
     }
 
     &__img {
-        width: 158px;
-        height: 26px;
+        width: 180px;
+        height: 30px;
         object-fit: cover;
         margin-bottom: 4px;
 
         &--sm {
-            width: 130px;
-            height: 21px;
+            width: 150px;
+            height: 25px;
         }
 
         &--lg {
@@ -68,7 +69,7 @@
 
     &__icon {
         position: absolute;
-        top: 13.5px;
+        top: 15.5px;
         left: -37px;
 
         &--right {
@@ -78,7 +79,14 @@
     }
 
     @include medias.breakpoint-down("md") {
+
+        &__text {
+            font-size: 32px;
+        }
+
         &__discount {
+            font-size: 20px;
+
             &--process {
                 text-align: center;
             }
@@ -92,8 +100,8 @@
 
         &__img {
             &--lg {
-                width: 189px;
-                height: 31px;
+                width: 160px;
+                height: 26px;
             }
         }
     }
@@ -368,7 +376,7 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 60px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         width: 54.7%;
         min-width: 820px;
         min-height: 500px;
@@ -389,31 +397,34 @@
     &__discount {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        justify-content: center;
+        gap: 64px;
         margin-top: 16px;
     }
 
     &__item {
         position: relative;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 4px;
-        padding-left: 10px;
-        color: #7953EE;
+        color: white;
         font-weight: bold;
         line-height: 1.2;
         letter-spacing: 0.64px;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            display: block;
-            width: 4px;
-            height: 4px;
-            background-color: white;
-            border-radius: 50%;
+        &+& {
+            &::after {
+                content: '';
+                position: absolute;
+                left: -32px;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 1px;
+                height: 24px;
+                background-color: white;
+            }
         }
     }
 
@@ -423,7 +434,7 @@
         display: block;
         width: calc(50% + 120px);
         margin-left: -120px;
-        height: 500px;
+        height: 520px;
         flex: 0 0 auto;
         z-index: -1;
 
@@ -464,20 +475,15 @@
         }
 
         &__item {
-            &:nth-of-type(1) {
-                order: 1;
-            }
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
 
-            &:nth-of-type(2) {
-                order: 3;
-            }
-
-            &:nth-of-type(3) {
-                order: 2;
-            }
-
-            &:nth-of-type(4) {
-                order: 4;
+            &+& {
+                &::after {
+                    content: none;
+                }
             }
         }
     }
@@ -505,7 +511,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 14px;
         padding: 40px 40px 40px 120px;
         margin-right: 0;
         margin-left: auto;
@@ -588,21 +594,6 @@
             object-fit: cover;
             object-position: left center;
         }
-
-        &.has-starbucksLogo {
-            &::before {
-                content: '';
-                position: absolute;
-                left: -50px;
-                top: 69px;
-                transform: translateY(-50%);
-                display: block;
-                width: 100px;
-                height: 100px;
-                background-image: url(../../images/section/savor/starbucksLogo.png);
-                z-index: 10;
-            }
-        }
     }
 
     @include medias.breakpoint-down("md") {
@@ -661,12 +652,6 @@
             width: 100%;
             max-width: 100%;
             height: 390px;
-
-            &.has-starbucksLogo {
-                &::before {
-                    content: none;
-                }
-            }
         }
     }
 
@@ -723,6 +708,8 @@
 
     @include medias.breakpoint-down("md") {
         &__head {
+            max-width: 100%;
+            height: 390px;
             padding-top: 60px;
             padding-left: 0;
         }
@@ -733,13 +720,6 @@
 
         &__content {
             max-width: 100%;
-        }
-    }
-
-    @include medias.breakpoint-down("sm") {
-        &__head {
-            max-width: 100%;
-            height: 390px;
         }
     }
 }
@@ -762,7 +742,6 @@
     &__img {
         display: block;
         width: 700px;
-        height: 400px;
         flex: 0 0 auto;
 
         img {
@@ -778,9 +757,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 16px;
+        padding: 40px 50px;
         width: 100%;
         max-width: 500px;
-        padding: 40px 50px;
     }
 
     &__head {
@@ -792,8 +772,13 @@
     &__discount {
         display: flex;
         flex-direction: column;
-        font-size: 20px;
-        gap: 4px;
+        gap: 8px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
     }
 
     &__num {
@@ -803,13 +788,20 @@
 
     &__action {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
     }
 
     &__item {
         color: #919191;
         position: relative;
+    }
+
+    &__notice {
+        font-size: 14px;
+        color: #919191;
+        margin-top: 8px;
     }
 
     @include medias.breakpoint-down("md") {
@@ -824,10 +816,6 @@
         &__introduce {
             max-width: 100%;
             padding: 40px 20px;
-        }
-
-        &__discount {
-            font-size: 18px;
         }
 
         &__action {
@@ -848,9 +836,22 @@
             height: 223px;
         }
 
-        &__more {
-            justify-content: flex-start;
-            padding: 20px;
+        &__notice {
+            padding: 0 20px;
+        }
+    }
+}
+
+.c-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__content {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -929,13 +930,14 @@
     padding-bottom: 40px;
 
     &__title {
-        padding: 40px 20px 20px 20px;
+        padding: 80px 20px 20px 20px;
         overflow: hidden;
     }
 
     &__action {
         display: flex;
         justify-content: center;
+        gap: 40px;
         padding-top: 40px;
     }
 
@@ -964,13 +966,16 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 100%;
     padding: 40px 0px;
     max-width: 1200px;
     margin: 0 auto;
 
     &__subTitle {
-        font-size: 24px;
+        font-size: 32px;
+        color: var(--9B7BFF, #9B7BFF);
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 1.28px;
     }
 
     &__title {
@@ -998,7 +1003,6 @@
         font-size: 26px;
         font-weight: bold;
         line-height: 120%;
-        white-space: nowrap;
 
         p {
             display: inline-flex;
@@ -1018,14 +1022,14 @@
     }
 
     @include medias.breakpoint-down("md") {
-        padding: 40px 36px;
+        padding: 40px 28px;
 
         &__subTitle {
             font-size: 20px;
         }
 
         &__title {
-            gap: 20px;
+            gap: 16px;
             font-size: 30px;
 
             img {
@@ -1075,5 +1079,9 @@
     &__item {
         font-size: 14px;
         color: #919191;
+    }
+
+    &__more {
+        margin-top: 8px;
     }
 }

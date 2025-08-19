@@ -85,28 +85,28 @@ $(window).on('load', function () {
         $('[data-loading]').fadeOut(300, function () {
             $(this).hide();
         });
-    }, 800);
+    }, 0);
 });
 
 // hyperlink(延遲700ms)
-$(document).on('click', '[data-link]', function (e) {
-    e.preventDefault();
+// $(document).on('click', '[data-link]', function (e) {
+//     e.preventDefault();
 
-    const url = $(this).attr('href');
-    const target = $(this).attr('target');
+//     const url = $(this).attr('href');
+//     const target = $(this).attr('target');
 
-    $('[data-loading]').fadeIn(200);
+//     $('[data-loading]').fadeIn(200);
 
-    setTimeout(function () {
-        $('[data-loading]').fadeOut(200, function () {
-            if (target === '_blank') {
-                window.open(url, '_blank');
-            } else {
-                window.location.href = url;
-            }
-        });
-    }, 700);
-});
+//     setTimeout(function () {
+//         $('[data-loading]').fadeOut(200, function () {
+//             if (target === '_blank') {
+//                 window.open(url, '_blank');
+//             } else {
+//                 window.location.href = url;
+//             }
+//         });
+//     }, 700);
+// });
 
 // gotop
 $(function () {

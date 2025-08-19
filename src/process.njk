@@ -2,30 +2,27 @@
 
 {% set headerType = "process" %}
 
-{% block title %}中國信託 uniopen 聯名卡－申辦綁定流程全攻略{% endblock %}
+{% block title %}中國信託 uniopen 聯名卡－點數累積兌換全攻略{% endblock %}
 
 {% block content %}
     <div class="l-block">
         <div class="l-block__item l-block__item--process">
             <div class="l-block__content">
                 <div class="c-unitBanner">
-                    <div class="c-unitBanner__subTitle">申辦綁定流程全攻略</div>
+                    <div class="c-unitBanner__subTitle">點數累積兌換全攻略</div>
                     <div class="c-unitBanner__title">
                         <img src="./content/images/section/kv/uniopen.svg" alt="uniopen 聯名卡">聯名卡</div>
                     <div class="c-unitBanner__item">
-                        <p>OPEN中信銀行APP</p>
-                        <p>簡單 <span class="c-unitBanner__num">5</span> 步驟完成會員連結及領券</p>
-                    </div>
-                    <div class="c-unitBanner__item">
-                        <p>消費回饋最高 <span class="c-unitBanner__num">11%</span></p>
+                        <p class="t-nowrap">簡單<span class="c-unitBanner__num">5</span>步驟完成會員連結及領券</p>
+                        <p class="t-nowrap">消費回饋最高 <span class="c-unitBanner__num">11%</span></p>
                     </div>
                 </div>
                 {%- for item in [
                     {
-                        step: 1,
+                        step: 0,
                         title: '申辦卡片',
                         subTitle: '有中信卡可直接申辦<br>若沒有請準備身分證、財力證明文件',
-                        desc: '(無中信帳戶者，請準備他行帳號或信用卡)',
+                        desc: '無中信帳戶者，請準備他行帳號或信用卡',
                         content: [
                             { text:'點擊網頁立即申辦→開始申請(或中信銀行APP →信用卡→前往申辦)' },
                             { text:'輸入資料'},
@@ -35,34 +32,36 @@
                             { text:'依據說明完成辦卡' }
                         ]
                     },{
-                        step: 2,
-                        title: '會員連結',
-                        subTitle: '完成 uniopen 會員連結<br>消費累積OPENPOINT',
+                        step: 1,
+                        title: '連結會員',
+                        subTitle: '<span>完成 uniopen 會員連結 </span><span class="t-nowrap">消費累積OPENPOINT</span>',
                         content: [
                             { text:'登入中信銀行APP' },
                             { text:'選擇信用卡→卡片管理'},
                             { text:'點選uniopen會員連結' },
                             { text:'點擊立即連結' },
-                            { text:'確認手機號碼' },
-                            { text:'依據說明完成連結<br>並點擊確定' },
+                            { text:'確認手機號碼<br>將以辦卡手機連結會員<br>，以領取回饋點數' },
+                            { text:'輸入密碼認證<br>(或忘記密碼重設)<br><div class="t-gy">還不是會員請設定密碼註冊</div>' },
+                            { text:'依據說明完成連結<br>並點擊下一步' },
                             { text:'完成連結' }
                         ]
                     },{
-                        step: 3,
+                        step: 2,
                         title: '綁定行動支付',
                         subTitle: '快速綁定 立即消費免等實體卡',
                         content: [
                             { text:'選擇信用卡→卡片管理' },
                             { text:'於卡片管理下滑<br>找到支付綁定' },
                             { text:'點擊家樂福錢包', gy: '(或其他想綁定的行動支付)' },
-                            { text:'安裝家樂福APP<br>並回到中信銀行APP' },
+                            { text:'安裝家樂福APP→註冊會員→回到中信銀APP點擊家樂福錢包' },
+                            { text:'以本人手機號碼實名認證' },
                             { text:'選擇uniopen聯名卡<br>進行綁定' },
                             { text:'依據說明完成綁定' }
                         ]
                     },{
-                        step: 4,
+                        step: 3,
                         title: '領優惠券',
-                        subTitle: '領券並完成指定任務<br>享踩點任務、國外消費加碼最高 <span class="t-pl t-bold t4 t-lh12">11%</span>',
+                        subTitle: '領券並完成指定任務 <span class="t-nowrap">最高回饋 <span class="t-pl t-bold t4 t-lh12">11%</span></span>',
                         content: [
                             { text:'選擇信用卡→卡片管理' },
                             { text:'點擊卡友專屬券'},
@@ -71,7 +70,7 @@
                             { text:'查看已領取的優惠券' }
                         ]
                     },{
-                        step: 5,
+                        step: 4,
                         title: '查詢點數',
                         subTitle: '隨時隨地 查詢回饋點數超輕鬆',
                         content: [
@@ -80,6 +79,17 @@
                             { text:'查詢uniopen聯名卡回饋' },
                             { text:'點擊會員帳號' },
                             { text:'可查詢入點帳號' }
+                        ]
+                    },{
+                        step: 5,
+                        title: '點數兌換',
+                        subTitle: '消費/繳費折抵、超值兌換，點數超好用',
+                        content: [
+                            { text:'OPENPOINT APP<br>→點擊會員條碼' },
+                            { text:'付款時出示條碼<br>並通知人員折抵<br>(超商使用專用條碼)'},
+                            { text:'點擊付款碼' },
+                            { text:'設定支付方式、開啟折抵→條碼支付' },
+                            { text:'點擊點數兌換<br>→兌換商品' }
                         ]
                     }
                 ] -%}
@@ -92,7 +102,7 @@
                                         <div class="o-icon o-icon--line"></div>
                                     </div>
                                     <div class="c-title__text">
-                                        <span class="t-pl">Step {{ loop.index }}</span>
+                                        <span class="t-pl">Step {{ loop.index0 }}</span>
                                         {{ item.title }}
                                     </div>
                                     <div class="c-title__icon c-title__icon--right">
@@ -130,7 +140,13 @@
                             </div>
                         </div>
                         <div class="c-process__action">
-                            <a href="#" class="o-btn" target="_blank" data-mfp-src="#step1popup" data-mfp-alert>教學影片</a>
+                            {% if loop.first %}
+                                <a href="#" class="o-btn" target="_blank" data-mfp-src="#step0Clientpopup" data-mfp-alert>新戶申辦教學</a>
+                                <a href="#" class="o-btn" target="_blank" data-mfp-src="#step0Cardpopup" data-mfp-alert>新卡申辦教學</a>
+                            {% elseif loop.last %}
+                            {% else %}
+                                <a href="#" class="o-btn" target="_blank" data-mfp-src="#step{{ item.step }}popup" data-mfp-alert>教學影片</a>
+                            {% endif %}
                         </div>
                     </div>
                 {%- endfor -%}
