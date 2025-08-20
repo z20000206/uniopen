@@ -47,7 +47,7 @@
             </div>
         </section>
         <!-- Video -->
-        {# <section id="video" class="l-block__item l-block__item--video">
+        <section id="video" class="l-block__item l-block__item--video">
             <div class="l-block__wrap">
                 <div class="l-block__content">
                     <div class="c-video">
@@ -66,7 +66,9 @@
                             </div>
                         </div>
                         <div class="c-video__content">
-                            <iframe src="https://www.youtube.com/embed/yxqnJ7HD4sU" title="【2025信託女子公開賽∣邀您為選手們加油】" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="c-video__figure">
+                                <iframe src="https://www.youtube.com/embed/svrZsrJyvqE?rel=0&modestbranding=1&controls=2&loop=1&playlist=svrZsrJyvqE" title="中國信託uniopen聯名卡  我的世界 由我OPEN！" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                             <div class="c-video__more">
                                 <div class="c-video__text">
                                     <span class="t6 t-bold t-lh12 t-ls-sm">看不了影片嗎？</span>
@@ -80,7 +82,7 @@
                     </div>
                 </div>
             </div>
-        </section> #}
+        </section>
         <!-- 輕奢體驗 -->
         <section id="enjoy" class="l-block__item l-block__item--enjoy">
             <div class="l-block__content">
@@ -255,14 +257,16 @@
                                                 <div class="c-savorCard__content">
                                                     {%- set data = [
                                                                 {
-                                                                    title: '大杯(含)以上飲料<br><span class="c-savorCard__num t4 u-mb-md">好友分享</span>',
+                                                                    title: '大杯(含)以上飲料',
+                                                                    remark: '不適用於部分指定門市',
                                                                     feedback: '',
-                                                                    text: '',
+                                                                    text: '<span class="c-savorCard__num t4 u-mb-md">好友分享</span>',
                                                                     img:'coffee',
                                                                     popup: 'coffee'
                                                                 },
                                                                 {
-                                                                    title: '咖啡豆、咖啡用品<br>咖啡豆',
+                                                                    title: '咖啡用品、咖啡豆',
+                                                                    remark: '',
                                                                     feedback: '',
                                                                     text: '<span class="c-savorCard__num u-mb-md">9</span>折',
                                                                     img:'beans',
@@ -277,6 +281,9 @@
                                                                     <div class="c-savorCard__feedback">{{ item.feedback }}</div>
                                                                     <div class="c-savorCard__text">{{ item.text | safe }}</div>
                                                                 </div>
+                                                                {%- if item.remark -%}
+                                                                    <div class="c-savorCard__remark">{{ item.remark | safe }}</div>
+                                                                {%- endif -%}
                                                                 {%- if item.img -%}
                                                                     <div class="c-savorCard__img">
                                                                         <img src="./content/images/section/savor/{{ item.img }}.png" alt="{{ item.img }}">
@@ -836,8 +843,8 @@
                                     },
                                     { 
                                         data:'cl-gift', 
-                                        title:'專屬信貸禮', 
-                                        discount:'抽<img class="c-financeCard__img" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen"> 17,711點', 
+                                        title:'專屬信貸禮抽', 
+                                        discount:'<img class="c-financeCard__img" src="./content/images/uniopen/uniopenColor.svg" alt="uniopen"> 17,711點', 
                                         text:'', 
                                         list:'<div class="c-list__item c-list__item--og">uniopen聯名卡核卡次月享Online貸開辦費優惠價2,000元</div>
                                         <div class="c-list__item c-list__item--og">再抽OPENPOINT 17,711點(1名)</div>',
@@ -1054,8 +1061,8 @@
                     </div>
                     <div class="c-logo__content">
                         <picture>
-                            <source srcset="./content/images/section/logo/allLogoSm.png" media="(max-width: 768px)">
-                            <img src="./content/images/section/logo/allLogo.png" alt="統一企業 集團品牌">
+                            <source srcset="./content/images/section/logo/allLogoSm.jpg" media="(max-width: 768px)">
+                            <img src="./content/images/section/logo/allLogo.jpg" alt="統一企業 集團品牌">
                         </picture>
                     </div>
 
@@ -1082,10 +1089,8 @@
                                         <ol class="c-noticeList__list">
                                             <li class="c-noticeList__item">活動日期: 2025/8/21~2025/12/31止(若有各別載明活動期間，以載明公告期間為主)。</li>
                                             <li class="c-noticeList__item">活動消費金額均以新臺幣計算。</li>
-                                            <li class="c-noticeList__item">統一企業集團品牌商店消費範圍：統一超商、康是美、夢時代購物中心、統一時代百貨、DREAM PLAZA、UNIKCY、玲廊滿藝、BEING sport、BEING spa、BEING fit、星巴克、21Plus 21風味館、Mister Donut、COLD STONE酷聖石冰淇淋、Semeur聖娜、家樂福、Mia C'bon、Yahoo購物、博客來、聖德科斯、統一生機、統一精工速邁樂加油站、foodomo、鮮拾網、DUSKIN、黑貓宅急便、ibon售票系統、統一渡假村、台北W飯店、台北時代寓所。消費回饋之認定依中國信託銀行系統為主，符合回饋之交易需為指定加碼商店交易，且帳單明細能完整呈現該指定商店名稱者方得回饋，<span class="t-rd">部分設立於百貨/商場/機場/車站/飯店/旅館/賣場/美食街內之商店，因帳單明細無法判別為該指定商店，將不列入回饋計算
-                                                    </span>。</li>
+                                            <li class="c-noticeList__item">統一企業集團品牌商店消費範圍：統一超商、康是美、夢時代購物中心、統一時代百貨、DREAM PLAZA、UNIKCY、玲廊滿藝、BEING sport、BEING spa、BEING fit、星巴克、21Plus 21風味館、Mister Donut、COLD STONE酷聖石冰淇淋、Semeur聖娜、家樂福、Mia C'bon、Yahoo購物、博客來、聖德科斯、統一生機、統一精工速邁樂加油站、foodomo、鮮拾網、DUSKIN、黑貓宅急便、ibon售票系統、統一渡假村、台北W飯店、台北時代寓所。消費回饋之認定依中國信託銀行系統為主，符合回饋之交易需為指定加碼商店交易，且帳單明細能完整呈現該指定商店名稱者方得回饋，<span class="t-rd">部分設立於百貨/商場/機場/車站/飯店/旅館/賣場/美食街內之商店，因帳單明細無法判別為該指定商店，將不列入回饋計算</span>。</li>
                                             <li class="c-noticeList__item">家樂福量販及超市活動行銷活動支付方式適用於uniopen聯名卡實體卡或綁定至家樂福錢包、Apple Pay、Google Pay等錢包支付刷卡；第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。家樂福線上購物恕不適用。</li>
-                                            <li class="c-noticeList__item">家樂福量販及超市活動支付方式適用於 uniopen 聯名卡實體卡或綁定至家樂福錢包、Apple Pay、Google Pay等錢包支付刷卡；第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。家樂福線上購物恕不適用。</li>
                                             <li class="c-noticeList__item">參與本活動之持卡人，若活動期間退貨交易致使其符合活動之總金額未達活動門檻，贈品點數核發時如持卡人已停卡或違反本行信用卡約定條款，本行將逕行取消該持卡人參加本活動之資格。另本行有權檢視各交易行為，若特約商店及持卡人涉及蓄意人為操作等不正當行為，本行除排除其參與本活動及兌領獎項外，並保留法律追訴權。</li>
                                             <li class="c-noticeList__item">其他未盡事宜及參與活動規範以中國信託銀行官網及合作商家官網公告為主。如遇不可抗力或不可歸責之事由，中國信託銀行及合作商家得保留修改、變更、終止本活動及對本活動之所有事宜做出最終解釋及決定之權利，相關事宜將依信用卡業務機構管理辦法第十九條及相關規定辦理。</li>
                                         </ol>

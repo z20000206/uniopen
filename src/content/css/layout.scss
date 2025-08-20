@@ -515,6 +515,7 @@ body {
    }
 
    &__card {
+      display: block;
       width: 72px;
       height: 100px;
 
@@ -522,6 +523,7 @@ body {
          width: 100%;
          height: 100%;
          object-fit: cover;
+         transform: translateZ(0);
       }
    }
 
@@ -535,8 +537,8 @@ body {
       bottom: 20px;
 
       &__card {
-         width: 64px;
-         height: 89px;
+         width: 72px;
+         height: 100px;
       }
 
       &__gotop {

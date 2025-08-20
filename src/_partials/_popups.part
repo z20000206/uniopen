@@ -51,7 +51,7 @@
                                 <th>任務二</th>
                                 <td>
                                     <div class="c-table__content">
-                                                每月於統一企業集團消費(需為不同品牌)
+                                                每月於統一企業集團品牌消費加碼(需為不同品牌)
                                                 <div class="c-list">
                                             <div class="c-list__item">消費2家：加碼1%</div>
                                             <div class="c-list__item">消費3家：加碼2%</div>
@@ -77,7 +77,6 @@
                                 <li class="c-list__item">國內一般消費定義:國內一般刷卡交易，不含本行不回饋交易項目，不回饋交易項目請依uniopen聯名卡回饋計劃辦理。</li>
                                 <li class="c-list__item">國內一般消費及統一企業集團消費加碼活動之當月消費入帳中獲得之OPENPOINT，將於商店請款結帳後計算，並5個工作日撥入正卡人已於中信銀行APP完成連結之uniopen會員帳號；統一企業集團消費加碼回饋2%為正、附卡合併計算，計算週期係為每日曆月1~31日之已完成商店請款之消費。例：9/1~9/30入帳之交易屬於9月回饋，全月回饋上限500點。</li>
                                 <li class="c-list__item">統一企業集團品牌適用範圍：統一超商、康是美、夢時代購物中心、統一時代百貨、DREAM PLAZA、UNIKCY、玲廊滿藝、BEING sport、BEING spa、BEING fit、星巴克、21Plus/21風味館、Mister Donut、COLD STONE酷聖石冰淇淋、Semeur聖娜、家樂福、Mia C‘bon、Yahoo購物、博客來、聖德科斯、統一生機、統一精工速邁樂加油站、foodomo、鮮拾網、DUSKIN、黑貓宅急便、ibon售票系統、統一渡假村、台北W飯店、台北時代寓所。消費回饋之認定依本行系統為主，符合回饋之交易需為指定加碼商店交易，且帳單明細能完整呈現該指定商店名稱者方得回饋，<span class="t-rd">部分設立於百貨/商場/機場/車站/飯店/旅館/賣場/美食街內之商店，因帳單明細無法判別為該指定商店，將不列入回饋計算</span>。</li>
-                                <li class="c-list__item">儲值交易不列入統一企業集團踩點任務加碼活動，惟星巴克線上儲值交易適用期間至2025/9/30止。</li>
                                 <li class="c-list__item">參加統一企業集團踩點任務加碼活動每月回饋上限計算方式為每月1日至月底日，且次月15日前商店完成請款。需於活動期間每月至中信銀行APP完成領取優惠券(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例:參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推。將以領取成功且符合活動規則為回饋依據。符合回饋資格之持卡人，將於消費月該月底加計60天內，撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號。</li>
                                 <li class="c-list__item">回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
                             </ul>
@@ -246,12 +245,12 @@
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
                                 <li class="c-list__item">每週一持uniopen聯名卡於星巴克實體門市營業期間購買兩杯大杯(含)以上容量/冰熱/口味皆一致的飲料，其中一杯由星巴克招待。每人每次至多買二送二，飲料限當場一次領取。</li>
-                                <li class="c-list__item">本活動限使用uniopen聯名卡實體卡、感應式支付(如：Apple Pay、Google Pay、Samsung Pay)與使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易，不適用綁定星巴克隨行卡或星巴克APP支付、行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、。交易金額須以uniopen聯名卡單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合活動資格。</li>
+                                <li class="c-list__item">本活動限使用uniopen聯名卡實體卡、感應式支付(如：Apple Pay、Google Pay、Samsung Pay)與使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易，不適用綁定星巴克隨行卡或星巴克APP支付、行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)。交易金額須以uniopen聯名卡單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合活動資格。</li>
                                 <li class="c-list__item">本活動不適用於部分指定門市以及車道服務、外送外賣、電話預訂與行動預點服務。不適用門市如下：松山機場、松機T2、一航廈3F、新二航廈B2、二航廈4F、二航廈5F、二航廈D3、二航管制4F、小港國際站、青埔、六家、烏日、苗栗高鐵、彰化高鐵、雲林高鐵、嘉義高鐵、台南高鐵、左營高鐵、南港車站、南港高鐵、松山車站、台鐵一、板橋車站、中壢休息站、湖口休息站、西湖休息站、泰安南、泰安北、清水站1F、清水站3F、南投休息站、西螺、東山休息站、關廟南、仁德南、仁德北、古坑休息站、花蓮和平、洄瀾、福隆觀海、日月潭、中埔穀倉、奇美博物館、墾丁福華、海生館、花蓮理想、龍門、101典藏、京站、萬里、南港LALA、星巴克典藏DREAM PLAZA台北門市。</li>
                                 <li class="c-list__item">活動優惠僅適用指定品項，並依各門市現貨為準。</li>
                                 <li class="c-list__item">原價購買與享有優惠折扣之飲料如更換需加價指定品項植物奶皆需收費。</li>
                                 <li class="c-list__item">折扣、優惠、兌換星禮程回饋與優惠、各行銷活動恕不合併使用。</li>
-                                <li class="c-list__item">凡參與本活動，即視同承認及接受本活動注意事項及相關規定，詳細活動辦法依星巴克網站公告為主。</li>
+                                <li class="c-list__item">詳細活動辦法依星巴克網站公告為主。</li>
                             </ul>
                         </div>
                     </div>
@@ -269,7 +268,7 @@
             <div class="l-contentBlock">
                 <div class="l-contentBlock__item">
                     <div class="l-contentBlock__title">星巴克</div>
-                    <div class="l-contentBlock__subTitle">咖啡用品、咖啡豆系列享 <span>9折</span></div>
+                    <div class="l-contentBlock__subTitle">每週一於星巴克購買咖啡用品、咖啡豆系列享 <span>9折</span></div>
                 </div>
                 <div class="l-contentBlock__item t-note">
                     <div class="c-warn">
@@ -277,11 +276,11 @@
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
                                 <li class="c-list__item">每週一持uniopen聯名卡於星巴克實體門市營業期間購買咖啡用品、咖啡設備、咖啡豆系列享 9折優惠。</li>
-                                <li class="c-list__item">本活動限使用uniopen聯名卡實體卡、感應式支付(如：Apple Pay、Google Pay、Samsung Pay)與使用附加之電子票證儲值卡(如：icash 2.0)付款及自動加值等交易，不適用綁定星巴克隨行卡或星巴克APP支付、行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、。交易金額須以uniopen聯名卡單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合活動資格。</li>
+                                <li class="c-list__item">本活動限使用uniopen聯名卡實體卡、感應式支付(如：Apple Pay、Google Pay、Samsung Pay)與使用附加之電子票證儲值卡(如：icash 2.0)付款及自動加值等交易，不適用綁定星巴克隨行卡或星巴克APP支付、行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)。交易金額須以uniopen聯名卡單筆全額支付(不含其他折抵金額或優惠券等折扣活動)方可符合活動資格。</li>
                                 <li class="c-list__item">本活動不適用BE@RBRICK系列聯名商品，亦不適用於車道服務、外送外賣、電話預訂、行動預點服務與星巴克典藏DREAM PLAZA台北門市。</li>
                                 <li class="c-list__item">商品依各門市現貨為準，售完為止。</li>
                                 <li class="c-list__item">折扣、優惠、兌換星禮程回饋與優惠、各行銷活動恕不合併使用。</li>
-                                <li class="c-list__item">凡參與本活動，即視同承認及接受本活動注意事項及相關規定，詳細活動辦法依星巴克網站公告為主。</li>
+                                <li class="c-list__item">詳細活動辦法依星巴克網站公告為主。</li>
                             </ul>
                         </div>
                     </div>
@@ -406,37 +405,45 @@
         <div class="c-modal__content">
             <div class="l-contentBlock">
                 <div class="l-contentBlock__item">
-                    <div class="l-contentBlock__title">家樂福</div>
-                    <div class="l-contentBlock__subTitle">每月1日家樂福品牌日至家樂福賣場內單筆刷滿799元(含)以上，即可以 <span>1元加購「超值好物」一個</span></div>
+                    <div class="l-contentBlock__title">家樂福 OPEN Day</div>
+                    <div class="l-contentBlock__subTitle">每月1日至家樂福賣場內單筆刷滿799元(含)以上，即可以 <span>1元加購「超值好物」一個</span></div>
                     <div class="l-contentBlock__content">
-                        <table class="c-table c-table--vertical c-table--verticalSm">
-                            <tr>
-                                <th>10/1</th>
-                                <td>
-                                    <div class="c-table__content u-flex-tac">
-                                        <img src="./content/images/section/savor/chair.png" alt="小王子 戶外用超輕摺疊口袋椅凳">
-                                        <span>小王子 戶外用超輕摺疊口袋椅凳</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>11/1</th>
-                                <td>
-                                    <div class="c-table__content u-flex-tac">
-                                        <img src="./content/images/section/savor/bag.png" alt="安妮兔 運動托特包">
-                                        <span>安妮兔 運動托特包</span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>12/1</th>
-                                <td>
-                                    <div class="c-table__content u-flex-tac">
-                                        <img src="./content/images/section/savor/bowl.png" alt="304不鏽鋼刨絲瀝水盆三件組">
-                                        <span>304不鏽鋼刨絲瀝水盆三件組</span>
-                                    </div>
-                                </td>
-                            </tr>
+                        <table class="c-table">
+                            <thead>
+                                <tr>
+                                    <th>2025/10/1</th>
+                                    <th>2025/11/1</th>
+                                    <th>2025/12/1</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="o-figure">
+                                            <div class="o-figure__img">
+                                                <img src="./content/images/section/savor/chair.png" alt="小王子 戶外用超輕摺疊口袋椅凳">
+                                            </div>
+                                            <div class="o-figure__description">小王子<br>戶外用超輕摺疊口袋椅凳</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="o-figure">
+                                            <div class="o-figure__img">
+                                                <img src="./content/images/section/savor/bag.png" alt="安妮兔 運動托特包">
+                                            </div>
+                                            <div class="o-figure__description">安妮兔 運動托特包</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="o-figure">
+                                            <div class="o-figure__img">
+                                                <img src="./content/images/section/savor/bowl.png" alt="304不鏽鋼刨絲瀝水盆三件組">
+                                            </div>
+                                            <div class="o-figure__description">304不鏽鋼刨絲瀝水盆三件組</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -616,7 +623,7 @@
                         <div class="c-warn__title">注意事項 :</div>
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
-                                <li class="c-list__item">指定商品買一送一優惠活動期間為2025/8/21~2025/10/31，適用商品為大薯霸、冬瓜檸檬凍飲、買烤半雞送烤雞腿、其餘項目依店內公告為主。</li>
+                                <li class="c-list__item">活動期間為2025/8/21~2025/10/31。</li>
                                 <li class="c-list__item">各優惠商店詳細優惠方案依各店公告為準。</li>
                                 <li class="c-list__item">本活動不可與其他行銷優惠合併使用、兌換現金。商品種類與數量以各門市現場供應為準，數量有限售完為止。</li>
                                 <li class="c-list__item">本活動限出示使用uniopen聯名卡實體卡。</li>
@@ -648,7 +655,6 @@
                                 <li class="c-list__item">活動日期：2025/8/21~2025/12/31(每週五)。</li>
                                 <li class="c-list__item">中杯以上含桶裝買一送一優惠(不含脆餅；價低者為優惠品項)，每次限使用乙次乙組，不可與其他行銷優惠合併使用、兌換現金。商品種類與數量以各門市現場供應為準，數量有限售完為止。</li>
                                 <li class="c-list__item">本優惠限COLD STONE酷聖石冰淇淋直營門市使用，不適用外送平台與7-ELEVEN酷聖石複合店。</li>
-                                <li class="c-list__item">本活動限出示使用uniopen聯名卡實體卡。</li>
                                 <li class="c-list__item">本活動限使用uniopen聯名卡實體卡、可識別uniopen聯名卡卡面之感應式支付(如：Apple Pay、Google Pay、Samsung Pay、icash 2.0)。</li>
                             </ul>
                         </div>
@@ -795,10 +801,10 @@
                                     { title:'租借行動電源', desc:'6折' },
                                     { title:'列印4x6貼紙', desc:'買1送1' }
                                 ] -%}
-                                <tr>
-                                    <th>{{ item.title }}</th>
-                                    <td>{{ item.desc }}</td>
-                                </tr>
+                                    <tr>
+                                        <th>{{ item.title }}</th>
+                                        <td>{{ item.desc }}</td>
+                                    </tr>
                                 {%- endfor -%}
                             </tbody>
                         </table>
@@ -831,7 +837,7 @@
             <div class="l-contentBlock">
                 <div class="l-contentBlock__item">
                     <div class="l-contentBlock__title">Yahoo 購物</div>
-                    <div class="l-contentBlock__subTitle">於Yahoo購物最高加碼 <span>OPENPOINT 5%</span></div>
+                    <div class="l-contentBlock__subTitle">於Yahoo購物中心及拍賣平台最高加碼 <span>OPENPOINT 5%</span></div>
                 </div>
                 <div class="l-contentBlock__item t-note">
                     <div class="c-warn">
@@ -1099,7 +1105,7 @@
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
                                 <li class="c-list__item">入住時請於櫃檯主動開啟OPENPOINT APP紀錄uniopen會員帳號，回饋點數預計於住宿當月起算，次月月底前歸戶至留存之uniopen會員帳號。</li>
-                                <li class="c-list__item">本活動限出示使用中國信託uniopen聯名卡實體卡或Apple Pay綁定畫面，不適用其他感應式支付(如：Google Pay、Samsung Pay)、綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。</li>
+                                <li class="c-list__item">本活動限出示使用uniopen聯名卡實體卡或Apple Pay綁定畫面，不適用其他感應式支付(如：Google Pay、Samsung Pay)、綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)、使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。</li>
                                 <li class="c-list__item">詳細活動辦法以本行及統一渡假村現場公告為準。OPENPOINT由統一超商發行，紅利點數相關問題，請電洽OPENPOINT客服中心0800-711-177(手機請撥02-2627-1650)或請mail至<a href="mailto:service@mail.openpoint.com.tw" class="t-link">service@mail.openpoint.com.tw</a>並留下您的uniopen會員手機號碼、uniopen會員帳號、問題等以供查詢回覆。</li>
                             </ul>
                         </div>
@@ -1468,49 +1474,49 @@
             <div class="l-contentBlock">
                 <div class="l-contentBlock__item">
                     <div class="l-contentBlock__title">年費辦法</div>
-                        <div class="c-list u-mt-lg">
-                            <div class="c-list__item c-list__item--og">鈦金卡 ：首年免年費，申辦電子帳單或設定本行帳戶自動扣繳信用卡費或近一年每月皆登入中信銀行APP乙次享次年免年費￮</div>
-                            <div class="c-list__item c-list__item--og">世界卡：首年免年費，次年費計算期間累計年新增消費金額達36萬元享次年免年費</div>
-                        </div>
+                    <div class="c-list u-mt-lg">
+                        <div class="c-list__item c-list__item--og">鈦金卡 ：首年免年費，申辦電子帳單或設定本行帳戶自動扣繳信用卡費或近一年每月皆登入中信銀行APP乙次享次年免年費￮</div>
+                        <div class="c-list__item c-list__item--og">世界卡：首年免年費，次年費計算期間累計年新增消費金額達36萬元享次年免年費</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 <!-- 注意事項 -->
 <div id="discountpopup" class="c-modal c-modal--sm mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="l-contentBlock">
-                <div class="l-contentBlock__item">
-                    <div class="l-contentBlock__title">專屬禮遇</div>
-                    <div class="l-contentBlock__subTitle">核卡30天內任刷1筆最高送 <span>OPENPOINT 500點</span>
-                        <div class="c-list u-mt-lg">
-                            <div class="c-list__item c-list__item--og">新戶禮：500點</div>
-                            <div class="c-list__item c-list__item--og">新卡禮：100點</div>
-                        </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="l-contentBlock">
+            <div class="l-contentBlock__item">
+                <div class="l-contentBlock__title">專屬禮遇</div>
+                <div class="l-contentBlock__subTitle">核卡30天內任刷1筆最高送 <span>OPENPOINT 500點</span>
+                    <div class="c-list u-mt-lg">
+                        <div class="c-list__item c-list__item--og">新戶禮：500點</div>
+                        <div class="c-list__item c-list__item--og">新卡禮：100點</div>
                     </div>
                 </div>
-                <div class="l-contentBlock__item t-note">
-                    <div class="c-warn">
-                        <div class="c-warn__title">注意事項 :</div>
-                        <div class="c-warn__content">
-                            <ul class="c-list c-list--decimal">
-                                <li class="c-list__item">活動時間為 2025/8/21-2025/12/31，收件日於 2025/8/21~2025/12/31(含) 前且核准日須為 2026/1/15(含) 前核卡。</li>
-                                <li class="c-list__item">申辦條件：申請世界卡正卡者需滿 24 歲，固定年收入 200 萬元以上，或近 2 個月平均資產餘額達 240 萬元以上；申請鈦金卡正卡者，需年滿 18 歲，固定年收入 20 萬元以上。年滿 15 歲者可申請附卡，若附卡申請人未滿 18 歲，須法定代理人(即父母/監護人)共同簽名同意。申請人需提供之身分證正反面影本、薪資扣繳憑單或其他財力證明，如近個月薪資證明或撥薪存摺。其他不足部份悉依本行「信用卡個人戶授信準則」之規定辦理。</li>
-                                <li class="c-list__item">刷卡消費認定皆需以該新卡刷卡消費為準，累計消費正、附卡合併計算，且消費金額計算為符合活動說明之核卡天數內之累計刷卡消費始得列入計算。</li>
-                                <li class="c-list__item">刷卡消費認定不包含預借現金、基金申購、退貨、帳單分期(含長期循環轉換分期)、學費、繳稅、繳稅分期、學費分期、信用卡年費、信用卡相關手續費、利息及違約金等等，如為分期交易以全額請款金額認列。</li>
-                                <li class="c-list__item">本活動新戶定義為本次申辦前 12 個月內未曾持有任何中國信託信用卡正卡(不含簽帳金融卡)之客戶。每位新戶限參加一種信用卡新戶禮活動，若同時申辦兩種以上產品或同時申辦兩次以上同產品者，依核卡日、申請序號及卡種排序較前者判斷應適用之活動，卡種排序原則【遠東SOGO &gt; LINE Pay &gt; 中油 &gt; 和泰 &gt; 華航卡商御卡 &gt; 秀泰 &gt; 101 &gt; Global Mall &gt; 南紡 &gt; 大高 &gt; 中信兄弟 &gt; 漢神 &gt; 中華電信 &gt; 商旅鈦金 &gt; LaLaport &gt; Agoda &gt; foodpanda &gt; uniopen 聯名卡】，排序若有異動請以本行網站最新公告為準，客戶如有指定符合該活動辦法之贈品者依其指定，其他情況視同同意由本行指定贈品；新卡定義為首次申辦 uniopen 聯名卡正卡者，即本次申辦日前未曾持有任一 uniopen 聯名卡正卡者，即未曾持有該產品任一卡別、卡種者。</li>
-                                <li class="c-list__item">新戶/新卡回饋將於符合資格後兩個月內撥入正卡人於中信銀行 APP 已完成連結之 uniopen 會員帳號內，回饋之 OPENPOINT 以 OPENPOINT APP 揭露為準。</li>
-                            </ul>
-                        </div>
+            </div>
+            <div class="l-contentBlock__item t-note">
+                <div class="c-warn">
+                    <div class="c-warn__title">注意事項 :</div>
+                    <div class="c-warn__content">
+                        <ul class="c-list c-list--decimal">
+                            <li class="c-list__item">活動時間為 2025/8/21-2025/12/31，收件日於 2025/8/21~2025/12/31(含) 前且核准日須為 2026/1/15(含) 前核卡。</li>
+                            <li class="c-list__item">申辦條件：申請世界卡正卡者需滿 24 歲，固定年收入 200 萬元以上，或近 2 個月平均資產餘額達 240 萬元以上；申請鈦金卡正卡者，需年滿 18 歲，固定年收入 20 萬元以上。年滿 15 歲者可申請附卡，若附卡申請人未滿 18 歲，須法定代理人(即父母/監護人)共同簽名同意。申請人需提供之身分證正反面影本、薪資扣繳憑單或其他財力證明，如近個月薪資證明或撥薪存摺。其他不足部份悉依本行「信用卡個人戶授信準則」之規定辦理。</li>
+                            <li class="c-list__item">刷卡消費認定皆需以該新卡刷卡消費為準，累計消費正、附卡合併計算，且消費金額計算為符合活動說明之核卡天數內之累計刷卡消費始得列入計算。</li>
+                            <li class="c-list__item">刷卡消費認定不包含預借現金、基金申購、退貨、帳單分期(含長期循環轉換分期)、學費、繳稅、繳稅分期、學費分期、信用卡年費、信用卡相關手續費、利息及違約金等等，如為分期交易以全額請款金額認列。</li>
+                            <li class="c-list__item">本活動新戶定義為本次申辦前 12 個月內未曾持有任何中國信託信用卡正卡(不含簽帳金融卡)之客戶。每位新戶限參加一種信用卡新戶禮活動，若同時申辦兩種以上產品或同時申辦兩次以上同產品者，依核卡日、申請序號及卡種排序較前者判斷應適用之活動，卡種排序原則【遠東SOGO &gt; LINE Pay &gt; 中油 &gt; 和泰 &gt; 華航卡商御卡 &gt; 秀泰 &gt; 101 &gt; Global Mall &gt; 南紡 &gt; 大高 &gt; 中信兄弟 &gt; 漢神 &gt; 中華電信 &gt; 商旅鈦金 &gt; LaLaport &gt; Agoda &gt; foodpanda &gt; uniopen 聯名卡】，排序若有異動請以本行網站最新公告為準，客戶如有指定符合該活動辦法之贈品者依其指定，其他情況視同同意由本行指定贈品；新卡定義為首次申辦 uniopen 聯名卡正卡者，即本次申辦日前未曾持有任一 uniopen 聯名卡正卡者，即未曾持有該產品任一卡別、卡種者。</li>
+                            <li class="c-list__item">新戶/新卡回饋將於符合資格後兩個月內撥入正卡人於中信銀行 APP 已完成連結之 uniopen 會員帳號，回饋之 OPENPOINT 以 OPENPOINT APP 揭露為準。</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- 離站提醒 -->
@@ -1538,114 +1544,114 @@
 <!-- 步驟頁 -->
 <!-- step 0(新戶申辦) -->
 <div id="step0Clientpopup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/pTmdbaeMBp0" title="新戶辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-client.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/pTmdbaeMBp0?rel=0&modestbranding=1&controls=2&loop=1&playlist=pTmdbaeMBp0" title="新戶辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-client.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- step 0(新卡申辦) -->
 <div id="step0Cardpopup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/EjMo0GnXmyM" title="新卡辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-card.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/EjMo0GnXmyM?rel=0&modestbranding=1&controls=2&loop=1&playlist=EjMo0GnXmyM" title="新卡辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-card.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- step 1 -->
 <div id="step1popup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/r5gbZ8PlNaU" title="會員連結篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step1.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/r5gbZ8PlNaU?rel=0&modestbranding=1&controls=2&loop=1&playlist=r5gbZ8PlNaU" title="會員連結篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step1.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- step 2 -->
 <div id="step2popup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/uwyRenTXLo0" title="綁定篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step2.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/uwyRenTXLo0?rel=0&modestbranding=1&controls=2&loop=1&playlist=uwyRenTXLo0" title="綁定篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step2.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- step 3 -->
 <div id="step3popup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step3.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls?rel=0&modestbranding=1&controls=2&loop=1&playlist=Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step3.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 <!-- step 4 -->
 <div id="step4popup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="c-alert__mobile">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">看不了影片嗎？</div>
-                        <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
-                        <img class="c-alertCard__img" src="./content/images/section/process//qrcode/step4.jpg" alt="qrcode">
-                    </div>
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls?rel=0&modestbranding=1&controls=2&loop=1&playlist=Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="c-alert__mobile">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">看不了影片嗎？</div>
+                    <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                    <img class="c-alertCard__img" src="./content/images/section/process//qrcode/step4.jpg" alt="qrcode">
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
