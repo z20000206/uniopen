@@ -278,12 +278,12 @@
                                                             <div class="c-savorCard__discount">
                                                                 <div class="c-savorCard__introduce">
                                                                     <div class="c-savorCard__title">{{ item.title | safe }}</div>
+                                                                    {%- if item.remark -%}
+                                                                        <div class="c-savorCard__remark">{{ item.remark | safe }}</div>
+                                                                    {%- endif -%}
                                                                     <div class="c-savorCard__feedback">{{ item.feedback }}</div>
                                                                     <div class="c-savorCard__text">{{ item.text | safe }}</div>
                                                                 </div>
-                                                                {%- if item.remark -%}
-                                                                    <div class="c-savorCard__remark">{{ item.remark | safe }}</div>
-                                                                {%- endif -%}
                                                                 {%- if item.img -%}
                                                                     <div class="c-savorCard__img">
                                                                         <img src="./content/images/section/savor/{{ item.img }}.png" alt="{{ item.img }}">
