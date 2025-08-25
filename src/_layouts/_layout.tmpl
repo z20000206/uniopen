@@ -64,9 +64,33 @@
         <script type="text/javascript" src="//cdn.dynamicyield.com/api/8792650/api_static.js"></script>
 
         <meta name="theme-color" content="#fafafa">
+
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer'
+                        ? '&l=' + l
+                        : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f
+                    .parentNode
+                    .insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TH7B3LN');
+        </script>
+        <!-- End Google Tag Manager -->
     </head>
 
     <body>
+        <!-- 中國信託Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TH7B3LN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <div class="l-loader" data-loading>
             <div class="c-loader"></div>
         </div>
@@ -170,6 +194,88 @@
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <!-- <script> window.ga = function () { ga .q .push(arguments) }; ga.q = []; ga.l = + new Date; ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview') </script> <script src="https://www.google-analytics.com/analytics.js" async="async"></script> -->
+        <!--Adobe 數位軌跡採集-->
+        <!-- Tracking begin -->
+        <script>
+            var bigdata_infos = {
+                'prodname': '信用卡',
+                'prodid': 'CC',
+                'prodcateid': 'CC'
+            };
+        </script>
+        <script src="https://www.ctbcbank.com/jscollection/WebConnector-webpage.js"></script>
+        <!-- Tracking end -->
+
+        <!-- UTM track start -->
+        <script>
+            try {
+                var target_url = window.parent.location.search;
+                var target_a = document.querySelectorAll('a');
+                var ct_utmObj = {};
+                var ct_utm = [
+                    'utm_source',
+                    'utm_medium',
+                    'utm_campaign',
+                    'utm_content',
+                    'ctsource',
+                    'ctchannel',
+                    'ctid',
+                    'Unit',
+                    'Seed',
+                    'Chnl'
+                ];
+                if (target_url.split('?').length > 1) {
+                    var target_url_querystring = target_url.split('?')[1];
+                    for (var i = 0; i < ct_utm.length; i++) {
+                        var url_param = new URLSearchParams(target_url_querystring).get(ct_utm[i]);
+                        if (url_param) {
+                            ct_utmObj[ct_utm[i]] = url_param;
+                        }
+                    }
+                }
+                if (Object.keys(ct_utmObj).length != 0 && target_a.length != 0) {
+                    for (var i = 0; i < target_a.length; i++) {
+                        var new_params = [];
+                        var attr_href = target_a[i].getAttribute('href');
+                        if (attr_href != null && attr_href != '' && attr_href.search('javascript:') == -1 && attr_href.search('mailto:') == -1 && attr_href.search('tel:') == -1 && attr_href[0] != '#' && attr_href.search('intent:') == -1) {
+                            if (attr_href.split('?').length > 1) {
+                                var href_url = attr_href.split('?')[0];
+                                var href_querystring = attr_href.split('?')[1];
+                                var urlParam = new URLSearchParams(href_querystring);
+                                for (var key in ct_utmObj) {
+                                    var value = ct_utmObj[key];
+                                    urlParam.set(key, value);
+                                }
+                                urlParam.forEach(function (value, key) {
+                                    if (key == '') {
+                                        new_params.push(value);
+                                    } else if (value == '') {
+                                        new_params.push(key);
+                                    } else {
+                                        new_params.push(key + '=' + value);
+                                    }
+                                });
+                                target_a[i].setAttribute('href', encodeURI(href_url + '?' + new_params.join('&')));
+                            } else {
+                                var href_url = attr_href.split('?')[0];
+                                for (var key in ct_utmObj) {
+                                    var value = ct_utmObj[key];
+                                    new_params.push(key + '=' + value);
+                                }
+                                if (new_params.length > 0) {
+                                    target_a[i].setAttribute('href', encodeURI(href_url + '?' + new_params.join('&')));
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        </script>
+
+        <!-- UTM track END -->
+
     </body>
 
 </html>
