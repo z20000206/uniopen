@@ -66,17 +66,17 @@ $(window).on('load', function () {
     });
 });
 
-
-
 // lottie 動畫
-$('[data-lottie]').each(function () {
-    lottie.loadAnimation({
-        container: this,
-        animType: 'svg',
-        loop: true,
-        autoplay: false,
-        path: $(this).data('lottie'),
-    }).play();
+$(function () {
+    $('[data-lottie]').each(function () {
+        lottie.loadAnimation({
+            container: this,
+            animType: 'svg',
+            loop: true,
+            autoplay: false,
+            path: $(this).data('lottie'),
+        }).play();
+    });
 });
 
 // loading (配合個人化調整，載入延遲800ms)

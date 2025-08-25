@@ -12,13 +12,13 @@
 
         <meta property="og:type" content="website">
         {% if headerType == "process" %}
-            <meta property="og:title" content="中國信託 uniopen 聯名卡－點數累積兌換全攻略">
-            <meta property="og:description" content="簡單5步驟完成會員連結及領券，消費回饋最高11%！">
-            <meta property="og:url" content="https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/process.html">
+        <meta property="og:title" content="中國信託 uniopen 聯名卡－點數累積兌換全攻略">
+        <meta property="og:description" content="簡單5步驟完成會員連結及領券，消費回饋最高11%！">
+        <meta property="og:url" content="https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/process.html">
         {% else %}
-            <meta property="og:title" content="中國信託 uniopen 聯名卡">
-            <meta property="og:description" content="消費回饋最高享11%！統一企業集團指定品牌天天享優惠，指定卡友日最優享買1送1。我的世界 由我OPEN。">
-            <meta property="og:url" content="https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/index.html">
+        <meta property="og:title" content="中國信託 uniopen 聯名卡">
+        <meta property="og:description" content="消費回饋最高享11%！統一企業集團指定品牌天天享優惠，指定卡友日最優享買1送1。我的世界 由我OPEN。">
+        <meta property="og:url" content="https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/index.html">
         {% endif %}
         <meta property="og:image" content="https://mkt.ctbcbank.com/long/creditcard/N2025052600033_01/content/images/og/og.png">
 
@@ -106,17 +106,17 @@
                             <img class="o-logo__img o-logo__img--uniopen" src="{{ '/content/images/logo/uniopen.svg' | relativePath }}" alt="uniopen信用卡">
                         </a>
                     </div>
-                    {% if headerType == "process" %}
+                    {%- if headerType == "process" -%}
                         <a href="./index.html" class="l-header__back" rel="noreferrer noopener" data-link>回活動首頁</a>
-                    {% else %}
+                    {%- else -%}
                         <div class="l-header__menu">
                             <div class="c-menu">
-                                <a href="#" class="c-menu__item" data-section="enjoy">享樂日常</a>
-                                <a href="#" class="c-menu__item" data-section="savor">品味時光</a>
-                                <a href="#" class="c-menu__item" data-section="finance">金融生活</a>
-                                <a href="#" class="c-menu__item" data-section="discount">專屬禮遇</a>
-                                <a href="#" class="c-menu__item" data-section="life">連結會員</a>
-                                <a href="https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_card_index/cc_service_card_apply.html?Dsn=0&Card1[Crd]=C_uniopen&Card1[Fac]=&Card1[Brnd]=&Card1[Grnd]=&Card1[CrdF]=&Card1[Etic]=&Card1[Chnl]=61711&Emp=&Unit=61711&SPC=&Seed=&ck=1" class="c-menu__btn" target="_blank">立即申辦</a>
+                                <a href="#" class="c-menu__item" data-title="enjoy">享樂日常</a>
+                                <a href="#" class="c-menu__item" data-title="savor">品味時光</a>
+                                <a href="#" class="c-menu__item" data-title="finance">金融生活</a>
+                                <a href="#" class="c-menu__item" data-title="discount">專屬禮遇</a>
+                                <a href="#" class="c-menu__item" target="_blank" data-title="1" data-page="./process.html">連結會員</a>
+                                <a href="https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_card_index/cc_service_card_apply.html?Dsn=0&Card1[Crd]=C_uniopen&Card1[Fac]=&Card1[Brnd]=&Card1[Grnd]=&Card1[CrdF]=&Card1[Etic]=&Card1[Chnl]=&Emp=&Unit=13157&SPC=&Seed=&ck=1" class="c-menu__btn" target="_blank">立即申辦</a>
                                 <div class="c-menu__share">
                                     <div class="c-share">
                                         <div class="c-share__title">分享到</div>
@@ -141,7 +141,7 @@
                         <div class="l-header__hamburger">
                             <button class="o-hamburger"></button>
                         </div>
-                    {% endif %}
+                    {%- endif -%}
                 </div>
             </header>
             <main class="l-main">
@@ -149,7 +149,7 @@
                     {% block content %}{% endblock %}
                 </div>
             </main>
-            <footer class="l-footer {% if headerType == "process" %}l-footer--process{% endif %}">
+            <footer class="l-footer {%- if headerType == "process" -%}l-footer--process{%- endif -%}">
                 <a href="https://www.ctbcbank.com/twrbo/zh_tw/index/ctbc_aboutCTBC/ctbc_legal/ctbc_finances.html?targetTab=ctbc_finances_tab2" class="t-noUnderline" target="_blank" rel="noreferrer noopener">
                     <div class="l-footer__wrap">
                         <div class="l-footer__title">謹慎理財 信用至上</div>
@@ -160,7 +160,7 @@
             <div class="l-floating">
                 <div class="l-floating__content">
                     <div class="l-floating__item">
-                        <a href="https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_card_index/cc_service_card_apply.html?Dsn=0&Card1[Crd]=C_uniopen&Card1[Fac]=&Card1[Brnd]=&Card1[Grnd]=&Card1[CrdF]=&Card1[Etic]=&Card1[Chnl]=61711&Emp=&Unit=61711&SPC=&Seed=&ck=1" target="_blank" class="l-floating__card">
+                        <a href="https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_card_index/cc_service_card_apply.html?Dsn=0&Card1[Crd]=C_uniopen&Card1[Fac]=&Card1[Brnd]=&Card1[Grnd]=&Card1[CrdF]=&Card1[Etic]=&Card1[Chnl]=&Emp=&Unit=13157&SPC=&Seed=&ck=1" target="_blank" class="l-floating__card">
                             <img src="./content/images/float/card.png" alt="">
                         </a>
                     </div>

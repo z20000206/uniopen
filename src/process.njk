@@ -95,7 +95,7 @@
                 ] -%}
                     <!-- Step {{ loop.index }} -->
                     <div class="c-process">
-                        <div class="c-process__title">
+                        <div class="c-process__title" data-section="{{ item.step }}" data-offset="48">
                             <div class="c-title">
                                 <div class="c-title__head">
                                     <div class="c-title__icon">
@@ -161,12 +161,14 @@
 
 {% block scripts %}
     <script>
-        // swiper
-        const processSettings = $.extend(true, {}, carouselSettings, {
-            slidesPerView: 'auto',
-            loop: false,
-            autoplay: false
+        $(function () {                
+            // swiper
+            const processSettings = $.extend(true, {}, carouselSettings, {
+                slidesPerView: 'auto',
+                loop: false,
+                autoplay: false
+            });
+            processSwiper = new Swiper('[data-swiper="process"]', processSettings);
         });
-        processSwiper = new Swiper('[data-swiper="process"]', processSettings);
     </script>
 {% endblock %}
