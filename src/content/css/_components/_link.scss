@@ -15,11 +15,20 @@
         flex: 0 0 auto;
         mask: url(../images/icon/arrow-right.svg) no-repeat center;
         background-color: #AD8F5E;
+
+        &--external {
+            margin-bottom: 2px;
+            mask: url(../images/icon/external.svg) no-repeat center;
+        }
     }
 
     @media (hover: hover) {
         &:hover {
             color: #987A49;
+
+            .o-link__icon {
+                background-color: #987A49;
+            }
         }
     }
 }

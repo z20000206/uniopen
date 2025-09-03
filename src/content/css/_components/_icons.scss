@@ -25,20 +25,6 @@
         margin-top: 2px;
     }
 
-    &--next {
-        width: 32px;
-        height: 32px;
-        background-color: #9B7BFF;
-        mask-image: url(../../images/icon/next.svg);
-    }
-
-    &--nextSm {
-        width: 24px;
-        height: 24px;
-        background-color: #FF8A3D;
-        mask-image: url(../../images/icon/next.svg);
-    }
-
     &--external {
         margin-bottom: 4px;
         width: 24px;
@@ -60,29 +46,12 @@
         mask-image: url(../../images/icon/new.svg);
     }
 
-    &--add {
-        width: 32px;
-        height: 32px;
-        background-color: #9B7BFF;
-        mask-image: url(../../images/icon/add.svg);
-    }
-
     &--open {
         mask-image: url(../../images/icon/open.svg);
     }
 
     &--minus {
         mask-image: url(../../images/icon/minus.svg);
-    }
-
-    &--menu {
-        background-color: #000;
-        mask-image: url(../../images/icon/menu.svg);
-    }
-
-    &--close {
-        background-color: #000;
-        mask-image: url(../../images/icon/close.svg);
     }
 
     &--line {
@@ -118,32 +87,6 @@
             width: 20px;
             height: 11px;
             mask-image: url(../../images/icon/lineSm.svg);
-        }
-    }
-}
-
-.o-iconBox {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #AD8F5E;
-    transition: 0.3s;
-
-    &--wh {
-        color: #FFF;
-    }
-
-    @media (hover: hover) {
-        &:hover {
-            color: #987A49;
-
-            .o-iconBox__icon {
-                .o-icon {
-                    background-color: #987A49;
-                }
-            }
         }
     }
 }

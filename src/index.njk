@@ -894,11 +894,8 @@
                                             {% endif %}
                                         </div>
                                         <div class="c-financeCard__more">
-                                            <a href="{{ item.link }}" class="o-iconBox" target="_blank" rel="noreferrer noopener" data-link>
-                                                <div class="o-iconBox__text">活動詳情</div>
-                                                <div class="o-iconBox__icon">
-                                                    <i class="o-icon o-icon--external"></i>
-                                                </div>
+                                            <a href="{{ item.link }}" class="o-link" target="_blank" rel="noreferrer noopener">活動詳情
+                                                <i class="o-link__icon o-link__icon--external"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -964,17 +961,11 @@
                         </div>
                     </div>
                     <div class="c-discount__more">
-                        <a href="#" class="o-iconBox" data-mfp-src="#annualpopup">
-                            <div class="o-iconBox__text">年費辦法</div>
-                            <div class="o-iconBox__icon">
-                                <i class="o-icon o-icon--arrowRight"></i>
-                            </div>
+                        <a href="" class="o-link" data-mfp-src="#annualpopup">年費辦法
+                            <i class="o-link__icon"></i>
                         </a>
-                        <a href="#" class="o-iconBox" data-mfp-src="#discountpopup">
-                            <div class="o-iconBox__text">注意事項</div>
-                            <div class="o-iconBox__icon">
-                                <i class="o-icon o-icon--arrowRight"></i>
-                            </div>
+                        <a href="" class="o-link" data-mfp-src="#discountpopup">注意事項
+                            <i class="o-link__icon"></i>
                         </a>
                     </div>
                 </div>
@@ -1023,11 +1014,8 @@
                                 </div>
                                 <div class="c-life__action">
                                     <div class="c-life__item">
-                                        <a href="https://www.uniopen.com/app?utm_source=web&openExternalBrowser=1&utm_medium=promo&utm_campaign=ctbc&utm_content=ctbcweb" class="o-iconBox" target="_blank" rel="noreferrer noopener" data-link>
-                                            <div class="o-iconBox__text">了解uniopen會員更多優惠</div>
-                                            <div class="o-iconBox__icon">
-                                                <i class="o-icon o-icon--external"></i>
-                                            </div>
+                                        <a href="https://www.uniopen.com/app?utm_source=web&openExternalBrowser=1&utm_medium=promo&utm_campaign=ctbc&utm_content=ctbcweb" class="o-link" target="_blank" rel="noreferrer noopener">了解uniopen會員更多優惠
+                                            <i class="o-link__icon o-link__icon--external"></i>
                                         </a>
                                     </div>
                                     <div class="c-life__item">
@@ -1099,11 +1087,8 @@
                                             <li class="c-noticeList__item">其他未盡事宜及參與活動規範以中國信託銀行官網及合作商家官網公告為主。如遇不可抗力或不可歸責之事由，中國信託銀行及合作商家得保留修改、變更、終止本活動及對本活動之所有事宜做出最終解釋及決定之權利，相關事宜將依信用卡業務機構管理辦法第十九條及相關規定辦理。</li>
                                         </ol>
                                         <div class="c-noticeList__more">
-                                            <a href="https://mkt.ctbcbank.com/long/creditcard/N2025080100010_01/index.html" class="o-iconBox" target="_blank" rel="noreferrer noopener" data-link="">
-                                                <div class="o-iconBox__text">uniopen 聯名卡回饋計劃</div>
-                                                <div class="o-iconBox__icon">
-                                                    <i class="o-icon o-icon--arrowRight"></i>
-                                                </div>
+                                            <a href="https://mkt.ctbcbank.com/long/creditcard/N2025080100010_01/index.html" class="o-link" target="_blank" rel="noreferrer noopener">uniopen 聯名卡回饋計劃
+                                                <i class="o-link__icon"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1124,8 +1109,9 @@
 
 {% block scripts %}
 <script>
+    // swiper 品味時光
     $(function () {
-        // swiper 品味時光
+        // ===== Swiper 設定 =====
         const savorSettings = $.extend(true, {}, carouselSettings, {
             direction: 'vertical',
             effect: window.innerWidth <= 1200
@@ -1135,53 +1121,28 @@
                 ? false
                 : true,
             autoHeight: true,
-            slidesPerView: '1',
+            slidesPerView: 1,
             allowTouchMove: false,
             autoplay: false,
-
             navigation: {
                 prevEl: '[data-swiper-prev="savor"]',
                 nextEl: '[data-swiper-next="savor"]'
             },
-
             on: {
-                init: function (swiper) {
-                    heightDetect(swiper);
-
-                    const index = swiper.realIndex;
-                    $('.c-savor__item')
-                        .removeClass('is-active')
-                        .eq(index)
-                        .addClass('is-active');
+                init(swiper) {
+                    updateHeight(swiper);
+                    setActiveItem(swiper.realIndex);
                 },
-
-                slideChangeTransitionStart: function () {
-                    const index = this.realIndex;
-                    $('.c-savor__item')
-                        .removeClass('is-active')
-                        .eq(index)
-                        .addClass('is-active');
+                slideChangeTransitionStart() {
+                    setActiveItem(this.realIndex);
                 },
-
-                slideChange: function (swiper) {
-                    heightDetect(swiper);
+                slideChange(swiper) {
+                    updateHeight(swiper);
                 }
             }
         });
 
-        function heightDetect(swiper) {
-            var $slider = $('[data-swiper="savor"]');
-            var $currentSlide = $(swiper.slides[swiper.activeIndex]);
-            var $currentSlideItem = $currentSlide
-                .children()
-                .eq(0);
-            $slider.height($currentSlideItem.outerHeight());
-        }
-
-        // 破壞重組
-        const allSavorSlides = {};
-        const allSavorItems = {};
-        const allNavigationHTML = {};
+        // ===== 全域變數 =====
         const savorSlideOrder = [
             'start',
             'parking',
@@ -1192,145 +1153,161 @@
             'travel',
             'more'
         ];
+        const allSavorSlides = {};
+        const allSavorItems = {};
+        const allNavigationHTML = {};
+        let savorSwiper = null;
 
-        $('[data-swiper="savor"] .swiper-slide').each(function () {
-            const key = $(this).attr('data-savor-slide');
-            if (key) {
-                allSavorSlides[key] = $(this).prop('outerHTML');
-            }
-        });
-
-        $('[data-savor-item]').each(function () {
-            const key = $(this).attr('data-savor-item');
-            if (key) {
-                allSavorItems[key] = $(this).prop('outerHTML');
-            }
-        });
-
-        $('[data-swiper-prev="savor"]').each(function () {
-            allNavigationHTML.prev = $(this).prop('outerHTML');
-        });
-        $('[data-swiper-next="savor"]').each(function () {
-            allNavigationHTML.next = $(this).prop('outerHTML');
-        });
-
-        const $navContainer = $('.o-carouselNav--savor');
-        if ($navContainer.length > 0) {
-            allNavigationHTML.container = $navContainer.prop('outerHTML');
-            allNavigationHTML.containerParent = $navContainer.parent();
+        // ===== 輔助函數 =====
+        function updateHeight(swiper) {
+            const $cur = $(swiper.slides[swiper.activeIndex])
+                .children()
+                .eq(0);
+            $('[data-swiper="savor"]').height($cur.outerHeight());
         }
 
-        let savorSwiper;
+        function setActiveItem(index) {
+            $('.c-savor__item')
+                .removeClass('is-active')
+                .eq(index)
+                .addClass('is-active');
+        }
 
+        function cacheElements() {
+            // 快取 slides
+            $('[data-swiper="savor"] .swiper-slide').each(function () {
+                const key = $(this).attr('data-savor-slide');
+                if (key) 
+                    allSavorSlides[key] = $(this).prop('outerHTML');
+                }
+            );
+
+            // 快取 items
+            $('[data-savor-item]').each(function () {
+                const key = $(this).attr('data-savor-item');
+                if (key) 
+                    allSavorItems[key] = $(this).prop('outerHTML');
+                }
+            );
+
+            // 快取導覽元素
+            const $prev = $('[data-swiper-prev="savor"]');
+            const $next = $('[data-swiper-next="savor"]');
+            const $navContainer = $('.o-carouselNav--savor');
+
+            if ($prev.length) 
+                allNavigationHTML.prev = $prev.prop('outerHTML');
+            if ($next.length) 
+                allNavigationHTML.next = $next.prop('outerHTML');
+            if ($navContainer.length) {
+                allNavigationHTML.container = $navContainer.prop('outerHTML');
+                allNavigationHTML.containerParent = $navContainer.parent();
+            }
+        }
+
+        function rebuildSlides(order) {
+            const $wrapper = $('[data-swiper="savor"] .swiper-wrapper');
+            $wrapper.html(order.map(k => allSavorSlides[k]).join(''));
+        }
+
+        function rebuildItems(order) {
+            const $itemWrapper = $('[data-savor-item]')
+                .first()
+                .parent();
+            if ($itemWrapper.length) {
+                $itemWrapper.html(order.map(k => allSavorItems[k]).join(''));
+            }
+        }
+
+        function ensureNavigation() {
+            const hasPrev = $('[data-swiper-prev="savor"]').length > 0;
+            const hasNext = $('[data-swiper-next="savor"]').length > 0;
+
+            if (hasPrev && hasNext) 
+                return;
+            
+            $('.o-carouselNav--savor').remove();
+
+            if (allNavigationHTML.container && allNavigationHTML.containerParent) {
+                allNavigationHTML
+                    .containerParent
+                    .prepend(allNavigationHTML.container);
+            } else {
+                const prevHTML = allNavigationHTML.prev || '<div class="o-carouselNav__prev swiper-button-prev" data-swiper-prev="savor"></div>';
+                const nextHTML = allNavigationHTML.next || '<div class="o-carouselNav__next swiper-button-next" data-swiper-next="savor"></div>';
+                $('[data-swiper="savor"]').before(`
+                <div class="o-carouselNav o-carouselNav--savor">
+                    ${prevHTML}${nextHTML}
+                </div>
+                `);
+            }
+        }
+
+        function bindItemEvents(order) {
+            $('[data-savor-item]')
+                .off('click')
+                .on('click', function (e) {
+                    e.preventDefault();
+                    const key = $(this).attr('data-savor-item');
+                    const index = order.indexOf(key);
+
+                    if (index !== -1 && savorSwiper) {
+                        savorSwiper.slideToLoop(index);
+                    }
+
+                    $('[data-savor-item]').removeClass('is-active');
+                    $(this).addClass('is-active');
+
+                    // 手機版錨點滾動
+                    if (window.innerWidth < 1200) {
+                        const $target = $('[data-savor-slide="' + key + '"]');
+                        if ($target.length) {
+                            const offset = $target
+                                .offset()
+                                .top - 120;
+                            $('html, body').animate({
+                                scrollTop: offset
+                            }, 500);
+                        }
+                    }
+                });
+        }
+
+        // ===== 主要函數 =====
         function updateSavorSwiper(order) {
+            // 銷毀舊實例
             if (savorSwiper) {
                 savorSwiper.destroy(true, true);
                 savorSwiper = null;
             }
 
-            const $wrapper = $('[data-swiper="savor"] .swiper-wrapper');
-            const newSlides = $.map(order, key => allSavorSlides[key]);
-            $wrapper
-                .empty()
-                .append(newSlides);
+            // 重建元素
+            rebuildSlides(order);
+            rebuildItems(order);
+            ensureNavigation();
+            bindItemEvents(order);
 
-            const $itemWrapper = $('[data-savor-item]')
-                .first()
-                .parent();
-            if ($itemWrapper.length) {
-                const newItems = $.map(order, key => allSavorItems[key]);
-                $itemWrapper
-                    .empty()
-                    .append(newItems);
-            }
-
-            let $prevBtn = $('[data-swiper-prev="savor"]');
-            let $nextBtn = $('[data-swiper-next="savor"]');
-
-            if ($prevBtn.length === 0 || $nextBtn.length === 0) {
-                $('.o-carouselNav--savor').remove();
-
-                if (allNavigationHTML.container && allNavigationHTML.containerParent) {
-                    allNavigationHTML
-                        .containerParent
-                        .prepend(allNavigationHTML.container);
-                } else if (allNavigationHTML.prev && allNavigationHTML.next) {
-
-                    const navHTML = `
-                                <div class="o-carouselNav o-carouselNav--savor">
-                                    ${allNavigationHTML.prev}
-                                    ${allNavigationHTML.next}
-                                </div>
-                            `;
-                    $('[data-swiper="savor"]').before(navHTML);
-                } else {
-                    const navHTML = `
-                                <div class="o-carouselNav o-carouselNav--savor">
-                                    <div class="o-carouselNav__prev swiper-button-prev" data-swiper-prev="savor"></div>
-                                    <div class="o-carouselNav__next swiper-button-next" data-swiper-next="savor"></div>
-                                </div>
-                            `;
-                    $('[data-swiper="savor"]').before(navHTML);
-                }
-            }
-
-            $('[data-savor-item]')
-                .off('click')
-                .on('click', function () {
-                    const key = $(this).attr('data-savor-item');
-                    const index = order.indexOf(key);
-                    if (index !== -1) 
-                        savorSwiper.slideToLoop(index);
-                    
-                    $('[data-savor-item]').removeClass('is-active');
-                    $(this).addClass('is-active');
-                });
-
+            // 初始化 Swiper
             savorSwiper = new Swiper('[data-swiper="savor"]', savorSettings);
 
-            const firstKey = order[0];
-            $('[data-savor-item][data-savor-item="' + firstKey + '"]').addClass('is-active');
+            // 設定預設 active 項目
+            $('[data-savor-item][data-savor-item="' + order[0] + '"]').addClass('is-active');
         }
 
+        // ===== 初始化 =====
+        cacheElements();
         updateSavorSwiper(savorSlideOrder);
 
-        // 品味時光小網錨點
-        $('[data-savor-item]').on('click', function (e) {
-            e.preventDefault();
-
-            const $this = $(this);
-            const targetKey = $this.attr('data-savor-item');
-            const index = $('[data-savor-item]').index($this);
-            const $target = $('[data-savor-slide="' + targetKey + '"]');
-
-            if (savorSwiper) {
-                savorSwiper.slideToLoop(index);
-            }
-
-            if (window.innerWidth < 1200) {
-                if ($target.length) {
-                    const offset = $target
-                        .offset()
-                        .top - 120;
-                    $('html, body').animate({
-                        scrollTop: offset
-                    }, 500);
-
-                    $('[data-savor-item]')
-                        .removeClass('is-active')
-                        .eq(index)
-                        .addClass('is-active');
-                }
-            }
-        });
-
-        $(window).on('resize', () => {
-            if (savorSwiper) {
+        // 視窗縮放處理
+        $(window).on('resize', function () {
+            if (savorSwiper) 
                 savorSwiper.update();
             }
-        });
+        );
+    });
 
-        // swiper 金融生活
+    // swiper 金融生活
+    $(function () {
         const allFinanceSlides = {};
         const allFinanceNavigationHTML = {};
         const financeSlideOrder = ['fm', 'cl-gift', 'mission', 'fund'];
@@ -1420,8 +1397,10 @@
         }
 
         updateFinanceSwiper(financeSlideOrder);
+    });
 
-        // 注意事項展開收合
+    // 注意事項展開收合
+    $(function () {
         $('[data-toggle]').on('click', function (e) {
             e.preventDefault();
             const key = $(this).attr('data-toggle');
@@ -1432,25 +1411,6 @@
                 .toggleClass('o-icon--minus');
 
             $(`[data-toggle-panel="${key}"]`).toggleClass('is-active');
-        });
-
-        // 卡片大小網切換(有兩套，內容調整時請同步變更 ! ! !)
-        function toggleCreditCardView() {
-            if ($(window).width() <= 768) {
-                $('[data-view="mobile"]').removeClass('u-hidden');
-                $('[data-view="desktop"]').addClass('u-hidden');
-            } else {
-                $('[data-view="desktop"]').removeClass('u-hidden');
-                $('[data-view="mobile"]').addClass('u-hidden');
-            }
-        }
-
-        $(document).ready(function () {
-            toggleCreditCardView();
-
-            $(window).on('resize', function () {
-                toggleCreditCardView();
-            });
         });
     });
 </script>
