@@ -11,10 +11,10 @@
                     <div class="l-contentBlock__content">
                         <table class="c-table c-table--break">
                             {%- set table01 = [
-                                        { title: '國內一般消費', value: '1%', note: '(無上限)' },
-                                        { title: '統一企業集團消費加碼', value: '2%', note: '(上限500點/月)' },
-                                        { title: '統一企業集團踩點任務', value: '最高4%', note: '(上限500點/月)' }
-                                    ] -%}
+                                { title: '國內一般消費', value: '1%', note: '(無上限)' },
+                                { title: '統一企業集團消費加碼', value: '2%', note: '(上限500點/月)' },
+                                { title: '統一企業集團踩點任務', value: '最高4%', note: '(上限500點/月)' }
+                            ] -%}
                             <thead>
                                 <tr>
                                     {%- for item in table01 -%}
@@ -67,6 +67,9 @@
                     <a href="https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011" class="o-link" target="_blank">立即登入中信銀行APP領取優惠券
                         <i class="o-link__icon"></i>
                     </a>
+                    <a href="https://ctbc.tw/TCAG23" target="_blank" class="o-link">
+                        立即登入中信銀行APP 完成會員連結<i class="o-link__icon"></i>
+                    </a>
                 </div>
                 <div class="l-contentBlock__item t-note">
                     <div class="c-warn">
@@ -76,9 +79,9 @@
                                 <li class="c-list__item">國內一般消費及統一企業集團消費加碼活動期間為2025/8/21~2026/8/31；統一企業集團踩點任務活動期間為2025/8/21~2025/12/31。</li>
                                 <li class="c-list__item">國內一般消費定義:國內一般刷卡交易，不含本行不回饋交易項目，不回饋交易項目請依uniopen聯名卡回饋計劃辦理。</li>
                                 <li class="c-list__item">國內一般消費及統一企業集團消費加碼活動之當月消費入帳中獲得之OPENPOINT，將於商店請款結帳後計算，並5個工作日撥入正卡人已於中信銀行APP完成連結之uniopen會員帳號；統一企業集團消費加碼回饋2%為正、附卡合併計算，計算週期係為每日曆月1~31日之已完成商店請款之消費。例：9/1~9/30入帳之交易屬於9月回饋，全月回饋上限500點。</li>
-                                <li class="c-list__item">統一企業集團品牌適用範圍：統一超商、康是美、夢時代購物中心、統一時代百貨、DREAM PLAZA、UNIKCY、玲廊滿藝、BEING sport、BEING spa、BEING fit、星巴克、21Plus/21風味館、Mister Donut、COLD STONE酷聖石冰淇淋、Semeur聖娜、家樂福、Mia C‘bon、Yahoo購物、博客來、聖德科斯、統一生機、統一精工速邁樂加油站、foodomo、鮮拾網、DUSKIN、黑貓宅急便、ibon售票系統、統一渡假村、台北W飯店、台北時代寓所。消費回饋之認定依本行系統為主，符合回饋之交易需為指定加碼商店交易，且帳單明細能完整呈現該指定商店名稱者方得回饋，<span class="t-rd">部分設立於百貨/商場/機場/車站/飯店/旅館/賣場/美食街內之商店，因帳單明細無法判別為該指定商店，將不列入回饋計算</span>。</li>
+                                <li class="c-list__item">統一企業集團品牌適用範圍：統一超商、康是美(含康是美網購eShop)、夢時代購物中心、統一時代百貨、DREAM PLAZA、UNIKCY、玲廊滿藝、BEING sport、BEING spa、BEING fit、星巴克、21Plus/21風味館、Mister Donut、COLD STONE酷聖石冰淇淋、Semeur聖娜、家樂福、Mia C‘bon、Yahoo購物、博客來、聖德科斯、統一生機、統一精工速邁樂加油站、foodomo、鮮拾網、DUSKIN、黑貓宅急便、ibon售票系統、統一渡假村、台北W飯店、台北時代寓所。消費回饋之認定依本行系統為主，符合回饋之交易需為指定加碼商店交易，且帳單明細能完整呈現該指定商店名稱者方得回饋，<span class="t-rd">部分設立於百貨/商場/機場/車站/飯店/旅館/賣場/美食街內之商店，因帳單明細無法判別為該指定商店，將不列入回饋計算</span>。</li>
                                 <li class="c-list__item">參加統一企業集團踩點任務加碼活動每月回饋上限計算方式為每月1日至月底日，且次月15日前商店完成請款。需於活動期間每月至中信銀行APP完成領取優惠券(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例:參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推。將以領取成功且符合活動規則為回饋依據。符合回饋資格之持卡人，將於消費月該月底加計60天內，撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號。</li>
-                                <li class="c-list__item">回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
+                                <li class="c-list__item">為取得刷卡OPENPOINT回饋，請務必於核卡後完成連結uniopen會員，回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
                             </ul>
                         </div>
                     </div>
@@ -156,6 +159,7 @@
                                         <li class="c-list__item">折價券不得與其他優惠活動併用。</li>
                                     </ul>
                                 </li>
+                                <li class="c-list__item">支付方式適用於uniopen聯名卡實體卡或綁定至家樂福錢包、Apple Pay、Google Pay等錢包支付刷卡；第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。家樂福線上購物恕不適用。</li>
                             </ul>
                         </div>
                     </div>
@@ -203,11 +207,12 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="l-contentBlock__content">
-                        <a href="https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011" class="o-link" target="_blank">
-                            立即登入中信銀行APP領取優惠券<i class="o-link__icon"></i>
-                        </a>
-                    </div>
+                    <a href="https://www.ctbcbank.com/content/dam/minisite/long/mobile/PRO_URL.html?TWRBM_Application_TX011" class="o-link" target="_blank">
+                        立即登入中信銀行APP領取優惠券<i class="o-link__icon"></i>
+                    </a>
+                    <a href="https://ctbc.tw/TCAG23" target="_blank" class="o-link">
+                        立即登入中信銀行APP 完成會員連結<i class="o-link__icon"></i>
+                    </a>
                 </div>
                 <div class="l-contentBlock__item t-note">
                     <div class="c-warn">
@@ -218,7 +223,7 @@
                                 <li class="c-list__item">國外一般消費定義:國外一般刷卡交易，不含本行不回饋交易項目，不回饋交易項目請依uniopen聯名卡回饋計劃辦理。</li>
                                 <li class="c-list__item">國外實體商店消費認定：該筆交易請款時，消費地或商店登記之國別碼於國外(非台灣)，且須為面對面交易(包括以實體卡、Apple Pay、Google Pay、Samsung Pay於實體商店支付)；網路交易、條碼支付或第三方支付恕不列入消費計算。相關交易判斷最終以本行及國際組織系統資料為準。但如屬本行不回饋交易項目將不提供回饋。</li>
                                 <li class="c-list__item">國外一般消費及國外實體商店消費活動之當月消費入帳中獲得之OPENPOINT，將於商店請款結帳後計算，並5個工作日撥入正卡人已於中信銀行APP完成連結之uniopen會員帳號。參加指定國外實體商店消費加碼活動每月回饋上限計算方式為每月1日至月底日，且次月15日前商店完成請款。需於活動期間每月至中信銀行APP完成領取優惠券(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例 : 參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推。將以領取成功且符合活動規則為回饋依據。符合回饋資格之持卡人，將於消費月該月底加計60天內，撥入正卡人於中信銀行APP已完成連結之uniopen會員帳號。</li>
-                                <li class="c-list__item">回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
+                                <li class="c-list__item">為取得刷卡OPENPOINT回饋，請務必於核卡後完成連結uniopen會員，回饋之OPENPOINT 以 OPENPOINT APP 揭露為準，若回饋時已解除uniopen會員連結將無法取得回饋。</li>
                             </ul>
                         </div>
                     </div>
@@ -397,7 +402,7 @@
     </div>
 </div>
 
-{# ==================== 生活優選 ==================== #}
+{# ==================== 新鮮採買​ ==================== #}
 <!-- 家樂福量販/超市 -->
 <div id="carrefourGoodsPopup" class="c-modal c-modal--sm mfp-hide">
     <button type="button" class="c-modal__close mfp-close"></button>
@@ -454,6 +459,7 @@
                             <ul class="c-list c-list--decimal">
                                 <li class="c-list__item">家樂福1日品牌日活動期間2025/10/1~2025/12/1(每月1號)，消費正附卡合併計算，每正卡歸戶當日限加購一個、限消費原店加購。</li>
                                 <li class="c-list__item">全臺量販店限量25,000個(依家樂福各門市配置數量為主)，OPEN好物將於收銀櫃檯結帳時直接領取。全臺超市店限量5,000個 (依家樂福各門市配置數量為主)，活動當日消費刷卡後，系統判斷符合活動規則，將發放超值好物商品加購券，持有商品加購券之會員當月20號至次月10號限至原出券店出示商品加購券加購，恕不接受跨店加購。例如10月活動，回店加購期間為2025/10/20~2025/11/10，且加購商品為10月份限定「超值好物」。</li>
+                                <li class="c-list__item">支付方式適用於uniopen聯名卡實體卡或綁定至家樂福錢包、Apple Pay、Google Pay等錢包支付刷卡；第三方支付、電子支付等付款方式(如: LINE Pay、街口支付、台灣Pay等)恕不適用。家樂福線上購物恕不適用。</li>
                             </ul>
                         </div>
                     </div>
@@ -581,6 +587,64 @@
                                 <li class="c-list__item">本活動須為單筆全額使用uniopen聯名卡實體卡支付，且不得與其他優惠或折扣活動合併使用，詳細以指定用餐店櫃現場說明為準。</li>
                                 <li class="c-list__item">每月限量5,000名，每戶每月回饋上限200點。需於活動期間每月至中信銀行APP完成領券優惠券(領取路徑：登入>信用卡>卡片管理>uniopen聯名卡卡友專屬券)，每月1日開放領取優惠券，舉例 : 參加2025/8/21~8/31活動須於2025/8/31前領券完成，以此類推，將以領取成功且符合活動規則之持卡人為回饋依據。2025/8~9月加碼點數統一於2025/10/31前回饋、2025/10~12月加碼點數統一於2026/2/28 前回饋。正附卡合併計算，將回饋至正卡人於中信銀行APP已完成連結之uniopen會員帳號，回饋之OPENPOINT以OPENPOINT APP 揭露為準。若回饋時已解除uniopen會員連結將無法取得回饋。</li>
                                 <li class="c-list__item">本活動之消費回饋認定將依單筆全額使用uniopen聯名卡實體卡刷卡支付金額為主。不含感應式支付(如：Apple Pay、Google Pay、Samsung Pay)或綁定行動錢包支付(如：icash Pay、OPEN錢包、LINE Pay、台灣行動支付等)或使用附加之電子票證儲值卡(如：icash)付款及自動加值等交易。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 統一時代百貨台北店 DREAM PLAZA -->
+<div id="dreamPlazafoodPopup" class="c-modal c-modal--sm mfp-hide">
+    <button type="button" class="c-modal__close mfp-close"></button>
+    <div class="c-modal__body">
+        <div class="c-modal__content">
+            <div class="l-contentBlock">
+                <div class="l-contentBlock__item">
+                    <div class="l-contentBlock__title">統一時代百貨台北店、DREAM PLAZA</div>
+                    <div class="l-contentBlock__content">
+                        <table class="c-table c-table--vertical">
+                            <tbody>
+                                <tr>
+                                    <th>指定餐飲櫃位</th>
+                                    <td>天天享 <span class="t-pl">9折</span>優惠</td>
+                                </tr>
+                                <tr>
+                                    <th>指定櫃位(含餐飲)</th>
+                                    <td>每週三於指定櫃位(含餐飲)單筆滿899元贈 <span class="t-pl">100元商品抵用券</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="l-contentBlock__item t-note">
+                    <div class="c-warn">
+                        <div class="c-warn__title">指定餐飲櫃位注意事項:</div>
+                        <div class="c-warn__content">
+                            <ul class="c-list c-list--decimal">
+                                <li class="c-list__item">活動期間:2025/9/1~2025/12/31</li>
+                                <li class="c-list__item">本活動限uniopen聯名卡實體卡片參加，行動支付恕不適用。</li>
+                                <li class="c-list__item">餐飲品牌以統一時代百貨台北店及DREAM PLAZA實際營運店櫃為準。</li>
+                                <li class="c-list__item">以實際刷卡金額計算，若使用抵用券、點數折抵及各式禮券，請於折扣前先行抵用，抵用金額恕不列入折扣計算，折扣後尾數未滿1元則以四捨五入計算。</li>
+                                <li class="c-list__item">已提供折扣及促銷商品不適用，詳細方式以櫃上為準。</li>
+                                <li class="c-list__item">活動詳情及未盡事宜請依統一時代百貨台北店、DREAM PLAZA館內現場公告及官方網站說明為準。</li>
+                                <li class="c-list__item">統一時代百貨台北店與DREAM PLAZA保留活動變更、修改或終止之權利。</li>
+                                <li class="c-list__item">本活動與uniopen聯名卡【週三卡友日】活動限擇一參加，無法合併優惠。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="c-warn">
+                        <div class="c-warn__title">指定櫃位(含餐飲)注意事項:</div>
+                        <div class="c-warn__content">
+                            <ul class="c-list c-list--decimal">
+                                <li class="c-list__item">活動期間:2025/9/1~2025/12/31 (週三)。</li>
+                                <li class="c-list__item">本活動每卡每日限贈乙份，限消費當日兌領，不累贈。</li>
+                                <li class="c-list__item">本活動僅限實體卡片兌換，行動支付不適用。</li>
+                                <li class="c-list__item">本活動與uniopen聯名卡指定【餐飲天天9折】活動限擇一參加，無法合併優惠。</li>
+                                <li class="c-list__item">統一時代台北店不配合店櫃：UNIQLO、GAP、MUJI無印良品、TSUTAYA BOOKSTORE、snow peak、今生金飾(黃金及工資)、甜蜜約定(黃金及工資)、2F夢廣場活動及部分櫃位(依現場公告為準)。DREAM PLAZA不配合店櫃：周大福(黃金及工資)、AVEDA沙龍與美甲服務、HOME MASTER鴻邁科技、博客來書店、7-ELEVEN、麥當勞及部分櫃位(依現場公告為準)。</li>
+                                <li class="c-list__item">本活動週年慶正檔期期間恕無法適用。</li>
                             </ul>
                         </div>
                     </div>
@@ -752,7 +816,7 @@
     </div>
 </div>
 
-{# ==================== 好物選購 ==================== #}
+{# ==================== 日用精選​ ==================== #}
 <!-- 康是美 -->
 <div id="cosmedPopup" class="c-modal c-modal--sm mfp-hide">
     <button type="button" class="c-modal__close mfp-close"></button>
@@ -1236,6 +1300,22 @@
                                     <th>日本環球影城</th>
                                     <td>單筆消費滿12,500日圓享 <span class="t-pl">1,250元日圓</span> 現金回饋</td>
                                 </tr>
+                                <tr>
+                                    <th>日本松本清</th>
+                                    <td>單筆消費滿20,000日圓或以上享 <span class="t-pl">2,000日圓</span> 現金回饋</td>
+                                </tr>
+                                <tr>
+                                    <th>日本唐吉訶德</th>
+                                    <td>單筆消費滿10,000日圓或以上享 <span class="t-pl">1,000日圓</span> 現金回饋</td>
+                                </tr>
+                                <tr>
+                                    <th>日本大丸福岡天神百貨</th>
+                                    <td>單筆消費滿30,000日圓或以上享 <span class="t-pl">3,000日圓</span> 現金回饋</td>
+                                </tr>
+                                <tr>
+                                    <th>日本三越伊勢丹</th>
+                                    <td>單筆消費滿80,000日圓或以上享 <span class="t-pl">8,000日圓</span> 現金回饋</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1250,7 +1330,7 @@
                         <div class="c-warn__title">注意事項 :</div>
                         <div class="c-warn__content">
                             <ul class="c-list c-list--decimal">
-                                <li class="c-list__item">日本7-ELEVEN、西武、SOGO、環球影城活動時間為2025年8月21日至2025年12月31日 (第一階段：2025年8月21日至9月30日、第二階段：2025年10月1日至12月31日)。日本7-ELEVEN 優惠適用於線上及線下交易；日本西武、SOGO、環球影城優惠只適用於線下交易。日本西武百貨、SOGO百貨購買前需要前往萬事達卡海外消費回饋平台網站，透過符合資格的萬事達卡註冊並啟用優惠， <a href="https://travelrewards.mastercardtaiwan.com/ctbcmtr/landing-page/ad" class="t-link" target="_blank">立即註冊</a>。活動期間內持卡人每個階段每個活動可享優惠一次。完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
+                                <li class="c-list__item">日本7-ELEVEN、西武、SOGO、環球影城活動時間為2025年8月21日至2025年12月31日 (第一階段：2025年8月21日至9月30日、第二階段：2025年10月1日至12月31日)，日本松本清、唐吉訶德、大丸福岡天神百貨、三越伊勢丹活動時間至2025年9月30日止。日本7-ELEVEN 優惠適用於線上及線下交易；日本西武、SOGO、環球影城、日本松本清、唐吉訶德、大丸福岡天神百貨、三越伊勢丹優惠只適用於線下交易。日本西武百貨、SOGO百貨、日本松本清、唐吉訶德、大丸福岡天神百貨、三越伊勢丹購買前需要前往萬事達卡海外消費回饋平台網站，透過符合資格的萬事達卡註冊並啟用優惠， <a href="https://travelrewards.mastercardtaiwan.com/ctbcmtr/landing-page/ad" class="t-link" target="_blank">立即註冊</a>。</li>
                                 <li class="c-list__item">活動期間內持卡人每個階段每個活動可享優惠一次。完成訂單後，現金回饋將於30日內直接存入符合資格萬事達卡之繳款帳單。此優惠不可兌換現金、轉售或轉讓給他人。對因違反本條款所導致的任何索賠或潛在索賠，萬事達卡不承擔任何責任。</li>
                                 <li class="c-list__item">本優惠由萬事達卡洽商各特約商戶提供，中國信託銀行僅代為轉達相關優惠訊息，萬事達卡保留相關活動條款之最終解釋權。惟中國信託銀行及萬事達卡非商品或服務之出售人，不就相關特約商戶所提供之商品或服務提供任何形式的聲明、推薦或保證，持卡人對於商品或服務內容有任何爭議，請逕洽相關特約商戶尋求解決。</li>
                             </ul>
@@ -1523,26 +1603,26 @@
 </div>
 
 <!-- 離站提醒 -->
-{# <div id="step2popup" class="c-modal c-modal--alert mfp-hide">
-    <button type="button" class="c-modal__close mfp-close"></button>
-    <div class="c-modal__body">
-        <div class="c-modal__content">
-            <div class="c-alert">
-                <img src="../content/images/popup/alert.jpg" class="c-alert__img" alt="離站提醒">
-                <div class="c-alert__content">
-                    <div class="c-alertCard">
-                        <div class="c-alertCard__title">不要錯過 !</div>
-                        <div class="c-alertCard__discount">星巴克 <span class="t-pl">買一送一</span></div>
-                        <div class="c-alertCard__discount">消費回饋最高 <span class="t-pl">OPENPOINT 11%</span></div>
-                        <div class="c-alertCard__action">
-                            <a href="#" target="_blank" class="o-btn">立即申辦</a>
-                        </div>
+<div id="leavePopup" class="c-modal c-modal--alert mfp-hide">
+<button type="button" class="c-modal__close mfp-close"></button>
+<div class="c-modal__body">
+    <div class="c-modal__content">
+        <div class="c-alert">
+            <img src="../content/images/popup/alert.jpg" class="c-alert__img" alt="離站提醒">
+            <div class="c-alert__content">
+                <div class="c-alertCard">
+                    <div class="c-alertCard__title">不要錯過 !</div>
+                    <div class="c-alertCard__discount">星巴克 <span class="t-pl">買一送一</span></div>
+                    <div class="c-alertCard__discount">消費回饋最高 <span class="t-pl">OPENPOINT 11%</span></div>
+                    <div class="c-alertCard__action">
+                        <a href="#" target="_blank" class="o-btn">立即申辦</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> #}
+</div>
+</div>
 
 <!-- 步驟頁 -->
 <!-- step 0(新戶申辦) -->

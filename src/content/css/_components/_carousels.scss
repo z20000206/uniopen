@@ -149,7 +149,7 @@
             @at-root & #{$root} {
                 &__slide {
                     width: 304px;
-                    height: 342px;
+                    height: 380px;
                 }
             }
         }
@@ -255,7 +255,7 @@
     }
 
     @include medias.breakpoint-down("md") {
-        bottom: -440px;
+        bottom: -480px;
         width: 100px;
         height: 40px;
 

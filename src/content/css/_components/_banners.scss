@@ -374,6 +374,7 @@
 }
 
 .c-enjoy {
+    position: relative;
     display: flex;
     width: 100%;
 
@@ -382,6 +383,7 @@
         position: relative;
         top: -47px;
         display: flex;
+        flex-direction: column;
         justify-content: flex-end;
         padding-top: 60px;
         padding-bottom: 40px;
@@ -389,6 +391,12 @@
         min-width: 820px;
         min-height: 500px;
         background: linear-gradient(296deg, #E3CFAD 0%, #BB975D 100%);
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 5px;
+        left: 48px;
     }
 
     &__content {
@@ -472,6 +480,7 @@
     }
 
     @include medias.breakpoint-down("sm") {
+
         &__content {
             padding-right: 20px;
             padding-left: 20px;
@@ -493,6 +502,12 @@
                     content: none;
                 }
             }
+        }
+
+        &__link {
+            width: 100%;
+            left: unset;
+            text-align: center;
         }
     }
 }
