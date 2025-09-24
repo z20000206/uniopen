@@ -104,6 +104,14 @@
             }
         }
     }
+
+    &--disc {
+        @at-root & #{$root} {
+            &__item {
+                list-style-type: disc;
+            }
+        }
+    }
 }
 
 .c-infoList {

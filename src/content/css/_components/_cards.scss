@@ -69,7 +69,7 @@
     justify-content: center;
     gap: 40px;
     padding: 20px;
-    width: 100%;
+    width: fit-content;
     background: #FFF;
     box-shadow: -4px -4px 4px 0px rgba(0, 0, 0, 0.10);
 
@@ -134,6 +134,7 @@
         flex-direction: column;
         gap: 48px;
         padding: 28px 20px;
+        width: 100%;
 
         &__item {
             padding: 0;
@@ -684,5 +685,72 @@
 
     &__action {
         padding-top: 40px;
+    }
+}
+
+.o-tooltip {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+
+    &__icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+        background-color: #fff;
+        mask: url(../../images/icon/more.svg) no-repeat center/contain;
+    }
+
+    &__panel {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: calc(-100% - 24px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4px;
+        padding: 8px 12px;
+        width: max-content;
+        background: #75654B;
+        color: #FFF;
+        text-align: start;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        width: 100%;
+        text-align: start;
+    }
+
+    @include medias.breakpoint-down('md') {
+        &__panel {
+            bottom: calc(-100% - 44px);
+            right: 20px;
+        }
+    }
+
+    @include medias.breakpoint-down('sm') {
+        &__panel {
+            right: 0px;
+        }
+    }
+
+    &:hover {
+        @at-root & #{$root} {
+            &__panel {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }
