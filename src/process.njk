@@ -155,12 +155,124 @@
 {% endblock %}
 
 {% block popups %}
-    {%- include './_partials/_popups.part' -%}
+    <!-- step 0(新戶申辦) -->
+    <div id="step0Clientpopup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/pTmdbaeMBp0?rel=0&modestbranding=1&controls=2&loop=1&playlist=pTmdbaeMBp0" title="新戶辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-client.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 0(新卡申辦) -->
+    <div id="step0Cardpopup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/EjMo0GnXmyM?rel=0&modestbranding=1&controls=2&loop=1&playlist=EjMo0GnXmyM" title="新卡辦卡篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step0-card.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 1 -->
+    <div id="step1popup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/r5gbZ8PlNaU?rel=0&modestbranding=1&controls=2&loop=1&playlist=r5gbZ8PlNaU" title="會員連結篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step1.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 2 -->
+    <div id="step2popup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/uwyRenTXLo0?rel=0&modestbranding=1&controls=2&loop=1&playlist=uwyRenTXLo0" title="綁定篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step2.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 3 -->
+    <div id="step3popup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls?rel=0&modestbranding=1&controls=2&loop=1&playlist=Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process/qrcode/step3.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- step 4 -->
+    <div id="step4popup" class="c-modal c-modal--alert mfp-hide">
+        <button type="button" class="c-modal__close mfp-close"></button>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <div class="c-alert">
+                    <iframe class="c-alert__video" src="https://www.youtube.com/embed/Es-AFf9j6Ls?rel=0&modestbranding=1&controls=2&loop=1&playlist=Es-AFf9j6Ls" title="點數領券篇" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="c-alert__mobile">
+                        <div class="c-alertCard">
+                            <div class="c-alertCard__title">看不了影片嗎？</div>
+                            <div class="c-alertCard__desc">手機掃碼 立即欣賞</div>
+                            <img class="c-alertCard__img" src="./content/images/section/process//qrcode/step4.jpg" alt="qrcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %}
     <script>
-        $(function () {                
+        $(function () {
             // swiper
             const processSettings = $.extend(true, {}, carouselSettings, {
                 slidesPerView: 'auto',
