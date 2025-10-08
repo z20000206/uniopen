@@ -1,276 +1,246 @@
-const browserSync = require('browser-sync').create(),
-    del = require('del'),
-    path = require('path');
+// ==== 必要套件 ====
+const path = require('path');
+const del = require('del');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
 
-const gulp = require('gulp'),
-    dependents = require('gulp-dependents'),
-    filter = require('gulp-filter'),
-    flatmap = require('gulp-flatmap'),
-    gulpIf = require('gulp-if'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename'),
-    replace = require('gulp-replace'),
-    watch = require('gulp-watch');
+const dependents = require('gulp-dependents');
+const filter = require('gulp-filter');
+const flatmap = require('gulp-flatmap');
+const gulpIf = require('gulp-if');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 
-const suffix = {
-    min: '.min'
-};
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const babelCore = require('@babel/core');
+const eslint = require('gulp-eslint');
 
-// gulp-watch 共用參數
-const watchParameter = {
-    ignoreInitial: false,
-    events: ['add', 'change']
-};
+const nunjucksRender = require('gulp-nunjucks-render');
 
-// #region Detect build task
-let isBuildTask = process.argv.slice(2)[0] == 'build';
-// #endregion
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCss = require('gulp-clean-css');
+const sass = require('gulp-sass')(require('sass'));
+const resolveUrl = require('gulp-resolve-url');
 
-// #region Clean(清除所有檔案)
-function clean(cb) {
-    return del(['./dist/**'], cb);
-};
-// #endregion
-
-// #region Remove(刪除檔案)
-const unlink = (file) => {
-    let files = [];
-    let { dir, name, ext } = path.parse(path.resolve('./dist/', path.relative(path.resolve('./src/'), file)));
-    if (ext === '.njk') {
-        ext = '.html'
-    }
-    if (ext === '.scss') {
-        ext = '.css';
-    }
-    // original file
-    files.push(path.format({ dir: dir, name: name, ext: ext }));
-    if (ext === '.js' || ext === '.css') {
-        // minify file
-        files.push(path.format({ dir: dir, name: name + suffix.min, ext: ext }));
-        // sourcemap file
-        files.push(path.format({ dir: dir, name: name + suffix.min + ext, ext: '.map' }));
-    }
-    del(files).then(file => {
-        console.log('Below files has been removed.');
-        console.log(file);
-        browserSync.reload();
-    });
-};
-// #endregion
-
-// #region HTML
-// (?:{#.*?#})：排除註解區塊{# #}內的所有文字
-let parserRegex = /(?:{#.*?#})|{%\s+(?:extends|include|import|from)\s+(?:"|')(.+?)(?:"|')(?:\s+(?:import|as)\s+(?:\w|\s|,)*)?\s+%}/gm;
-let dependentsConfig = {
-    '.tmpl': { parserSteps: [parserRegex] },
-    '.part': { parserSteps: [parserRegex] },
-    '.njk': { parserSteps: [parserRegex, function (url) { return [path.join(path.resolve('./src/'), url)]; }] }
-};
-const babelCore = require('@babel/core'),
-    nunjucksRender = require('gulp-nunjucks-render');
-function html(cb) {
-    return watch(['./src/**/*.{njk,tmpl,part}', '!./src/content/vendor/', '!./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .on('change', () => browserSync.reload())
-        .pipe(dependents(dependentsConfig, { logDependents: true }))
-        .pipe(filter(['**', '!**/*.{tmpl,part}']))
-        .pipe(flatmap(function (stream, file) {
-            return stream
-                .pipe(plumber())
-                .pipe(nunjucksRender({
-                    path: ['./src/'],
-                    // envOptions: {
-                    //     tags: {
-                    //         variableStart: '{$',
-                    //         variableEnd: '$}',
-                    //     }
-                    // },
-                    manageEnv: function (env) {
-                        env.addFilter('relativePath', function (url, filePath = file.relative) {
-                            if (url === '#') {
-                                return url;
-                            }
-                            let current = path.posix.join.apply(path, filePath.split(/\/|\\/));
-                            if (!path.posix.isAbsolute(current)) {
-                                current = path.posix.sep + current;
-                            }
-                            let relativePath = path.posix.relative(path.posix.dirname(current), url);
-                            if (relativePath.substring(1, 1) !== '.') {
-                                relativePath = './' + relativePath;
-                            }
-                            return relativePath;
-                        });
-
-                        env.addFilter('padLeft', function (val, str, len) {
-                            val = '' + val;
-                            return val.length >= len ? val : new Array(len - val.length + 1).join(str) + val;
-                        });
-
-                        env.addFilter('3x', function (fileName) {
-                            let parser = path.parse(fileName);
-                            return parser.name + '__3x' + parser.ext;
-                        });
-                    }
-                }))
-                .pipe(replace(/<script>([\S\s]*?)<\/script>/ig, function (match, p1, offset, string) {
-                    var result = babelCore.transform(p1, {
-                        configFile: './.babelrc'
-                    });
-                    return '\n<script>\n' + result.code + '\n</script>\n';
-                }));
-        }))
-        .pipe(gulp.dest('./dist/'));
-};
-// #endregion
-
-// #region Script
-const babel = require('gulp-babel'),
-    eslint = require('gulp-eslint'),
-    sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify');
-function script(cb) {
-    return watch(['./src/**/*.js', '!./src/content/vendor/', '!./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .on('change', () => browserSync.reload())
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
-        .pipe(gulpIf(!isBuildTask, sourcemaps.init()))
-        .pipe(babel())
-        .pipe(gulp.dest('./dist/'))
-        .pipe(rename({
-            suffix: suffix.min
-        }))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
-        .pipe(gulp.dest('./dist/'));
-};
-// #endregion
-
-// #region Style
-const autoprefixer = require('gulp-autoprefixer'),
-    cleanCss = require('gulp-clean-css'),
-    sass = require('gulp-sass')(require('sass')),
-    resolveUrl = require('gulp-resolve-url');
-function css(cb) {
-    return watch(['./src/**/*.css', '!./src/content/vendor/', '!./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        // .pipe(gulpIf(!isBuildTask, sourcemaps.init()))
-        .pipe(sourcemaps.init())
-        .pipe(autoprefixer())
-        .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(filter(['**', '!**/*.map']))
-        .pipe(cleanCss())
-        .pipe(rename({
-            suffix: suffix.min
-        }))
-        .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
-        // .pipe(through2.obj(function (file, enc, cb) {
-        //     console.log(file.path)
-        //     cb(null, file)
-        // }))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(browserSync.stream());
-};
-
-function scss(cb) {
-    return watch(['./src/**/*.scss', '!./src/content/vendor/', '!./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .pipe(dependents(dependentsConfig, { logDependents: true }))
-        .pipe(plumber())
-        // .pipe(gulpIf(!isBuildTask, sourcemaps.init()))
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(resolveUrl({debug: true}))
-        .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(filter(['**', '!**/*.map']))
-        .pipe(cleanCss())
-        .pipe(rename({
-            suffix: suffix.min
-        }))
-        .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(browserSync.stream());
-};
-// #endregion
-
-// #region Image
 const imagemin = require('gulp-imagemin');
-function image(cb) {
-    return watch(['./src/**/*.{png,jpg,jpeg,gif,svg}', '!./src/content/vendor/', '!./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .pipe(gulpIf(isBuildTask, imagemin([
+
+// ==== Windows/網路磁碟/中文路徑：強制輪詢更穩 ====
+process.env.CHOKIDAR_USEPOLLING = '1';
+
+const suffix = { min: '.min' };
+const isBuildTask = process.argv.slice(2)[0] === 'build';
+
+const watchOptions = {
+  ignoreInitial: true,                 // 初始由 buildOnce 做
+  usePolling: true,
+  interval: 300,
+  awaitWriteFinish: { stabilityThreshold: 300, pollInterval: 100 },
+};
+
+// ==== HTML 依賴解析（NJK include/extends）====
+let parserRegex =
+  /(?:{#.*?#})|{%\s+(?:extends|include|import|from)\s+(?:"|')(.+?)(?:"|')(?:\s+(?:import|as)\s+(?:\w|\s|,)*)?\s+%}/gm;
+let dependentsConfig = {
+  '.tmpl': { parserSteps: [parserRegex] },
+  '.part': { parserSteps: [parserRegex] },
+  '.njk': {
+    parserSteps: [
+      parserRegex,
+      function (url) {
+        return [path.join(path.resolve('./src/'), url)];
+      },
+    ],
+  },
+};
+
+// ==== 清空 dist ====
+function clean() {
+  return del(['./dist/**']);
+}
+
+// ==== build：JS ====
+function buildScript() {
+  return gulp
+    .src(['./src/**/*.js', '!./src/content/vendor/**/*'], { base: './src' })
+    .pipe(eslint())                 // 開發期如怕被中斷，可先註解掉這兩行
+    .pipe(eslint.format())
+    // .pipe(eslint.failAfterError()) // 想要嚴格就打開
+    .pipe(sourcemaps.init())
+    .pipe(babel({ presets: ['@babel/preset-env'] }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(rename({ suffix: suffix.min }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream({ match: '**/*.js' }));
+}
+
+// ==== build：純 CSS ====
+function buildCss() {
+  return gulp
+    .src(['./src/**/*.css', '!./src/content/vendor/**/*'], { base: './src' })
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(filter(['**', '!**/*.map']))
+    .pipe(cleanCss())
+    .pipe(rename({ suffix: suffix.min }))
+    .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream({ match: '**/*.css' }));
+}
+
+// ==== build：SCSS ====
+function buildScss() {
+  return gulp
+    .src(['./src/**/*.scss', '!./src/content/vendor/**/*'], { base: './src' })
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(resolveUrl({ debug: true }))
+    .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(filter(['**', '!**/*.map']))
+    .pipe(cleanCss())
+    .pipe(rename({ suffix: suffix.min }))
+    .pipe(sourcemaps.write('./', { sourceRoot: '/' }))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream({ match: '**/*.css' }));
+}
+
+// ==== build：圖片 ====
+function buildImage() {
+  return gulp
+    .src(['./src/**/*.{png,jpg,jpeg,gif,svg}', '!./src/content/vendor/**/*'], { base: './src' })
+    .pipe(
+      gulpIf(
+        isBuildTask,
+        imagemin(
+          [
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 100, progressive: true }),
             imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: false },
-                    { cleanupIDs: false }
-                ]
-            })
-        ], { verbose: true })))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(browserSync.stream());
-};
-// #endregion
+            imagemin.svgo({ plugins: [{ removeViewBox: false }, { cleanupIDs: false }] }),
+          ],
+          { verbose: true },
+        ),
+      ),
+    )
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream({ match: '**/*.{png,jpg,jpeg,gif,svg}' }));
+}
 
-// #region Plugin
-function plugin(cb) {
-    return watch(['./src/content/vendor/**/*'], watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .on('change', file => browserSync.reload())
-        .pipe(gulp.dest('./dist/content/vendor/'));
-};
-// #endregion
+// ==== build：第三方套件拷貝 ====
+function buildPlugin() {
+  return gulp
+    .src('./src/content/vendor/**/*', { base: './src' })
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream());
+}
 
-// #region Other
-function other(cb) {
-    let glob = [
+// ==== build：其他靜態資源 ====
+function buildOther() {
+  return gulp
+    .src(
+      [
         './src/**/*',
         '!./src/**/*.{njk,part,tmpl,js,css,scss,png,jpg,jpeg,gif,svg}',
         '!./src/**/.git*',
-        '!./src/content/vendor/',
-        '!./src/content/vendor/**/*'
-    ];
-    return watch(glob, watchParameter)
-        .on('ready', cb)
-        .on('unlink', file => unlink(file))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(browserSync.stream());
-};
-// #endregion
-
-// #region HTTP Server
-function serve(cb) {
-    browserSync.init({
-        server: {
-            baseDir: './dist/'
-        }
-    })
-    cb();
+        '!./src/content/vendor/**/*',
+      ],
+      { base: './src' },
+    )
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browserSync.stream());
 }
-// #endregion
 
-exports.default = exports.build = gulp.series(
-    clean,
-    gulp.parallel(
-        script,
-        css,
-        scss,
-        image,
-        plugin,
-        other,
-        html
-    ),
-    serve
+// ==== build：Nunjucks → HTML ====
+function buildHtml() {
+  return gulp
+    .src(['./src/**/*.njk', '!./src/content/vendor/**/*'], { base: './src' })
+    .pipe(dependents(dependentsConfig, { logDependents: true }))
+    .pipe(filter(['**', '!**/*.{tmpl,part}']))
+    .pipe(
+      flatmap(function (stream, file) {
+        return stream
+          .pipe(plumber())
+          .pipe(
+            nunjucksRender({
+              path: ['./src/'],
+              manageEnv: function (env) {
+                env.addFilter('relativePath', function (url, filePath = file.relative) {
+                  if (url === '#') return url;
+                  let current = path.posix.join.apply(path, filePath.split(/\/|\\/));
+                  if (!path.posix.isAbsolute(current)) current = path.posix.sep + current;
+                  let relativePath = path.posix.relative(path.posix.dirname(current), url);
+                  if (relativePath.substring(1, 1) !== '.') relativePath = './' + relativePath;
+                  return relativePath;
+                });
+                env.addFilter('padLeft', function (val, str, len) {
+                  val = '' + val;
+                  return val.length >= len ? val : new Array(len - val.length + 1).join(str) + val;
+                });
+                env.addFilter('3x', function (fileName) {
+                  let parser = path.parse(fileName);
+                  return parser.name + '__3x' + parser.ext;
+                });
+              },
+            }),
+          )
+          .pipe(
+            replace(/<script>([\S\s]*?)<\/script>/gi, function (match, p1) {
+              const result = babelCore.transform(p1, { configFile: './.babelrc' });
+              return `\n<script>\n${result.code}\n</script>\n`;
+            }),
+          );
+      }),
+    )
+    .pipe(gulp.dest('./dist/'))
+    .on('end', () => browserSync.reload());
+}
+
+// ==== 一次性 build（啟動時先跑一次，填滿 dist）====
+const buildOnce = gulp.parallel(
+  buildScript,
+  buildCss,
+  buildScss,
+  buildImage,
+  buildPlugin,
+  buildOther,
+  buildHtml,
 );
+
+// ==== Watch：任何存檔都重跑對應任務 ====
+function watchAll() {
+  gulp.watch(['./src/**/*.js', '!./src/content/vendor/**/*'], watchOptions, buildScript);
+  gulp.watch(['./src/**/*.css', '!./src/content/vendor/**/*'], watchOptions, buildCss);
+  gulp.watch(['./src/**/*.scss', '!./src/content/vendor/**/*'], watchOptions, buildScss);
+  gulp.watch(['./src/**/*.{png,jpg,jpeg,gif,svg}', '!./src/content/vendor/**/*'], watchOptions, buildImage);
+  gulp.watch(['./src/content/vendor/**/*'], watchOptions, buildPlugin);
+  gulp.watch(
+    [
+      './src/**/*',
+      '!./src/**/*.{njk,part,tmpl,js,css,scss,png,jpg,jpeg,gif,svg}',
+      '!./src/**/.git*',
+      '!./src/content/vendor/**/*',
+    ],
+    watchOptions,
+    buildOther,
+  );
+  gulp.watch(['./src/**/*.{njk,tmpl,part}', '!./src/content/vendor/**/*'], watchOptions, buildHtml);
+}
+
+// ==== 開發伺服器 ====
+function serve(done) {
+  browserSync.init({ server: { baseDir: './dist/' } });
+  done();
+}
+
+// ==== 指令 ====
+exports.build = gulp.series(clean, buildOnce);       // 正式打包
+exports.dev = gulp.series(clean, buildOnce, serve, watchAll); // 開發
+exports.default = exports.dev;
